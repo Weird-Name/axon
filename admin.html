@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Admin &amp; CMS Portal | Axon Petro Engineering Pvt. Ltd.</title>
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Google Fonts: Inter, Plus Jakarta Sans & JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Main Stylesheet with Cache Busting -->
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.10">
+
+  <style>
+    svg { flex-shrink: 0; vertical-align: middle; }
+    .top-utility-bar { background: #f8fafc; color: #475569; font-size: 0.76rem; height: 40px; display: flex; align-items: center; border-bottom: 1px solid #e2e8f0; }
+    .top-utility-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 1rem; white-space: nowrap; overflow: hidden; }
+    .utility-left, .utility-right { display: flex; align-items: center; gap: 1.15rem; white-space: nowrap; }
+    .utility-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; padding: 0.15rem 0.65rem; border-radius: 9999px; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .login-gate-wrap { min-height: calc(100vh - 120px); display: flex; align-items: center; justify-content: center; padding: 2rem 1.25rem; background: linear-gradient(180deg, #f8fafc 0%, #eff6ff 100%); }
+    .login-card { width: 100%; max-width: 440px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 2.5rem 2.25rem; box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.10); }
+    .login-error { display: none; background: #fef2f2; border: 1px solid #fecaca; color: #dc2626; font-size: 0.82rem; font-weight: 600; padding: 0.65rem 0.9rem; border-radius: 10px; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+
+  <!-- Light Admin Top Bar -->
+  <div class="top-utility-bar">
+    <div class="container top-utility-inner">
+      <div class="utility-left">
+        <span class="utility-badge">INTERNAL STAFF PORTAL</span>
+        <span id="adminStaffStatusBadge" style="color:#0f172a;font-weight:600;">Authentication Required</span>
+      </div>
+      <div class="utility-right">
+        <a href="index.html" style="color:#0055ff;font-weight:600;display:inline-flex;align-items:center;gap:0.35rem;">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
+          <span>Return to Public Website</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Admin Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-logo" title="Axon Petro Engineering Pvt. Ltd.">
+        <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd. Logo">
+      </a>
+
+      <div id="adminToolbarControls" style="display:none;align-items:center;gap:0.5rem;flex-wrap:wrap;padding:0.35rem 0;">
+        <select id="staffRoleSelector" class="form-control" style="padding:0.4rem 0.75rem;font-size:0.78rem;border-radius:999px;width:auto;max-width:100%;" onchange="switchStaffRole(this.value)">
+          <option value="admin@axonpetro.in (Chief Engineer)">Staff Role: Chief Engineer (Full Admin)</option>
+          <option value="catalog@axonpetro.in (Product Manager)">Staff Role: Product Catalog Editor</option>
+          <option value="sales@axonpetro.in (RFQ & Estimating Desk)">Staff Role: Sales &amp; RFQ Estimator</option>
+        </select>
+        <button class="btn btn-outline btn-sm" onclick="exportFullCatalogJson()">
+          Export Catalog JSON
+        </button>
+        <button class="btn btn-outline btn-sm" onclick="resetCmsToDefaults()">
+          Reset to Defaults
+        </button>
+        <button class="btn btn-outline btn-sm" style="color:#dc2626;border-color:#fecaca;" onclick="handleAdminLogout()">
+          Sign Out
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ========================================================================
+       STAFF LOGIN GATE
+       ======================================================================== -->
+  <section id="adminLoginGate" class="login-gate-wrap">
+    <div class="login-card">
+      <div style="text-align:center;margin-bottom:1.75rem;">
+        <span class="utility-badge" style="margin-bottom:0.75rem;">STAFF CMS AUTHENTICATION</span>
+        <h1 style="font-size:1.55rem;margin-bottom:0.35rem;color:#0f172a;">Sign In to Axonpetro CMS</h1>
+        <p style="font-size:0.86rem;color:#64748b;">Enter your authorized staff credentials to manage equipment, case studies, and RFQ leads.</p>
+      </div>
+
+      <div id="adminLoginError" class="login-error">Invalid Admin ID or Password. Please check your credentials.</div>
+
+      <form onsubmit="handleAdminLogin(event)">
+        <div class="form-group" style="margin-bottom:1rem;">
+          <label>Admin ID / Official Email *</label>
+          <input type="text" id="loginAdminId" class="form-control" required placeholder="admin@axonpetro.in" value="admin@axonpetro.in">
+        </div>
+        <div class="form-group" style="margin-bottom:1.35rem;">
+          <label>Password *</label>
+          <input type="password" id="loginAdminPass" class="form-control" required placeholder="•••••••••">
+        </div>
+        <button type="submit" class="btn btn-primary" style="width:100%;">
+          <span>Sign In to Admin Portal</span>
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       PROTECTED ADMIN DASHBOARD CONTENT
+       ======================================================================== -->
+  <main id="adminDashboardMain" style="display:none;">
+    <div class="section-dark" style="padding:3rem 0;">
+      <div class="container">
+        <span class="section-eyebrow">AXONPETRO CONTENT MANAGEMENT SYSTEM</span>
+        <h1 style="font-size:2rem;margin-bottom:0.4rem;">Equipment Catalog, Case Studies &amp; RFQ Lead Manager</h1>
+        <p style="font-size:0.95rem;">Changes saved here update the public website catalog and project portfolio immediately.</p>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <!-- Incoming RFQ Leads Table -->
+        <div style="background:#fff;border:1px solid var(--surface-200);border-radius:16px;padding:1.85rem;margin-bottom:2.5rem;box-shadow:var(--shadow-xs);">
+          <h2 style="font-size:1.35rem;margin-bottom:0.35rem;">Incoming RFQ &amp; R&amp;D Collaboration Enquiries</h2>
+          <p style="font-size:0.86rem;color:var(--text-500);margin-bottom:1rem;">Every quote request or R&amp;D form submitted on the public website is logged here.</p>
+          <div class="wps-table-container">
+            <table class="wps-table" style="min-width:750px;">
+              <thead>
+                <tr>
+                  <th>Ref ID &amp; Date</th>
+                  <th>Contact &amp; Company</th>
+                  <th>Email &amp; Phone</th>
+                  <th>Equipment / Subject</th>
+                  <th>Material / Scale</th>
+                  <th>Technical Notes</th>
+                </tr>
+              </thead>
+              <tbody id="adminLeadsList"></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Add / Edit Product & Spec Sheet Form -->
+        <div class="admin-split-grid" style="margin-bottom:2.5rem;">
+          <div style="background:#fff;border:1px solid var(--surface-200);border-radius:16px;padding:clamp(1.15rem, 3vw, 1.85rem);box-shadow:var(--shadow-xs);min-width:0;">
+            <h3 style="font-size:1.25rem;margin-bottom:0.35rem;">Add / Edit Equipment &amp; Spec Sheet</h3>
+            <p style="font-size:0.82rem;color:var(--text-500);margin-bottom:1rem;">Click "Edit" on any product on the right to load it into the editor, or create a new item.</p>
+            <form id="adminProductForm" onsubmit="handleAdminSaveProduct(event)">
+              <input type="hidden" name="prodId">
+              <div class="form-group" style="margin-bottom:0.75rem;">
+                <label>Equipment Code *</label>
+                <input type="text" name="prodCode" class="form-control" required placeholder="e.g. AXN-EQ-031">
+              </div>
+              <div class="form-group" style="margin-bottom:0.75rem;">
+                <label>Equipment Name *</label>
+                <input type="text" name="prodName" class="form-control" required placeholder="e.g. High-Pressure Hydrogen Buffer Vessel">
+              </div>
+              <div class="form-group" style="margin-bottom:0.75rem;">
+                <label>Category *</label>
+                <input type="text" name="prodCategory" class="form-control" required placeholder="e.g. Reactors & Pressure Vessels">
+              </div>
+              <div class="form-group" style="margin-bottom:0.75rem;">
+                <label>Design Code Badge</label>
+                <input type="text" name="prodBadge" class="form-control" placeholder="e.g. ASME Sec VIII Div. 2">
+              </div>
+              <div class="form-group" style="margin-bottom:0.75rem;">
+                <label>Image Path</label>
+                <input type="text" name="prodImage" class="form-control" value="assets/images/project-reactor-crayvalley.jpg">
+              </div>
+              <div class="form-group" style="margin-bottom:0.75rem;">
+                <label>Material Grades (Comma Separated)</label>
+                <input type="text" name="prodMaterials" class="form-control" placeholder="SS 316L, SA 516 Gr. 70, Super Duplex S32760">
+              </div>
+              <div class="form-group" style="margin-bottom:0.75rem;">
+                <label>Short Overview *</label>
+                <textarea name="prodShortDesc" rows="2" class="form-control" required placeholder="Summary description..."></textarea>
+              </div>
+              <div class="form-group" style="margin-bottom:1rem;">
+                <label>Technical Spec Sheet Rows (One `Parameter: Value` per line) *</label>
+                <textarea name="prodSpecs" rows="5" class="form-control" required placeholder="Capacity Range: 1,000L to 50,000L&#10;Design Code: ASME Sec VIII Div. 1&#10;Design Pressure: Up to 60 bar(g)&#10;Qualified WPS: DESB-WPS-008 / WPS-021"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Save Equipment &amp; Spec Sheet</button>
+            </form>
+          </div>
+
+          <div style="background:#fff;border:1px solid var(--surface-200);border-radius:16px;padding:clamp(1.15rem, 3vw, 1.85rem);box-shadow:var(--shadow-xs);min-width:0;">
+            <h3 style="font-size:1.25rem;margin-bottom:0.85rem;" id="adminProductCountHeading">Active Equipment Catalog (30 Products Uploaded)</h3>
+            <div class="wps-table-container" style="max-height:560px;overflow-y:auto;">
+              <table class="wps-table" style="min-width:600px;">
+                <thead>
+                  <tr>
+                    <th>Code</th>
+                    <th>Equipment Name</th>
+                    <th>Category</th>
+                    <th>Standard</th>
+                    <th>Specs</th>
+                    <th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="adminProductsList"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Add / Manage Executed EPC Projects -->
+        <div class="admin-split-grid">
+          <div style="background:#fff;border:1px solid var(--surface-200);border-radius:16px;padding:clamp(1.15rem, 3vw, 1.85rem);box-shadow:var(--shadow-xs);min-width:0;">
+            <h3 style="font-size:1.25rem;margin-bottom:0.35rem;">Add New Executed EPC Project</h3>
+            <form onsubmit="handleAdminSaveProject(event)">
+              <div class="form-group" style="margin-bottom:0.65rem;">
+                <label>Project Title *</label>
+                <input type="text" name="projTitle" class="form-control" required placeholder="e.g. Turnkey Piping & Reactor Erection">
+              </div>
+              <div class="form-group" style="margin-bottom:0.65rem;">
+                <label>Category *</label>
+                <select name="projCategory" class="form-control">
+                  <option value="Turnkey Construction">Turnkey Construction</option>
+                  <option value="Mechanical & Process Piping">Mechanical &amp; Process Piping</option>
+                  <option value="Structural Steel Work">Structural Steel Work</option>
+                  <option value="Industrial & Process Piping">Industrial &amp; Process Piping</option>
+                  <option value="Modular Process Skids">Modular Process Skids</option>
+                  <option value="Custom Steel Fabrication">Custom Steel Fabrication</option>
+                </select>
+              </div>
+              <div class="form-grid" style="margin-bottom:0.65rem;">
+                <div class="form-group">
+                  <label>Client *</label>
+                  <input type="text" name="projClient" class="form-control" required placeholder="Client Name">
+                </div>
+                <div class="form-group">
+                  <label>End User *</label>
+                  <input type="text" name="projEndUser" class="form-control" required placeholder="End User">
+                </div>
+              </div>
+              <div class="form-grid" style="margin-bottom:0.65rem;">
+                <div class="form-group">
+                  <label>Location *</label>
+                  <input type="text" name="projLocation" class="form-control" required placeholder="City, Country">
+                </div>
+                <div class="form-group">
+                  <label>Year *</label>
+                  <input type="text" name="projYear" class="form-control" required placeholder="2026">
+                </div>
+              </div>
+              <div class="form-group" style="margin-bottom:0.65rem;">
+                <label>Image Path</label>
+                <input type="text" name="projImage" class="form-control" value="assets/images/project-turnkey-emery-main.jpg">
+              </div>
+              <div class="form-group" style="margin-bottom:0.65rem;">
+                <label>Scope Description *</label>
+                <textarea name="projScope" rows="2" class="form-control" required placeholder="Engineering, Procurement, Construction..."></textarea>
+              </div>
+              <div class="form-group" style="margin-bottom:0.9rem;">
+                <label>Key Highlights (One per line)</label>
+                <textarea name="projHighlights" rows="3" class="form-control" placeholder="100% Radiography tested&#10;Zero LTI completion"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary" style="width:100%;">Add Project to Portfolio</button>
+            </form>
+          </div>
+
+          <div style="background:#fff;border:1px solid var(--surface-200);border-radius:16px;padding:clamp(1.15rem, 3vw, 1.85rem);box-shadow:var(--shadow-xs);min-width:0;">
+            <h3 style="font-size:1.25rem;margin-bottom:0.85rem;">Executed Case Studies Portfolio</h3>
+            <div class="wps-table-container">
+              <table class="wps-table" style="min-width:560px;">
+                <thead>
+                  <tr>
+                    <th>Year</th>
+                    <th>Project Title</th>
+                    <th>Client / End User</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody id="adminProjectsList"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="assets/js/data.js?v=2026.10"></script>
+  <script src="assets/js/app.js?v=2026.10"></script>
+  <script>
+    const STAFF_ACCOUNTS = {
+      'admin': { pass: 'Axon@2026', label: 'admin@axonpetro.in (Chief Engineer)' },
+      'admin@axonpetro.in': { pass: 'Axon@2026', label: 'admin@axonpetro.in (Chief Engineer)' },
+      'catalog@axonpetro.in': { pass: 'Catalog@2026', label: 'catalog@axonpetro.in (Product Manager)' },
+      'sales@axonpetro.in': { pass: 'Sales@2026', label: 'sales@axonpetro.in (RFQ & Estimating Desk)' }
+    };
+
+    function unlockAdminView(roleLabel) {
+      document.getElementById('adminLoginGate').style.display = 'none';
+      document.getElementById('adminDashboardMain').style.display = 'block';
+      document.getElementById('adminToolbarControls').style.display = 'flex';
+      currentStaffUser = roleLabel;
+      renderAdminPanel();
+    }
+
+    function handleAdminLogin(e) {
+      e.preventDefault();
+      const id = document.getElementById('loginAdminId').value.trim().toLowerCase();
+      const pass = document.getElementById('loginAdminPass').value.trim();
+      const errEl = document.getElementById('adminLoginError');
+
+      if (STAFF_ACCOUNTS[id] && STAFF_ACCOUNTS[id].pass === pass) {
+        errEl.style.display = 'none';
+        sessionStorage.setItem('AXON_ADMIN_SESSION', STAFF_ACCOUNTS[id].label);
+        unlockAdminView(STAFF_ACCOUNTS[id].label);
+      } else {
+        errEl.style.display = 'block';
+      }
+    }
+
+    function handleAdminLogout() {
+      sessionStorage.removeItem('AXON_ADMIN_SESSION');
+      document.getElementById('adminLoginGate').style.display = 'flex';
+      document.getElementById('adminDashboardMain').style.display = 'none';
+      document.getElementById('adminToolbarControls').style.display = 'none';
+      document.getElementById('adminStaffStatusBadge').textContent = 'Authentication Required';
+      document.getElementById('loginAdminPass').value = '';
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const savedSession = sessionStorage.getItem('AXON_ADMIN_SESSION');
+      if (savedSession) {
+        unlockAdminView(savedSession);
+      }
+    });
+  </script>
+</body>
+</html>
