@@ -13,7 +13,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
   <!-- Main Stylesheet with Cache Busting -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.10">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.11">
 
   <!-- Critical Inline Light Theme Styles -->
   <style>
@@ -86,7 +86,7 @@
        ======================================================================== -->
   <header class="site-header">
     <div class="container header-inner">
-      <div class="brand-logo" onclick="navigateTo('home')" title="Axon Petro Engineering Pvt. Ltd. — Engineered to perform.">
+      <div class="brand-logo" onclick="navigateTo('company')" title="Axon Petro Engineering Pvt. Ltd. — Engineered to perform.">
         <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd. Logo">
       </div>
 
@@ -95,12 +95,12 @@
       </button>
 
       <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
-        <button class="nav-btn active" data-page="home" onclick="navigateTo('home')">Home</button>
-        <button class="nav-btn" data-page="company" onclick="navigateTo('company')">About Us</button>
+        <button class="nav-btn active" data-page="company" onclick="navigateTo('company')">About Us</button>
         <button class="nav-btn" data-page="products" onclick="navigateTo('products')">Equipment Catalog</button>
         <button class="nav-btn" data-page="services" onclick="navigateTo('services')">Services</button>
         <button class="nav-btn" data-page="rnd" onclick="navigateTo('rnd')">R&amp;D Hub</button>
         <button class="nav-btn" data-page="infra-hse" onclick="navigateTo('infra-hse')">Infrastructure &amp; HSE</button>
+        <button class="nav-btn" data-page="home" onclick="navigateTo('home')">Capabilities Summary</button>
         <button class="nav-btn" data-page="contact" onclick="navigateTo('contact')">Contact</button>
       </nav>
 
@@ -114,9 +114,9 @@
   </header>
 
   <!-- ========================================================================
-       VIEW 1: HOME PAGE (LIGHT ARCHITECTURAL THEME)
+       VIEW 1: CAPABILITIES SUMMARY PAGE (LIGHT ARCHITECTURAL THEME)
        ======================================================================== -->
-  <main id="view-home" class="page-view active">
+  <main id="view-home" class="page-view">
     <!-- Hero Section -->
     <section class="hero-section">
       <div class="container">
@@ -283,7 +283,7 @@
   <!-- ========================================================================
        VIEW 2: ABOUT US / COMPANY OVERVIEW (MODELED DIRECTLY ON THERMAX GLOBAL)
        ======================================================================== -->
-  <section id="view-company" class="page-view">
+  <section id="view-company" class="page-view active">
     <!-- 1. Thermax-Style Editorial Split Hero Banner -->
     <div class="section-dark" style="padding:4.5rem 0 3.5rem;">
       <div class="container">
@@ -1201,7 +1201,7 @@
   </footer>
 
   <!-- Scripts with Cache Busting -->
-  <script src="assets/js/data.js?v=2026.10"></script>
-  <script src="assets/js/app.js?v=2026.10"></script>
+  <script src="assets/js/data.js?v=2026.11"></script>
+  <script src="assets/js/app.js?v=2026.11"></script>
 </body>
 </html>

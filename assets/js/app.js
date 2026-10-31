@@ -7,7 +7,7 @@ const STORAGE_KEY = 'AXONPETRO_CMS_DATA_V6';
 const LEADS_KEY = 'AXONPETRO_LEADS_V2';
 
 let appData = loadAppData();
-let activePage = 'home';
+let activePage = 'company';
 let selectedProductCategory = 'All';
 let productSearchQuery = '';
 let selectedProjectCategory = 'All';
@@ -74,7 +74,7 @@ function navigateTo(pageId, scrollTargetId = null) {
     return;
   }
   const validPages = ['home', 'company', 'products', 'services', 'rnd', 'infra-hse', 'contact'];
-  if (!validPages.includes(pageId)) pageId = 'home';
+  if (!validPages.includes(pageId)) pageId = 'company';
   activePage = pageId;
 
   document.querySelectorAll('.page-view').forEach(sec => {
