@@ -12,8 +12,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
+  <link rel="icon" type="image/png" href="assets/images/axon-favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
   <!-- Main Stylesheet with Cache Busting -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.11">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.12">
 
   <!-- Critical Inline Light Theme Styles -->
   <style>
@@ -95,13 +97,93 @@
       </button>
 
       <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
-        <button class="nav-btn active" data-page="company" onclick="navigateTo('company')">About Us</button>
-        <button class="nav-btn" data-page="products" onclick="navigateTo('products')">Equipment Catalog</button>
-        <button class="nav-btn" data-page="services" onclick="navigateTo('services')">Services</button>
-        <button class="nav-btn" data-page="rnd" onclick="navigateTo('rnd')">R&amp;D Hub</button>
-        <button class="nav-btn" data-page="infra-hse" onclick="navigateTo('infra-hse')">Infrastructure &amp; HSE</button>
-        <button class="nav-btn" data-page="home" onclick="navigateTo('home')">Capabilities Summary</button>
-        <button class="nav-btn" data-page="contact" onclick="navigateTo('contact')">Contact</button>
+        <!-- 1. About Us with Adani-Style Dropdown -->
+        <div class="nav-item-dropdown">
+          <button class="nav-btn active" data-page="company" onclick="navigateTo('company')">
+            <span>ABOUT US</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="adani-dropdown-menu">
+            <button class="adani-dropdown-link" onclick="navigateTo('company', 'groupVisionAnchor')">
+              <div>
+                <span class="adani-dropdown-title">Group Vision &amp; Mission</span>
+                <span class="adani-dropdown-sub">Engineering Beyond Conventional Boundaries</span>
+              </div>
+            </button>
+            <button class="adani-dropdown-link" onclick="navigateTo('company', 'leadershipAnchor')">
+              <div>
+                <span class="adani-dropdown-title">Leadership &amp; Governance</span>
+                <span class="adani-dropdown-sub">Executive Council &amp; Technical Officers</span>
+              </div>
+            </button>
+            <button class="adani-dropdown-link" onclick="navigateTo('company', 'advisersAnchor')">
+              <div>
+                <span class="adani-dropdown-title">Advisory Council</span>
+                <span class="adani-dropdown-sub">Industry, Metallurgy &amp; Mobility Specialists</span>
+              </div>
+            </button>
+            <button class="adani-dropdown-link" onclick="navigateTo('company', 'ourJourneyAnchor')">
+              <div>
+                <span class="adani-dropdown-title">Our Journey &amp; Milestones</span>
+                <span class="adani-dropdown-sub">Two Decades of Industrial Growth</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- 2. Business Verticals with Adani-Style Dropdown -->
+        <div class="nav-item-dropdown">
+          <button class="nav-btn" data-page="company" onclick="navigateTo('company', 'businessVerticalsAnchor')">
+            <span>BUSINESS VERTICALS</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </button>
+          <div class="adani-dropdown-menu">
+            <button class="adani-dropdown-link" onclick="switchBusinessVertical(0); navigateTo('company', 'businessVerticalsAnchor');">
+              <div>
+                <span class="adani-dropdown-title">EPC &amp; Turnkey Industrial Plants</span>
+                <span class="adani-dropdown-sub">Process Equipment, Static Vessels &amp; 3,000 MT Steel</span>
+              </div>
+            </button>
+            <button class="adani-dropdown-link" onclick="switchBusinessVertical(1); navigateTo('company', 'businessVerticalsAnchor');">
+              <div>
+                <span class="adani-dropdown-title">Sustainable Mobility</span>
+                <span class="adani-dropdown-sub">Electric Road &amp; Marine Mobility Electrification</span>
+              </div>
+            </button>
+            <button class="adani-dropdown-link" onclick="switchBusinessVertical(2); navigateTo('company', 'businessVerticalsAnchor');">
+              <div>
+                <span class="adani-dropdown-title">HVAC &amp; Thermal Engineering</span>
+                <span class="adani-dropdown-sub">Industrial Air Handling, WHRU &amp; Exchangers</span>
+              </div>
+            </button>
+            <button class="adani-dropdown-link" onclick="switchBusinessVertical(3); navigateTo('company', 'businessVerticalsAnchor');">
+              <div>
+                <span class="adani-dropdown-title">Trading &amp; Strategic Commodities</span>
+                <span class="adani-dropdown-sub">Exotic Alloys, Valves &amp; Global EPC Supply Chain</span>
+              </div>
+            </button>
+          </div>
+        </div>
+
+        <!-- 3. Centre of Excellence on Advance Engineering Research -->
+        <button class="nav-btn" data-page="company" onclick="navigateTo('company', 'coeResearchAnchor')">
+          <span>CENTRE OF EXCELLENCE</span>
+        </button>
+
+        <!-- 4. Newsroom -->
+        <button class="nav-btn" data-page="company" onclick="navigateTo('company', 'newsroomAnchor')">
+          <span>NEWSROOM</span>
+        </button>
+
+        <!-- 5. Careers -->
+        <button class="nav-btn" data-page="company" onclick="navigateTo('company', 'careersAnchor')">
+          <span>CAREERS</span>
+        </button>
+
+        <!-- 6. Contact Us -->
+        <button class="nav-btn" data-page="contact" onclick="navigateTo('contact')">
+          <span>CONTACT US</span>
+        </button>
       </nav>
 
       <div class="header-actions">
@@ -281,35 +363,41 @@
   </main>
 
   <!-- ========================================================================
-       VIEW 2: ABOUT US / COMPANY OVERVIEW (MODELED DIRECTLY ON THERMAX GLOBAL)
+       VIEW 2: ABOUT US / ADANI-INSPIRED CORPORATE ECOSYSTEM LANDING PAGE
        ======================================================================== -->
   <section id="view-company" class="page-view active">
-    <!-- 1. Thermax-Style Editorial Split Hero Banner -->
+    <!-- 1. Adani-Style Editorial Split Hero Banner with Prominent Brand Logo -->
     <div class="section-dark" style="padding:4.5rem 0 3.5rem;">
       <div class="container">
-        <div class="mono" style="font-size:0.75rem;color:var(--text-500);margin-bottom:0.75rem;">
-          Home &nbsp;/&nbsp; <span style="color:var(--primary);font-weight:700;">Company Overview</span>
+        <!-- Logo Display Box -->
+        <div class="adani-brand-showcase-box">
+          <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd. Official Logo">
+          <div style="border-left:1px solid #d2e1f3;padding-left:0.85rem;">
+            <div style="font-weight:700;font-size:0.85rem;color:var(--text-900);">AXON PETRO ENGINEERING GROUP</div>
+            <div style="font-size:0.73rem;color:var(--text-500);">Engineering Beyond Conventional Boundaries</div>
+          </div>
         </div>
+
         <div class="hero-grid" style="align-items:center;">
           <div>
-            <span class="section-eyebrow">CONSERVING RESOURCES &bull; ENGINEERING PERFORMANCE</span>
-            <h1 style="font-size:clamp(2.15rem,3.6vw,3.1rem);margin-bottom:1.1rem;line-height:1.12;">
-              A Trusted Global Partner in Process Equipment, Energy Transition &amp; Turnkey EPC Infrastructure
+            <span class="section-eyebrow">ENGINEERING INNOVATION &bull; SUSTAINABLE INDUSTRIAL TRANSFORMATION</span>
+            <h1 style="font-size:clamp(2.15rem,3.6vw,3.15rem);margin-bottom:1.1rem;line-height:1.12;">
+              A Multi-Disciplinary Engineering Conglomerate Powering Global Industry &amp; Clean Mobility
             </h1>
             <p style="font-size:1.05rem;color:var(--text-600);margin-bottom:1.15rem;line-height:1.7;">
-              Headquartered in Bengaluru, India, with established EPC execution hubs in Malaysia and Singapore, <strong>Axon Petro Engineering Pvt. Ltd.</strong>—in strategic joint venture with <strong>Greengold Energy (JV)</strong>—delivers integrated, sustainable engineering solutions across chemical reactors, thermal heat transfer, clean-air gas recovery, modular process skids, and full-scale plant construction.
+              Headquartered in Bengaluru, India, with established international operations across Malaysia and Singapore, <strong>Axon Petro Engineering Pvt. Ltd.</strong> operates across high-growth strategic business verticals—including <strong>Turnkey EPC, Sustainable Mobility, HVAC &amp; Thermal Engineering, and Global Material Trading</strong>—anchored by our proprietary <strong>Centre of Excellence on Advance Engineering Research</strong>.
             </p>
             <p style="font-size:0.95rem;color:var(--text-600);margin-bottom:1.65rem;">
-              Guided by our philosophy of <em>"Engineered to Perform,"</em> we bridge precision ASME/TEMA shop-floor manufacturing with multi-thousand-ton site erection under a single point of accountability.
+              Guided by our commitment to <em>"Engineering Innovation. Creating Sustainable Value,"</em> we deliver integrated engineering solutions that enhance performance, improve efficiency, and enable sustainable industrial transformation.
             </p>
             <div style="display:flex;gap:0.85rem;flex-wrap:wrap;">
-              <button class="btn btn-primary" onclick="navigateTo('company', 'companyPortfolioAnchor')">
-                <span>Explore Executed Case Studies</span>
+              <button class="btn btn-primary" onclick="navigateTo('company', 'businessVerticalsAnchor')">
+                <span>Explore 4 Business Verticals</span>
                 <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </button>
-              <a class="btn btn-outline" href="wps-registry.html">
-                <span>View 26 Certified WPS Procedures</span>
-              </a>
+              <button class="btn btn-outline" onclick="navigateTo('company', 'coeResearchAnchor')">
+                <span>Centre of Excellence Research</span>
+              </button>
             </div>
           </div>
           <div>
@@ -317,23 +405,23 @@
               <img src="assets/images/project-turnkey-emery-main.jpg" alt="Turnkey Oleochemical Plant by Axon Petro Engineering" style="border-radius:14px;width:100%;height:260px;object-fit:cover;margin-bottom:0.85rem;">
               <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.85rem;">
                 <img src="assets/images/project-reactor-crayvalley.jpg" alt="Stainless Steel Chemical Reactor" style="border-radius:10px;height:140px;width:100%;object-fit:cover;">
-                <img src="assets/images/project-petronas-fgru-site.jpg" alt="PETRONAS Flare Gas Recovery Unit" style="border-radius:10px;height:140px;width:100%;object-fit:cover;">
+                <img src="assets/images/project-metering-skid-main.jpg" alt="Custody Transfer Metering Skid" style="border-radius:10px;height:140px;width:100%;object-fit:cover;">
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 2. Thermax-Style "At a Glance" 6-Column Corporate Numbers Strip -->
+        <!-- 2. Adani-Style "At a Glance" 6-Column Corporate Numbers Strip -->
         <div class="thermax-glance-strip" style="margin-top:3.5rem;">
           <div class="thermax-glance-item">
             <div class="thermax-glance-val">2002</div>
             <div class="thermax-glance-lbl">Year Established</div>
-            <div class="thermax-glance-sub">22+ Years EPC Heritage</div>
+            <div class="thermax-glance-sub">22+ Years Engineering Heritage</div>
           </div>
           <div class="thermax-glance-item">
-            <div class="thermax-glance-val">30+</div>
-            <div class="thermax-glance-lbl">Equipment Lines</div>
-            <div class="thermax-glance-sub">ASME, TEMA &amp; API Built</div>
+            <div class="thermax-glance-val">4 Verticals</div>
+            <div class="thermax-glance-lbl">Core Businesses</div>
+            <div class="thermax-glance-sub">EPC, Mobility, HVAC &amp; Trading</div>
           </div>
           <div class="thermax-glance-item">
             <div class="thermax-glance-val">5,300+ MT</div>
@@ -359,126 +447,224 @@
       </div>
     </div>
 
-    <!-- 3. Thermax-Style Vision Statement & 4 Core Values -->
-    <div class="section">
+    <!-- 3. Group Vision & Mission (Adani Philosophy: "Engineering Beyond Conventional Boundaries") -->
+    <div class="section" id="groupVisionAnchor">
       <div class="container">
-        <div class="thermax-purpose-banner">
-          <div style="max-width:880px;">
-            <span class="section-eyebrow" style="background:#ffffff !important;">OUR VISION &amp; CORPORATE PURPOSE</span>
+        <div class="thermax-purpose-banner" style="background:linear-gradient(135deg, #eef5fc 0%, #f6f9fc 60%, #e8f4f1 100%);border-color:#c7d9ef;">
+          <div style="max-width:920px;">
+            <span class="section-eyebrow" style="background:#ffffff !important;">GROUP VISION &amp; MISSION</span>
             <h2 style="font-size:clamp(1.65rem,2.8vw,2.35rem);color:var(--text-900);margin-bottom:0.85rem;line-height:1.25;">
-              &ldquo;To be a globally respected, high-performance engineering organisation offering sustainable solutions in process equipment, clean energy, and turnkey industrial infrastructure.&rdquo;
+              &ldquo;Engineering Innovation. Creating Sustainable Value. Engineering Beyond Conventional Boundaries.&rdquo;
             </h2>
-            <p style="font-size:0.98rem;color:var(--text-700);">
-              Like the world's foremost energy and environment engineering leaders, Axon Petro Engineering combines metallurgical mastery in exotic alloys with clean-technology innovation—helping petrochemical, oleochemical, and energy operators decarbonize and scale reliably.
+            <p style="font-size:1.02rem;color:var(--text-700);margin-bottom:1.15rem;line-height:1.7;">
+              <strong>Our Mission:</strong> To develop advanced technologies, proprietary intellectual property, and high-performance engineering infrastructure that enhance efficiency, accelerate clean transport, and enable sustainable industrial transformation worldwide.
+            </p>
+            <p style="font-size:0.95rem;color:var(--text-600);">
+              Our foundation is built on four core pillars: <strong>Engineering Excellence, Technology Innovation, Intellectual Property, and Long-Term Value Creation.</strong>
             </p>
           </div>
         </div>
 
         <div class="section-header" style="margin-bottom:2rem;">
-          <span class="section-eyebrow">THE AXONPETRO WAY</span>
-          <h2>Our Core Values</h2>
-          <p>Four foundational principles govern every pressure vessel we roll, every exotic alloy weld we qualify, and every turnkey plant we commission.</p>
+          <span class="section-eyebrow">OUR CORE VALUES</span>
+          <h2>The Four Values Driving Axon</h2>
+          <p>Guided by uncompromising standards across engineering design, client partnership, environmental integrity, and workplace safety.</p>
         </div>
 
         <div class="thermax-values-grid">
           <div class="thermax-value-card">
             <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">VALUE 01</div>
-            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;">Respect &amp; Partnership</h3>
-            <p style="font-size:0.88rem;color:var(--text-600);">Building multi-decade engineering alliances with global plant owners, process licensors (Desmet Ballestra, Lipico), and international EPC contractors.</p>
+            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;">Engineering Excellence</h3>
+            <p style="font-size:0.88rem;color:var(--text-600);">Uncompromising adherence to international engineering codes (ASME Sec VIII, B31.3, AWS D1.1, TEMA, API 650) with precision simulation and zero-defect manufacturing.</p>
           </div>
-          <div class="thermax-value-card" style="border-top-color:#0284c7;">
-            <div class="mono" style="font-size:0.75rem;font-weight:700;color:#0284c7;margin-bottom:0.4rem;">VALUE 02</div>
-            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;">Engineering Commitment</h3>
-            <p style="font-size:0.88rem;color:var(--text-600);">Uncompromising adherence to ASME Section VIII, ASME B31.3, TEMA, API 650, and AWS D1.1 codes from 3D CAD modeling through final hydrotest.</p>
+          <div class="thermax-value-card" style="border-top-color:#1f7a8c;">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:#1f7a8c;margin-bottom:0.4rem;">VALUE 02</div>
+            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;">Technology Innovation</h3>
+            <p style="font-size:0.88rem;color:var(--text-600);">Continuous proprietary R&amp;D through our Centre of Excellence—generating patentable IP in electric mobility, battery integration, and clean process systems.</p>
           </div>
-          <div class="thermax-value-card" style="border-top-color:#059669;">
-            <div class="mono" style="font-size:0.75rem;font-weight:700;color:#059669;margin-bottom:0.4rem;">VALUE 03</div>
-            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;">Honesty &amp; Integrity</h3>
-            <p style="font-size:0.88rem;color:var(--text-600);">100% material and weld traceability—from raw Mill Test Certificates (MTC) and XRF PMI verification to third-party witnessed radiography.</p>
+          <div class="thermax-value-card" style="border-top-color:#1c7c54;">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:#1c7c54;margin-bottom:0.4rem;">VALUE 03</div>
+            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;">Intellectual Property &amp; Integrity</h3>
+            <p style="font-size:0.88rem;color:var(--text-600);">Building ownable, differentiated technologies with 100% metallurgical traceability, transparent governance, and multi-decade client alliances.</p>
           </div>
-          <div class="thermax-value-card" style="border-top-color:#d97706;">
-            <div class="mono" style="font-size:0.75rem;font-weight:700;color:#d97706;margin-bottom:0.4rem;">VALUE 04</div>
-            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;">Concern for Environment &amp; Safety</h3>
-            <p style="font-size:0.88rem;color:var(--text-600);">Pioneering Flare Gas Recovery Units (FGRU), green-hydrogen ready metallurgy, and maintaining a strict Zero-LTI safety culture on every site.</p>
+          <div class="thermax-value-card" style="border-top-color:#b76e14;">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:#b76e14;margin-bottom:0.4rem;">VALUE 04</div>
+            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;">Long-Term Sustainable Value</h3>
+            <p style="font-size:0.88rem;color:var(--text-600);">Committed to Zero-LTI safety cultures, life-cycle decarbonisation, and creating scalable value across cross-industry infrastructure ecosystems.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 4. Thermax-Style "Our Business Verticals" (5 Integrated Offerings) -->
-    <div class="section section-alt">
+    <!-- ========================================================================
+         2. BUSINESS VERTICALS (ADANI MODEL: EPC, SUSTAINABLE MOBILITY, HVAC & TRADING)
+         ======================================================================== -->
+    <div class="section section-sand" id="businessVerticalsAnchor">
       <div class="container">
         <div class="section-header-row">
           <div class="section-header" style="margin-bottom:0;">
-            <span class="section-eyebrow">INTEGRATED BUSINESS SEGMENTS</span>
-            <h2>Our Five Core Business Verticals</h2>
-            <p>Delivering sustainable, code-stamped solutions across process manufacturing, thermal energy, emission control, and turnkey plant construction.</p>
+            <span class="section-eyebrow">AXON GROUP BUSINESS VERTICALS</span>
+            <h2>Four Pillars of Industrial &amp; Clean-Tech Leadership</h2>
+            <p>From heavy turnkey plant construction and ASME static equipment to electric road &amp; marine mobility, industrial HVAC, and global commodity sourcing.</p>
           </div>
-          <button class="btn btn-primary" onclick="navigateTo('products')">
-            <span>Explore Full 30-Product Catalog</span>
+          <button class="btn btn-primary" onclick="openRfqModal('Axon Business Verticals Inquiry')">
+            <span>Enquire on Business Verticals</span>
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </button>
         </div>
 
-        <div class="thermax-verticals-grid">
-          <div class="thermax-vertical-card">
-            <div class="thermax-vertical-img">
-              <img src="assets/images/project-reactor-crayvalley.jpg" alt="Process Equipment & Reactors">
-            </div>
-            <div class="thermax-vertical-body">
-              <div class="mono" style="font-size:0.7rem;font-weight:700;color:var(--primary);margin-bottom:0.3rem;">01 / PROCESS EQUIPMENT</div>
-              <h3 style="font-size:1.12rem;margin-bottom:0.45rem;">Reactors, Columns &amp; Pressure Vessels</h3>
-              <p style="font-size:0.84rem;color:var(--text-600);margin-bottom:1rem;">Limpet-coil &amp; jacketed chemical reactors, distillation columns, falling-film sulphonators, and sterile bioreactors.</p>
-              <span class="pillar-link" style="margin-top:auto;" onclick="navigateTo('products')">Explore Vertical →</span>
-            </div>
-          </div>
+        <!-- 4 Verticals Selector Tabs -->
+        <div class="adani-verticals-nav" id="adaniVerticalsNav"></div>
 
-          <div class="thermax-vertical-card">
-            <div class="thermax-vertical-img">
-              <img src="assets/images/project-vessels-crayvalley.jpg" alt="Heating, Cooling & Thermal Systems">
-            </div>
-            <div class="thermax-vertical-body">
-              <div class="mono" style="font-size:0.7rem;font-weight:700;color:var(--primary);margin-bottom:0.3rem;">02 / HEATING &amp; COOLING</div>
-              <h3 style="font-size:1.12rem;margin-bottom:0.45rem;">Heat Exchangers &amp; Thermal Systems</h3>
-              <p style="font-size:0.84rem;color:var(--text-600);margin-bottom:1rem;">TEMA Class R/C/B shell &amp; tube heat exchangers, waste heat recovery units, condensers, and indirect bath heaters.</p>
-              <span class="pillar-link" style="margin-top:auto;" onclick="navigateTo('products')">Explore Vertical →</span>
-            </div>
-          </div>
+        <!-- Active Vertical Interactive Showcase Container -->
+        <div class="adani-vertical-showcase" id="adaniVerticalShowcase"></div>
+      </div>
+    </div>
 
-          <div class="thermax-vertical-card">
-            <div class="thermax-vertical-img">
-              <img src="assets/images/project-petronas-fgru-site.jpg" alt="Clean Air & Flare Gas Recovery">
-            </div>
-            <div class="thermax-vertical-body">
-              <div class="mono" style="font-size:0.7rem;font-weight:700;color:var(--primary);margin-bottom:0.3rem;">03 / CLEAN AIR &amp; ENVIRONMENT</div>
-              <h3 style="font-size:1.12rem;margin-bottom:0.45rem;">Flare Gas Recovery (FGRU) &amp; Scrubbers</h3>
-              <p style="font-size:0.84rem;color:var(--text-600);margin-bottom:1rem;">Zero-routine-flaring FGRU skids, venturi/packed-bed gas scrubbers, knockout drums, and large-bore exhaust ducting.</p>
-              <span class="pillar-link" style="margin-top:auto;" onclick="navigateTo('rnd')">Explore Vertical →</span>
-            </div>
-          </div>
+    <!-- ========================================================================
+         3. CENTRE OF EXCELLENCE ON ADVANCE ENGINEERING RESEARCH
+         ======================================================================== -->
+    <div class="section" id="coeResearchAnchor">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">TECHNOLOGY &amp; INNOVATION</span>
+          <h2>Centre of Excellence on Advance Engineering Research</h2>
+          <p class="mono" style="font-size:0.92rem;color:var(--primary);font-weight:700;margin-top:0.25rem;">
+            Innovation Driven. Technology Owned. Engineering Beyond Conventional Boundaries.
+          </p>
+          <p style="margin-top:0.65rem;">
+            Creating differentiated engineering technologies and intellectual property with scalable commercial applications across mobility, marine, energy, and process industries.
+          </p>
+        </div>
 
-          <div class="thermax-vertical-card">
-            <div class="thermax-vertical-img">
-              <img src="assets/images/project-turnkey-emery-main.jpg" alt="Turnkey EPCC & Piping">
+        <!-- CoE Core Competencies (6 Pillars) -->
+        <div style="margin-bottom:3.5rem;">
+          <h3 style="font-size:1.35rem;margin-bottom:1.5rem;color:var(--text-900);">Core Competencies</h3>
+          <div class="grid-3-col">
+            <div class="pillar-card">
+              <div>
+                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 01</span>
+                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Advanced Product &amp; Systems Engineering</h4>
+                <p style="font-size:0.86rem;color:var(--text-600);">Multi-physics 3D modeling, finite element stress simulation, aerodynamics, and clean-sheet vehicle and vessel architectures.</p>
+              </div>
             </div>
-            <div class="thermax-vertical-body">
-              <div class="mono" style="font-size:0.7rem;font-weight:700;color:var(--primary);margin-bottom:0.3rem;">04 / TURNKEY EPCC</div>
-              <h3 style="font-size:1.12rem;margin-bottom:0.45rem;">Plant Construction, Piping &amp; Steel</h3>
-              <p style="font-size:0.84rem;color:var(--text-600);margin-bottom:1rem;">3,000+ MT structural steel erection, API 650 storage tank farms, and exotic alloy piping (Super Duplex, Monel, Hastelloy).</p>
-              <span class="pillar-link" style="margin-top:auto;" onclick="navigateTo('services')">Explore Vertical →</span>
+            <div class="pillar-card">
+              <div>
+                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 02</span>
+                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Proprietary &amp; Patentable Technology</h4>
+                <p style="font-size:0.86rem;color:var(--text-600);">Building high-value intellectual property assets, patentable battery enclosures, and proprietary modular skid controllers.</p>
+              </div>
+            </div>
+            <div class="pillar-card">
+              <div>
+                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 03</span>
+                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Research, Development &amp; Prototyping</h4>
+                <p style="font-size:0.86rem;color:var(--text-600);">Advanced prototype fabrication bays, hardware-in-the-loop validation, and rapid technology validation before series manufacture.</p>
+              </div>
+            </div>
+            <div class="pillar-card">
+              <div>
+                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 04</span>
+                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Engineering Design &amp; System Integration</h4>
+                <p style="font-size:0.86rem;color:var(--text-600);">Cross-functional integration across mechanical structures, electrical powertrains, telematics, and automated PLC control loops.</p>
+              </div>
+            </div>
+            <div class="pillar-card">
+              <div>
+                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 05</span>
+                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Technology Commercialisation &amp; Licensing</h4>
+                <p style="font-size:0.86rem;color:var(--text-600);">Translating laboratory-proven inventions into market-ready commercial hardware and OEM technology licensing frameworks.</p>
+              </div>
+            </div>
+            <div class="pillar-card">
+              <div>
+                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 06</span>
+                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Cross-Industry Technology Applications</h4>
+                <p style="font-size:0.86rem;color:var(--text-600);">One foundational engineering core leveraged horizontally across commercial mobility, marine propulsion, and heavy process plants.</p>
+              </div>
             </div>
           </div>
+        </div>
+
+        <!-- Industrial Applications & Strategic Partnerships Banner -->
+        <div style="background:linear-gradient(135deg, #f0f7fd 0%, #ffffff 100%);border:1px solid #c7daf2;border-radius:20px;padding:2.5rem;box-shadow:var(--shadow-sm);margin-bottom:3.5rem;">
+          <div class="hero-grid" style="align-items:start;">
+            <div>
+              <span class="section-eyebrow">ONE FOUNDATION &bull; MULTIPLE SECTORS</span>
+              <h3 style="font-size:1.45rem;margin-bottom:0.6rem;color:var(--text-900);">Industrial Applications</h3>
+              <p style="font-size:0.9rem;color:var(--text-600);margin-bottom:1.25rem;">Deploying proprietary engineering technologies across high-impact economic sectors:</p>
+              <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;font-size:0.88rem;color:var(--text-700);">
+                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Sustainable Mobility &amp; Transportation:</strong> Electric road coaches, buses and passenger transport fleets</li>
+                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Marine Engineering &amp; Electrification:</strong> Electric passenger boats, ferries and marine propulsion units</li>
+                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Energy Systems &amp; Infrastructure:</strong> Battery pack integration, fast charging and microgrid power</li>
+                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Industrial Engineering &amp; Automation:</strong> Heavy ASME process skids, clean air and modular automation</li>
+                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Emerging Technology Applications:</strong> Green hydrogen piping and next-gen exotic metallurgy</li>
+              </ul>
+            </div>
+            <div>
+              <span class="section-eyebrow" style="background:#e8f4f1 !important;color:#1c7c54 !important;border-color:#bce3d4 !important;">STRATEGIC PARTNERSHIPS</span>
+              <h3 style="font-size:1.45rem;margin-bottom:0.6rem;color:var(--text-900);">Collaborating to Accelerate Innovation</h3>
+              <p style="font-size:0.9rem;color:var(--text-600);margin-bottom:1.25rem;">Building strategic alliances to advance technology deployment and commercial growth:</p>
+              <div style="display:flex;flex-direction:column;gap:0.65rem;">
+                <div style="background:#ffffff;border:1px solid #d2e1f3;padding:0.75rem 1rem;border-radius:10px;font-size:0.85rem;">
+                  <strong style="color:var(--text-900);">Technology Development &amp; Joint Innovation</strong>
+                  <div style="color:var(--text-600);font-size:0.78rem;">Co-development programs with industry OEMs and technology creators.</div>
+                </div>
+                <div style="background:#ffffff;border:1px solid #d2e1f3;padding:0.75rem 1rem;border-radius:10px;font-size:0.85rem;">
+                  <strong style="color:var(--text-900);">OEM &amp; Manufacturing Collaborations</strong>
+                  <div style="color:var(--text-600);font-size:0.78rem;">Licensing and manufacturing execution alliances with established partners.</div>
+                </div>
+                <div style="background:#ffffff;border:1px solid #d2e1f3;padding:0.75rem 1rem;border-radius:10px;font-size:0.85rem;">
+                  <strong style="color:var(--text-900);">Research &amp; Academic Partnerships</strong>
+                  <div style="color:var(--text-600);font-size:0.78rem;">Joint metallurgical and electrification studies with top universities.</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="text-align:center;">
+          <button class="btn btn-primary" onclick="openRfqModal('CoE Advance Engineering Research Collaboration')">
+            <span>Propose R&amp;D Collaboration with CoE</span>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
         </div>
       </div>
     </div>
 
-    <!-- 5. Thermax-Style Corporate Heritage & Milestones Timeline -->
-    <div class="section section-sand">
+    <!-- ========================================================================
+         4. LEADERSHIP & ADVISORY COUNCIL (ADANI GOVERNANCE STYLE)
+         ======================================================================== -->
+    <div class="section section-alt" id="leadershipAnchor">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">OUR EVOLUTION (2002 – PRESENT)</span>
+          <span class="section-eyebrow">CORPORATE GOVERNANCE</span>
+          <h2>Executive Leadership Council</h2>
+          <p>Decades of hands-on expertise across ASME engineering design, international plant execution, and strategic enterprise growth.</p>
+        </div>
+        <div class="pillars-grid" id="leadershipGrid" style="margin-bottom:3.5rem;"></div>
+
+        <!-- Advisers Section -->
+        <div id="advisersAnchor">
+          <div class="section-header">
+            <span class="section-eyebrow">STRATEGIC GOVERNANCE</span>
+            <h2>Corporate &amp; Technical Advisers</h2>
+            <p>Guiding our technology roadmaps, energy transition investments, and international engineering standards.</p>
+          </div>
+          <div class="grid-3-col" id="advisersGrid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         5. OUR JOURNEY & TWO DECADES OF MILESTONES
+         ======================================================================== -->
+    <div class="section section-sand" id="ourJourneyAnchor">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">OUR JOURNEY (2002 – PRESENT)</span>
           <h2>Two Decades of Engineering Milestones</h2>
-          <p>From industrial piping and pressure vessel fabrication to multi-thousand-ton turnkey chemical plant construction and clean-tech R&amp;D.</p>
+          <p>From industrial piping and pressure vessel fabrication to multi-thousand-ton turnkey chemical plant construction, electric mobility, and clean-tech innovation.</p>
         </div>
 
         <div class="thermax-timeline-grid">
@@ -504,14 +690,16 @@
           </div>
           <div class="thermax-milestone-card">
             <div class="thermax-milestone-year">2023 – 2026</div>
-            <h4 style="font-size:0.98rem;margin-bottom:0.35rem;">RTIC Clean-Tech &amp; Digital Catalog</h4>
-            <p style="font-size:0.82rem;color:var(--text-600);">Scaling green-hydrogen ready metallurgy, carbon-capture modular skids, and 30+ standardized process equipment lines across India &amp; SE Asia.</p>
+            <h4 style="font-size:0.98rem;margin-bottom:0.35rem;">CoE Research &amp; Sustainable Mobility</h4>
+            <p style="font-size:0.82rem;color:var(--text-600);">Established the Centre of Excellence on Advance Engineering Research; scaling electric mobility, marine propulsion, and clean-tech patents across India &amp; SE Asia.</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- 6. Executed Landmark Projects Portfolio (8 Real Projects) -->
+    <!-- ========================================================================
+         6. EXECUTED CASE STUDIES PORTFOLIO (8 DOCUMENTED PROJECTS)
+         ======================================================================== -->
     <div class="section" id="companyPortfolioAnchor">
       <div class="container">
         <div class="section-header">
@@ -526,7 +714,9 @@
       </div>
     </div>
 
-    <!-- 7. Clients & Industries -->
+    <!-- ========================================================================
+         7. CLIENTS & INDUSTRIES SERVED
+         ======================================================================== -->
     <div class="section section-alt">
       <div class="container">
         <div class="section-header">
@@ -537,36 +727,29 @@
       </div>
     </div>
 
-    <!-- 8. Board & Executive Leadership (Thermax Governance Style) -->
-    <div class="section">
+    <!-- ========================================================================
+         8. NEWSROOM (ADANI STYLE)
+         ======================================================================== -->
+    <div class="section" id="newsroomAnchor">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">CORPORATE GOVERNANCE &amp; LEADERSHIP</span>
-          <h2>Executive Council &amp; Technical Leadership</h2>
-          <p>Decades of hands-on leadership across ASME pressure vessel design, exotic-alloy welding metallurgy, and international turnkey EPC project management.</p>
-        </div>
-        <div class="pillars-grid" id="leadershipGrid"></div>
-      </div>
-    </div>
-
-    <!-- 9. News & Media -->
-    <div class="section section-alt">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">NEWS, MEDIA &amp; TECHNICAL BULLETINS</span>
-          <h2>Latest Announcements &amp; Project Milestones</h2>
+          <span class="section-eyebrow">NEWSROOM &amp; MEDIA RELEASES</span>
+          <h2>Latest Press Releases, Bulletins &amp; Milestones</h2>
+          <p>Stay updated on new business verticals, technological milestones from our Centre of Excellence, and corporate announcements.</p>
         </div>
         <div class="grid-3-col" id="newsMediaGrid"></div>
       </div>
     </div>
 
-    <!-- 10. Careers Section -->
-    <div class="section section-sand">
+    <!-- ========================================================================
+         9. CAREERS AT AXON GROUP
+         ======================================================================== -->
+    <div class="section section-sand" id="careersAnchor">
       <div class="container">
         <div class="section-header">
-          <span class="section-eyebrow">CAREERS AT AXONPETRO</span>
-          <h2>Join Our Engineering, QA/QC &amp; Fabrication Teams</h2>
-          <p>We are always looking for ASME design engineers, project managers, CSWIP welding inspectors, and 6G GTAW/FCAW alloy welders.</p>
+          <span class="section-eyebrow">CAREERS AT AXON GROUP</span>
+          <h2>Join Our Multi-Disciplinary Engineering &amp; Research Teams</h2>
+          <p>We are always looking for visionary design engineers, EV powertrain specialists, project managers, CSWIP welding inspectors, and exotic alloy metallurgists.</p>
         </div>
         <div class="pillars-grid" id="careersGrid"></div>
       </div>
@@ -1201,7 +1384,7 @@
   </footer>
 
   <!-- Scripts with Cache Busting -->
-  <script src="assets/js/data.js?v=2026.11"></script>
-  <script src="assets/js/app.js?v=2026.11"></script>
+  <script src="assets/js/data.js?v=2026.12"></script>
+  <script src="assets/js/app.js?v=2026.12"></script>
 </body>
 </html>

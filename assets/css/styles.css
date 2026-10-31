@@ -6,49 +6,49 @@
 
 :root {
   --surface-white: #ffffff;
-  --surface-50: #f8fafc;
-  --surface-100: #f1f5f9;
-  --surface-200: #e2e8f0;
-  --surface-300: #cbd5e1;
-  --sky-50: #f0f9ff;
-  --sky-100: #e0f2fe;
-  --sky-200: #bae6fd;
-  --blue-50: #eff6ff;
-  --text-900: #0f172a;
-  --text-700: #334155;
-  --text-600: #475569;
-  --text-500: #64748b;
-  --text-400: #64748b;
-  --navy-900: #0f172a;
-  --slate-200: #e2e8f0;
-  --slate-300: #cbd5e1;
-  --slate-500: #64748b;
-  --slate-600: #475569;
-  --slate-700: #334155;
-  --primary: #0055ff;
-  --primary-dark: #003ecb;
-  --axon-blue: #0055ff;
-  --axon-sky: #e0f2fe;
-  --cyan: #0284c7;
-  --axon-cyan: #0284c7;
-  --cyan-soft: rgba(2, 132, 199, 0.1);
-  --amber: #d97706;
-  --amber-600: #d97706;
-  --emerald: #059669;
-  --emerald-600: #059669;
-  --whatsapp: #16a34a;
-  --whatsapp-green: #16a34a;
-  --border-light: #e2e8f0;
+  --surface-50: #f7f9fc;
+  --surface-100: #edf2f8;
+  --surface-200: #dce5f0;
+  --surface-300: #c5d3e3;
+  --sky-50: #f2f7fc;
+  --sky-100: #e2ecf8;
+  --sky-200: #c7d9ef;
+  --blue-50: #f0f5fb;
+  --text-900: #162436;
+  --text-700: #33475b;
+  --text-600: #4b5e73;
+  --text-500: #66788c;
+  --text-400: #7b8c9e;
+  --navy-900: #162436;
+  --slate-200: #dce5f0;
+  --slate-300: #c5d3e3;
+  --slate-500: #66788c;
+  --slate-600: #4b5e73;
+  --slate-700: #33475b;
+  --primary: #1b5299;
+  --primary-dark: #133c73;
+  --axon-blue: #1b5299;
+  --axon-sky: #e2ecf8;
+  --cyan: #1f7a8c;
+  --axon-cyan: #1f7a8c;
+  --cyan-soft: rgba(31, 122, 140, 0.1);
+  --amber: #b76e14;
+  --amber-600: #b76e14;
+  --emerald: #1c7c54;
+  --emerald-600: #1c7c54;
+  --whatsapp: #1e824c;
+  --whatsapp-green: #1e824c;
+  --border-light: #dce5f0;
   --radius-xs: 6px;
   --radius-sm: 10px;
   --radius-md: 16px;
   --radius-lg: 24px;
   --radius-pill: 9999px;
-  --shadow-xs: 0 1px 3px rgba(15, 23, 42, 0.04);
-  --shadow-sm: 0 4px 20px -2px rgba(15, 23, 42, 0.06);
-  --shadow-md: 0 12px 32px -4px rgba(15, 23, 42, 0.09);
-  --shadow-lg: 0 24px 48px -12px rgba(15, 23, 42, 0.14);
-  --shadow-glow: 0 8px 24px rgba(0, 85, 255, 0.18);
+  --shadow-xs: 0 1px 3px rgba(22, 36, 54, 0.04);
+  --shadow-sm: 0 4px 20px -2px rgba(22, 36, 54, 0.05);
+  --shadow-md: 0 12px 32px -4px rgba(22, 36, 54, 0.08);
+  --shadow-lg: 0 24px 48px -12px rgba(22, 36, 54, 0.12);
+  --shadow-glow: 0 8px 24px rgba(27, 82, 153, 0.15);
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   --font-display: 'Plus Jakarta Sans', 'Inter', sans-serif;
   --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -202,16 +202,16 @@ img {
   font-weight: 600;
 }
 
-/* Main Navigation Header */
+/* Main Navigation Header (Adani-Inspired Mild Periwinkle Sky Header) */
 .site-header {
   position: sticky;
   top: 0;
   z-index: 1000;
-  background: rgba(255, 255, 255, 0.94);
-  backdrop-filter: blur(18px) saturate(180%);
-  -webkit-backdrop-filter: blur(18px) saturate(180%);
-  border-bottom: 1px solid var(--surface-200);
-  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.03);
+  background: linear-gradient(180deg, #c7daf2 0%, #d8e6f7 58%, #eaf2fc 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid #bfd2eb;
+  box-shadow: 0 4px 18px rgba(22, 36, 54, 0.06);
   transition: all 0.25s var(--ease);
 }
 
@@ -219,7 +219,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 76px;
+  height: 80px;
   gap: 1.25rem;
 }
 
@@ -229,6 +229,11 @@ img {
   gap: 0.75rem;
   cursor: pointer;
   flex-shrink: 0;
+  background: #ffffff;
+  padding: 0.38rem 0.85rem;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 2px 10px rgba(22, 36, 54, 0.06);
 }
 
 .brand-logo img {
@@ -240,36 +245,112 @@ img {
 .main-nav {
   display: flex;
   align-items: center;
-  gap: 0.2rem;
-  background: var(--surface-50);
-  padding: 0.3rem;
-  border-radius: var(--radius-pill);
-  border: 1px solid var(--surface-200);
+  gap: 0.35rem;
+  background: transparent;
+  padding: 0;
+  border: none;
+}
+
+.nav-item-dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
 }
 
 .nav-btn {
   background: transparent;
   border: none;
-  font-family: var(--font-sans);
-  font-size: 0.84rem;
-  font-weight: 600;
-  color: var(--text-700);
-  padding: 0.48rem 0.95rem;
-  border-radius: var(--radius-pill);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #111b27;
+  padding: 0.6rem 0.9rem;
+  border-radius: 8px;
   cursor: pointer;
   transition: all 0.2s var(--ease);
   white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.nav-btn .nav-chevron {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2;
+  transition: transform 0.2s var(--ease);
+}
+
+.nav-item-dropdown:hover .nav-btn .nav-chevron {
+  transform: rotate(180deg);
 }
 
 .nav-btn:hover {
   color: var(--primary);
-  background: #ffffff;
+  background: rgba(255, 255, 255, 0.55);
 }
 
 .nav-btn.active {
-  color: #ffffff;
-  background: var(--primary);
-  box-shadow: 0 2px 10px rgba(0, 85, 255, 0.22);
+  color: var(--primary);
+  background: rgba(255, 255, 255, 0.82);
+  box-shadow: 0 2px 8px rgba(27, 82, 153, 0.10);
+}
+
+/* Adani-Style Dropdown Submenu */
+.adani-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 270px;
+  background: #ffffff;
+  border: 1px solid var(--surface-200);
+  border-radius: 14px;
+  box-shadow: 0 18px 40px -8px rgba(22, 36, 54, 0.14);
+  padding: 0.55rem;
+  display: none;
+  flex-direction: column;
+  gap: 0.2rem;
+  z-index: 1300;
+}
+
+.nav-item-dropdown:hover .adani-dropdown-menu {
+  display: flex;
+}
+
+.adani-dropdown-link {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.7rem;
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  text-align: left;
+  background: transparent;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  transition: background 0.18s;
+  font-family: var(--font-sans);
+}
+
+.adani-dropdown-link:hover {
+  background: var(--sky-50);
+}
+
+.adani-dropdown-title {
+  font-size: 0.84rem;
+  font-weight: 700;
+  color: var(--text-900);
+  display: block;
+}
+
+.adani-dropdown-sub {
+  font-size: 0.73rem;
+  color: var(--text-500);
+  display: block;
+  margin-top: 0.1rem;
 }
 
 .header-actions {
@@ -394,17 +475,93 @@ img {
 }
 
 .section-sand {
-  background: linear-gradient(180deg, #f8fafc 0%, #f0f9ff 100%);
+  background: linear-gradient(180deg, #f6f9fc 0%, #eef5fc 100%);
   border-top: 1px solid var(--surface-200);
   border-bottom: 1px solid var(--surface-200);
 }
 
 .section-dark {
-  background: radial-gradient(circle at 85% 15%, rgba(14, 165, 233, 0.10) 0%, transparent 45%),
-              radial-gradient(circle at 15% 85%, rgba(0, 85, 255, 0.06) 0%, transparent 45%),
-              linear-gradient(180deg, #f0f7ff 0%, #f8fafc 100%);
+  background: radial-gradient(circle at 85% 15%, rgba(186, 214, 247, 0.35) 0%, transparent 50%),
+              radial-gradient(circle at 15% 85%, rgba(209, 232, 226, 0.30) 0%, transparent 50%),
+              linear-gradient(180deg, #e7f0fa 0%, #f5f9fd 100%);
   color: var(--text-700);
-  border-bottom: 1px solid #dbeafe;
+  border-bottom: 1px solid #d2e1f3;
+}
+
+/* ============================================================================
+   ADANI-STYLE 3 BUSINESS VERTICALS ECOSYSTEM (MILD PALETTE)
+   ============================================================================ */
+.adani-verticals-nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 2.25rem;
+}
+
+.adani-vertical-tab {
+  background: #ffffff;
+  border: 1.5px solid var(--surface-200);
+  border-radius: 18px;
+  padding: 1.5rem 1.65rem;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.25s var(--ease);
+  box-shadow: var(--shadow-xs);
+  position: relative;
+  overflow: hidden;
+}
+
+.adani-vertical-tab::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--surface-300);
+  transition: background 0.25s;
+}
+
+.adani-vertical-tab:hover {
+  transform: translateY(-3px);
+  border-color: #a3c2e8;
+  box-shadow: var(--shadow-sm);
+}
+
+.adani-vertical-tab.active {
+  background: linear-gradient(180deg, #f2f7fd 0%, #ffffff 100%);
+  border-color: var(--primary);
+  box-shadow: 0 10px 28px -6px rgba(27, 82, 153, 0.14);
+}
+
+.adani-vertical-tab.active::before {
+  background: linear-gradient(90deg, #1b5299, #1f7a8c);
+}
+
+.adani-vertical-showcase {
+  background: #ffffff;
+  border: 1px solid var(--surface-200);
+  border-radius: 22px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.adani-brand-showcase-box {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  background: #ffffff;
+  border: 1px solid #d2e1f3;
+  padding: 0.65rem 1.25rem;
+  border-radius: 16px;
+  margin-bottom: 1.35rem;
+  box-shadow: 0 4px 14px rgba(22, 36, 54, 0.05);
+}
+
+.adani-brand-showcase-box img {
+  height: 52px;
+  width: auto;
+  object-fit: contain;
 }
 
 .section-dark h1, .section-dark h2, .section-dark h3, .section-dark h4 {
@@ -1983,6 +2140,25 @@ img {
     padding: 0.65rem 0.9rem;
     font-size: 0.9rem;
     border-radius: var(--radius-sm);
+    width: 100%;
+    justify-content: space-between;
+  }
+  .nav-item-dropdown {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+  }
+  .adani-dropdown-menu {
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-left: 2px solid #c7d9ef;
+    border-radius: 0;
+    margin-left: 1rem;
+    padding: 0.25rem 0 0.25rem 0.5rem;
+  }
+  .adani-verticals-nav {
+    grid-template-columns: 1fr;
   }
 }
 

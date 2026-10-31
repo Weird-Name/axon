@@ -108,6 +108,7 @@ function navigateTo(pageId, scrollTargetId = null) {
 function renderAll() {
   renderHeroStats();
   renderBuyerPillars();
+  renderAdaniBusinessVerticals();
   renderHomeFeaturedProducts();
   renderHomeProjectsPreview();
   renderClientsGrid('homeClientsGrid');
@@ -167,6 +168,7 @@ function renderBuyerPillars() {
 
 function renderLeadershipAndNews() {
   const leadEl = document.getElementById('leadershipGrid');
+  const advEl = document.getElementById('advisersGrid');
   const newsEl = document.getElementById('newsMediaGrid');
   if (leadEl && appData.leadership) {
     leadEl.innerHTML = appData.leadership.map(l => `
@@ -175,6 +177,17 @@ function renderLeadershipAndNews() {
           <span class="section-eyebrow">${l.role}</span>
           <h3 style="font-size:1.15rem;margin-bottom:0.45rem;">${l.name}</h3>
           <p style="font-size:0.86rem;color:var(--slate-600);">${l.bio}</p>
+        </div>
+      </div>
+    `).join('');
+  }
+  if (advEl && appData.advisers) {
+    advEl.innerHTML = appData.advisers.map(a => `
+      <div class="pillar-card" style="border-top:3px solid #1f7a8c;">
+        <div>
+          <span class="section-eyebrow" style="background:#eaf2fc;color:#1b5299;border-color:#c7daf2;">ADVISORY COUNCIL &bull; ${a.role}</span>
+          <h3 style="font-size:1.15rem;margin-bottom:0.45rem;">${a.name}</h3>
+          <p style="font-size:0.86rem;color:var(--slate-600);">${a.bio}</p>
         </div>
       </div>
     `).join('');
@@ -193,6 +206,77 @@ function renderLeadershipAndNews() {
       </div>
     `).join('');
   }
+}
+
+// Interactive Adani Business Verticals Switcher
+let activeVerticalIndex = 0;
+function renderAdaniBusinessVerticals() {
+  const navEl = document.getElementById('adaniVerticalsNav');
+  const showcaseEl = document.getElementById('adaniVerticalShowcase');
+  if (!navEl || !showcaseEl || !appData.businessVerticals) return;
+
+  navEl.innerHTML = appData.businessVerticals.map((v, idx) => `
+    <button class="adani-vertical-tab ${idx === activeVerticalIndex ? 'active' : ''}" onclick="switchBusinessVertical(${idx})">
+      <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">VERTICAL ${v.code} //</div>
+      <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--text-900);line-height:1.25;margin-bottom:0.3rem;">${v.title}</div>
+      <div style="font-size:0.8rem;color:var(--text-500);">${v.subtitle}</div>
+    </button>
+  `).join('');
+
+  const current = appData.businessVerticals[activeVerticalIndex] || appData.businessVerticals[0];
+  showcaseEl.innerHTML = `
+    <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:2.5rem;align-items:center;" class="hero-grid">
+      <div>
+        <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.85rem;">
+          <span class="utility-badge" style="background:#eaf2fc;color:#1b5299;border-color:#c7daf2;">${current.badge}</span>
+          <span class="mono" style="font-size:0.76rem;color:var(--text-500);font-weight:600;">AXON ECOSYSTEM VERTICAL ${current.code}</span>
+        </div>
+        <h2 style="font-size:clamp(1.75rem,3vw,2.35rem);margin-bottom:0.75rem;color:var(--text-900);">${current.title}</h2>
+        <div class="mono" style="font-size:0.84rem;font-weight:700;color:var(--cyan);margin-bottom:1rem;">${current.tagline}</div>
+        <p style="font-size:0.98rem;color:var(--text-600);margin-bottom:1.4rem;line-height:1.7;">${current.desc}</p>
+        
+        <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:14px;padding:1.25rem 1.4rem;margin-bottom:1.5rem;">
+          <div style="font-weight:700;font-size:0.84rem;color:var(--text-900);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.04em;">Key Capabilities & Focus Areas</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
+            ${current.pillars.map(p => `
+              <li style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.88rem;color:var(--text-700);">
+                <span style="color:var(--primary);font-weight:800;line-height:1.4;">✓</span>
+                <span>${p}</span>
+              </li>
+            `).join('')}
+          </ul>
+        </div>
+
+        <div style="display:flex;gap:0.85rem;flex-wrap:wrap;">
+          <button class="btn btn-primary" onclick="navigateTo('${current.linkTarget}')">
+            <span>${current.linkText}</span>
+            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </button>
+          <button class="btn btn-outline" onclick="openRfqModal('Business Vertical Enquiry: ${current.title}')">
+            <span>Enquire for Proposals</span>
+          </button>
+        </div>
+      </div>
+
+      <div>
+        <div style="border-radius:18px;overflow:hidden;border:1px solid var(--surface-200);box-shadow:var(--shadow-md);background:#ffffff;">
+          <img src="${current.image}" alt="${current.title}" style="width:100%;height:380px;object-fit:cover;">
+          <div style="padding:1.25rem;background:#ffffff;border-top:1px solid var(--surface-100);display:flex;justify-content:space-between;align-items:center;">
+            <div>
+              <div style="font-weight:700;font-size:0.9rem;color:var(--text-900);">Axon Petro Engineering Pvt. Ltd.</div>
+              <div style="font-size:0.76rem;color:var(--text-500);">Engineering Beyond Conventional Boundaries</div>
+            </div>
+            <img src="assets/images/axon-favicon.png" alt="Axon Emblem" style="height:34px;width:34px;">
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function switchBusinessVertical(index) {
+  activeVerticalIndex = index;
+  renderAdaniBusinessVerticals();
 }
 
 function createProductCardHtml(p) {

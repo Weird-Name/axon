@@ -1167,7 +1167,151 @@ const DEFAULT_AXON_DATA = {
     ]
   },
 
-  leadership: [
+  // Adani-Inspired Business Verticals Ecosystem (EPC, Sustainable Mobility, HVAC, Trading)
+  businessVerticals: [
+    {
+      id: "epc",
+      code: "01",
+      title: "EPC & Turnkey Industrial Plants",
+      subtitle: "Engineering, Procurement, Construction & Commissioning",
+      badge: "CORE INDUSTRIAL CAPABILITY",
+      tagline: "Heavy Engineering • Process Equipment • Structural Steel • Plant Construction",
+      desc: "Delivering world-class turnkey engineering, heavy static equipment fabrication, ASME Sec VIII reactors, high-pressure process skids, and multi-thousand-ton structural steelwork with zero-LTI track record across international petrochemical, energy, and oleochemical plants.",
+      pillars: [
+        "Turnkey Plant Engineering & EPCC Execution",
+        "ASME Sec VIII Chemical Reactors & Distillation Columns",
+        "Modular Process & Custody-Transfer Metering Skids",
+        "3,000+ MT Heavy Structural Steel Erection",
+        "Exotic Alloy Piping (Super Duplex, Hastelloy, Monel)"
+      ],
+      linkText: "Explore EPC Equipment & Case Studies",
+      linkTarget: "products",
+      image: "assets/images/project-turnkey-emery-main.jpg"
+    },
+    {
+      id: "mobility",
+      code: "02",
+      title: "Sustainable Mobility",
+      subtitle: "Engineering the Future of Mobility",
+      badge: "ELECTRIFICATION & ADVANCED MOBILITY",
+      tagline: "Electric Road Mobility • Electric Marine • Battery Integration • Smart Control Systems",
+      desc: "Developing next-generation mobility solutions through advanced engineering, electrification, and intelligent technologies that accelerate industrial decarbonisation and commercial clean transport.",
+      pillars: [
+        "Electric Road Mobility: Electric coaches, buses and passenger transportation",
+        "Electric Marine Mobility: Electric boats, ferries and marine propulsion systems",
+        "Energy Technologies: Battery pack integration, charging and energy management",
+        "Intelligent Mobility: Telematics, remote monitoring and smart control systems",
+        "Advanced Vehicle Engineering: Aerodynamics, vehicle architecture and performance optimisation"
+      ],
+      linkText: "Explore Sustainable Mobility Architecture",
+      linkTarget: "services",
+      image: "assets/images/project-turnkey-cad-1.jpg"
+    },
+    {
+      id: "hvac",
+      code: "03",
+      title: "HVAC & Thermal Engineering",
+      subtitle: "Industrial Climate Control & Heat Recovery",
+      badge: "ENERGY EFFICIENCY & CLIMATE SYSTEMS",
+      tagline: "Industrial HVAC • Thermal Management • Heat Exchangers • Clean Air Systems",
+      desc: "Specialized industrial air handling, precision clean-room HVAC systems, heavy process ventilation, and high-efficiency thermal exchangers designed for extreme petrochemical and industrial plant environments.",
+      pillars: [
+        "Industrial Air Handling Units & Hazardous Zone HVAC Systems",
+        "TEMA Class R/C/B Shell & Tube Heat Exchangers",
+        "Waste Heat Recovery Units (WHRU) & Condensers",
+        "Large-Bore Heavy Industrial Ducting & Exhaust Stacks",
+        "Clean-Bay Environmental Air Filtration & Control"
+      ],
+      linkText: "Explore HVAC & Thermal Solutions",
+      linkTarget: "products",
+      image: "assets/images/project-ducting-lanxess-shop.jpg"
+    },
+    {
+      id: "trading",
+      code: "04",
+      title: "Trading & Strategic Commodities",
+      subtitle: "Global Supply Chain & Material Procurement",
+      badge: "GLOBAL PROCUREMENT & SOURCING",
+      tagline: "Exotic Alloys • Process Hardware • Raw Materials • International Supply Chains",
+      desc: "Connecting global industrial suppliers with certified raw materials, certified mill steel, exotic nickel alloy plates, titanium piping, valves, and specialized components for mission-critical engineering projects.",
+      pillars: [
+        "Certified Exotic Alloy Sourcing (Hastelloy C276, Super Duplex, Monel)",
+        "Heavy Flanges, Forgings, Fittings & ASME B31.3 Spools",
+        "Industrial Valves, Actuators & Instrumentation Loops",
+        "Global EPC Supply Chain Optimization & JIT Delivery",
+        "Full Mill Test Certificate (MTC) & 3.1 / 3.2 Traceability"
+      ],
+      linkText: "Enquire on Material Trading & Supply",
+      linkTarget: "contact",
+      image: "assets/images/project-metering-skid-valves.jpg"
+    }
+  ],
+
+  // Centre of Excellence on Advance Engineering Research (Thermax / CoE Innovation Model)
+  coeResearch: {
+    title: "Centre of Excellence on Advance Engineering Research",
+    tagline: "Innovation Driven. Technology Owned. Engineering Beyond Conventional Boundaries.",
+    overview: "Developing advanced engineering solutions, proprietary technologies, and patentable intellectual property that drive innovation, efficiency, and sustainable industrial transformation across multiple industries.",
+    coreCompetencies: [
+      {
+        title: "Advanced Product & Systems Engineering",
+        desc: "End-to-end multi-physics modeling, finite element stress simulation, CFD thermal aerodynamics, and proprietary subsystem architecture."
+      },
+      {
+        title: "Proprietary & Patentable Technology Development",
+        desc: "Creating high-barrier intellectual property, proprietary process skids, and novel clean-tech formulations ready for commercial scale-up."
+      },
+      {
+        title: "Research, Development & Prototyping",
+        desc: "Fully equipped engineering labs for prototype assembly, exotic metallurgy qualification, electrical skid testing, and rapid iterations."
+      },
+      {
+        title: "Engineering Design & System Integration",
+        desc: "Seamless integration across mechanical hardware, battery energy storage, SCADA PLC automation, and industrial instrumentation."
+      },
+      {
+        title: "Technology Commercialisation & Licensing",
+        desc: "Accelerating laboratory-proven concepts into commercial production packages, OEM licensing models, and turnkey industrial installations."
+      },
+      {
+        title: "Cross-Industry Technology Applications",
+        desc: "One single core technology foundation deployed across mobility, marine electrification, chemical process plants, and clean energy."
+      }
+    ],
+    industrialApplications: [
+      { name: "Sustainable Mobility & Transportation", desc: "Electric road coaches, heavy commercial vehicles, and urban bus platforms.", icon: "cog" },
+      { name: "Marine Engineering & Electrification", desc: "Clean electric boats, passenger ferries, and marine propulsion drivetrains.", icon: "factory" },
+      { name: "Energy Systems & Infrastructure", desc: "Advanced battery storage, fast-charging integration, and smart energy hubs.", icon: "shield" },
+      { name: "Industrial Engineering & Automation", desc: "High-pressure reactors, flare gas recovery (FGRU), and robotic fabrication.", icon: "flask" },
+      { name: "Emerging Technology Applications", desc: "Green hydrogen piping, carbon capture skids, and bioprocess intensification.", icon: "cog" }
+    ],
+    partnerships: [
+      { type: "Technology Development & Joint Innovation", desc: "Co-developing next-generation engineering platforms with global technology partners." },
+      { type: "OEM & Manufacturing Collaborations", desc: "Scaling commercial production through specialized tier-1 manufacturing agreements." },
+      { type: "Research & Academic Partnerships", desc: "Collaborating with premier technical institutes and metallurgical laboratories." },
+      { type: "Intellectual Property & Technology Licensing", desc: "Monetizing patent portfolios through structured cross-industry licensing." },
+      { type: "Strategic Investment & Commercialisation", desc: "Accelerating high-growth clean mobility and energy transition ventures." }
+    ]
+  },
+
+  // Corporate Advisers (Adani Governance Model)
+  advisers: [
+    {
+      name: "Senior EPC & Energy Transition Adviser",
+      role: "Strategic EPC & Global Megaprojects",
+      bio: "Over 35 years advising international energy conglomerates on mega-scale refinery, petrochemical, and renewable infrastructure investments across Asia-Pacific."
+    },
+    {
+      name: "Metallurgical & Advanced Materials Adviser",
+      role: "Exotic Alloys & ASME IX Code Standards",
+      bio: "Former Lead Materials Specialist with top classification bodies, guiding exotic nickel metallurgy, high-temperature creep resistance, and hydrogen embrittlement research."
+    },
+    {
+      name: "Sustainable Mobility & EV Systems Adviser",
+      role: "E-Mobility Architecture & Marine Propulsion",
+      bio: "Veteran automotive and marine propulsion strategist specializing in high-voltage battery architecture, electric ferry drivetrains, and telematics systems."
+    }
+  ],
     {
       name: "Managing Director & Chief EPC Officer",
       role: "Turnkey EPCC & Strategic Operations",
