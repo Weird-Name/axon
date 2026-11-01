@@ -89,14 +89,17 @@ function navigateTo(pageId, scrollTargetId = null) {
   if (mainNav) mainNav.classList.remove('open');
 
   if (history.pushState) {
-    history.replaceState(null, '', `#${pageId}`);
+    history.replaceState(null, '', `#${scrollTargetId || pageId}`);
   }
 
   if (scrollTargetId) {
+    // If the target element is inside a page view that is now active, give browser a brief tick to layout
     setTimeout(() => {
       const el = document.getElementById(scrollTargetId);
-      if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }, 80);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    }, 50);
   } else {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -248,13 +251,10 @@ function renderAdaniBusinessVerticals() {
         </div>
 
         <div style="display:flex;gap:0.85rem;flex-wrap:wrap;">
-          <button class="btn btn-primary" onclick="navigateTo('${current.linkTarget}')">
-            <span>${current.linkText}</span>
+          <a class="btn btn-primary" href="#view-contact" onclick="navigateTo('contact')">
+            <span>Connect on ${current.title}</span>
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </button>
-          <button class="btn btn-outline" onclick="openRfqModal('Business Vertical Enquiry: ${current.title}')">
-            <span>Enquire for Proposals</span>
-          </button>
+          </a>
         </div>
       </div>
 

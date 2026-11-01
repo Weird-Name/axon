@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" href="assets/images/axon-favicon.png">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- Main Stylesheet with Cache Busting -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.13">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.14">
 
   <!-- Critical Inline Light Theme Styles -->
   <style>
@@ -99,98 +99,88 @@
       <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
         <!-- 1. About Us with Adani-Style Dropdown -->
         <div class="nav-item-dropdown">
-          <button class="nav-btn active" data-page="company" onclick="navigateTo('company')">
+          <a class="nav-btn active" href="#groupVisionAnchor" data-page="company" onclick="navigateTo('company', 'groupVisionAnchor')">
             <span>ABOUT US</span>
             <svg class="nav-chevron" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+          </a>
           <div class="adani-dropdown-menu">
-            <button class="adani-dropdown-link" onclick="navigateTo('company', 'groupVisionAnchor')">
+            <a class="adani-dropdown-link" href="#groupVisionAnchor" onclick="navigateTo('company', 'groupVisionAnchor')">
               <div>
                 <span class="adani-dropdown-title">Group Vision &amp; Mission</span>
                 <span class="adani-dropdown-sub">Engineering Beyond Conventional Boundaries</span>
               </div>
-            </button>
-            <button class="adani-dropdown-link" onclick="navigateTo('company', 'leadershipAnchor')">
+            </a>
+            <a class="adani-dropdown-link" href="#leadershipAnchor" onclick="navigateTo('company', 'leadershipAnchor')">
               <div>
                 <span class="adani-dropdown-title">Leadership &amp; Governance</span>
                 <span class="adani-dropdown-sub">Executive Council &amp; Technical Officers</span>
               </div>
-            </button>
-            <button class="adani-dropdown-link" onclick="navigateTo('company', 'advisersAnchor')">
+            </a>
+            <a class="adani-dropdown-link" href="#advisersAnchor" onclick="navigateTo('company', 'advisersAnchor')">
               <div>
                 <span class="adani-dropdown-title">Advisory Council</span>
                 <span class="adani-dropdown-sub">Industry, Metallurgy &amp; Mobility Specialists</span>
               </div>
-            </button>
-            <button class="adani-dropdown-link" onclick="navigateTo('company', 'ourJourneyAnchor')">
+            </a>
+            <a class="adani-dropdown-link" href="#ourJourneyAnchor" onclick="navigateTo('company', 'ourJourneyAnchor')">
               <div>
                 <span class="adani-dropdown-title">Our Journey &amp; Milestones</span>
                 <span class="adani-dropdown-sub">Two Decades of Industrial Growth</span>
               </div>
-            </button>
+            </a>
           </div>
         </div>
 
         <!-- 2. Business Verticals with Adani-Style Dropdown -->
         <div class="nav-item-dropdown">
-          <button class="nav-btn" data-page="company" onclick="navigateTo('company', 'businessVerticalsAnchor')">
+          <a class="nav-btn" href="#businessVerticalsAnchor" data-page="company" onclick="navigateTo('company', 'businessVerticalsAnchor')">
             <span>BUSINESS VERTICALS</span>
             <svg class="nav-chevron" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </button>
+          </a>
           <div class="adani-dropdown-menu">
-            <button class="adani-dropdown-link" onclick="switchBusinessVertical(0); navigateTo('company', 'businessVerticalsAnchor');">
+            <a class="adani-dropdown-link" href="#businessVerticalsAnchor" onclick="switchBusinessVertical(0); navigateTo('company', 'businessVerticalsAnchor');">
               <div>
                 <span class="adani-dropdown-title">EPC &amp; Turnkey Industrial Plants</span>
                 <span class="adani-dropdown-sub">Process Equipment, Static Vessels &amp; 3,000 MT Steel</span>
               </div>
-            </button>
-            <button class="adani-dropdown-link" onclick="switchBusinessVertical(1); navigateTo('company', 'businessVerticalsAnchor');">
+            </a>
+            <a class="adani-dropdown-link" href="#businessVerticalsAnchor" onclick="switchBusinessVertical(1); navigateTo('company', 'businessVerticalsAnchor');">
               <div>
                 <span class="adani-dropdown-title">Sustainable Mobility</span>
                 <span class="adani-dropdown-sub">Electric Road &amp; Marine Mobility Electrification</span>
               </div>
-            </button>
-            <button class="adani-dropdown-link" onclick="switchBusinessVertical(2); navigateTo('company', 'businessVerticalsAnchor');">
+            </a>
+            <a class="adani-dropdown-link" href="#businessVerticalsAnchor" onclick="switchBusinessVertical(2); navigateTo('company', 'businessVerticalsAnchor');">
               <div>
                 <span class="adani-dropdown-title">HVAC &amp; Thermal Engineering</span>
                 <span class="adani-dropdown-sub">Industrial Air Handling, WHRU &amp; Exchangers</span>
               </div>
-            </button>
-            <button class="adani-dropdown-link" onclick="switchBusinessVertical(3); navigateTo('company', 'businessVerticalsAnchor');">
+            </a>
+            <a class="adani-dropdown-link" href="#businessVerticalsAnchor" onclick="switchBusinessVertical(3); navigateTo('company', 'businessVerticalsAnchor');">
               <div>
                 <span class="adani-dropdown-title">Trading &amp; Strategic Commodities</span>
                 <span class="adani-dropdown-sub">Exotic Alloys, Valves &amp; Global EPC Supply Chain</span>
               </div>
-            </button>
+            </a>
           </div>
         </div>
 
-        <!-- 3. Centre of Excellence on Advance Engineering Research -->
-        <button class="nav-btn" data-page="company" onclick="navigateTo('company', 'coeResearchAnchor')">
-          <span>CENTRE OF EXCELLENCE</span>
-        </button>
-
-        <!-- 4. Newsroom -->
-        <button class="nav-btn" data-page="company" onclick="navigateTo('company', 'newsroomAnchor')">
+        <!-- 3. Newsroom -->
+        <a class="nav-btn" href="#newsroomAnchor" data-page="company" onclick="navigateTo('company', 'newsroomAnchor')">
           <span>NEWSROOM</span>
-        </button>
+        </a>
 
-        <!-- 5. Careers -->
-        <button class="nav-btn" data-page="company" onclick="navigateTo('company', 'careersAnchor')">
-          <span>CAREERS</span>
-        </button>
-
-        <!-- 6. Contact Us -->
-        <button class="nav-btn" data-page="contact" onclick="navigateTo('contact')">
+        <!-- 4. Contact Us -->
+        <a class="nav-btn" href="#view-contact" data-page="contact" onclick="navigateTo('contact')">
           <span>CONTACT US</span>
-        </button>
+        </a>
       </nav>
 
       <div class="header-actions">
-        <button class="btn btn-primary btn-sm" onclick="openRfqModal('')">
-          <span>Request a Quote</span>
-          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-        </button>
+        <a class="btn btn-primary btn-sm" href="mailto:projects@axonpetro.in" style="gap:0.4rem;">
+          <span>Get In Touch</span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
       </div>
     </div>
   </header>
@@ -391,13 +381,13 @@
               Guided by our commitment to <em>"Engineering Innovation. Creating Sustainable Value,"</em> we deliver integrated engineering solutions that enhance performance, improve efficiency, and enable sustainable industrial transformation.
             </p>
             <div style="display:flex;gap:0.85rem;flex-wrap:wrap;">
-              <button class="btn btn-primary" onclick="navigateTo('company', 'businessVerticalsAnchor')">
+              <a class="btn btn-primary" href="#businessVerticalsAnchor" onclick="navigateTo('company', 'businessVerticalsAnchor')">
                 <span>Explore 4 Business Verticals</span>
                 <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-              </button>
-              <button class="btn btn-outline" onclick="navigateTo('company', 'coeResearchAnchor')">
-                <span>Centre of Excellence Research</span>
-              </button>
+              </a>
+              <a class="btn btn-outline" href="#leadershipAnchor" onclick="navigateTo('company', 'leadershipAnchor')">
+                <span>Leadership &amp; Governance</span>
+              </a>
             </div>
           </div>
           <div>
@@ -507,10 +497,10 @@
             <h2>Four Pillars of Industrial &amp; Clean-Tech Leadership</h2>
             <p>From heavy turnkey plant construction and ASME static equipment to electric road &amp; marine mobility, industrial HVAC, and global commodity sourcing.</p>
           </div>
-          <button class="btn btn-primary" onclick="openRfqModal('Axon Business Verticals Inquiry')">
-            <span>Enquire on Business Verticals</span>
+          <a class="btn btn-primary" href="#view-contact" onclick="navigateTo('contact')">
+            <span>Contact Our Verticals Desk</span>
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </button>
+          </a>
         </div>
 
         <!-- 4 Verticals Selector Tabs -->
@@ -521,116 +511,7 @@
       </div>
     </div>
 
-    <!-- ========================================================================
-         3. CENTRE OF EXCELLENCE ON ADVANCE ENGINEERING RESEARCH
-         ======================================================================== -->
-    <div class="section" id="coeResearchAnchor">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-eyebrow">TECHNOLOGY &amp; INNOVATION</span>
-          <h2>Centre of Excellence on Advance Engineering Research</h2>
-          <p class="mono" style="font-size:0.92rem;color:var(--primary);font-weight:700;margin-top:0.25rem;">
-            Innovation Driven. Technology Owned. Engineering Beyond Conventional Boundaries.
-          </p>
-          <p style="margin-top:0.65rem;">
-            Creating differentiated engineering technologies and intellectual property with scalable commercial applications across mobility, marine, energy, and process industries.
-          </p>
-        </div>
-
-        <!-- CoE Core Competencies (6 Pillars) -->
-        <div style="margin-bottom:3.5rem;">
-          <h3 style="font-size:1.35rem;margin-bottom:1.5rem;color:var(--text-900);">Core Competencies</h3>
-          <div class="grid-3-col">
-            <div class="pillar-card">
-              <div>
-                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 01</span>
-                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Advanced Product &amp; Systems Engineering</h4>
-                <p style="font-size:0.86rem;color:var(--text-600);">Multi-physics 3D modeling, finite element stress simulation, aerodynamics, and clean-sheet vehicle and vessel architectures.</p>
-              </div>
-            </div>
-            <div class="pillar-card">
-              <div>
-                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 02</span>
-                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Proprietary &amp; Patentable Technology</h4>
-                <p style="font-size:0.86rem;color:var(--text-600);">Building high-value intellectual property assets, patentable battery enclosures, and proprietary modular skid controllers.</p>
-              </div>
-            </div>
-            <div class="pillar-card">
-              <div>
-                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 03</span>
-                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Research, Development &amp; Prototyping</h4>
-                <p style="font-size:0.86rem;color:var(--text-600);">Advanced prototype fabrication bays, hardware-in-the-loop validation, and rapid technology validation before series manufacture.</p>
-              </div>
-            </div>
-            <div class="pillar-card">
-              <div>
-                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 04</span>
-                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Engineering Design &amp; System Integration</h4>
-                <p style="font-size:0.86rem;color:var(--text-600);">Cross-functional integration across mechanical structures, electrical powertrains, telematics, and automated PLC control loops.</p>
-              </div>
-            </div>
-            <div class="pillar-card">
-              <div>
-                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 05</span>
-                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Technology Commercialisation &amp; Licensing</h4>
-                <p style="font-size:0.86rem;color:var(--text-600);">Translating laboratory-proven inventions into market-ready commercial hardware and OEM technology licensing frameworks.</p>
-              </div>
-            </div>
-            <div class="pillar-card">
-              <div>
-                <span class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);">COMPETENCY 06</span>
-                <h4 style="font-size:1.12rem;margin:0.4rem 0;">Cross-Industry Technology Applications</h4>
-                <p style="font-size:0.86rem;color:var(--text-600);">One foundational engineering core leveraged horizontally across commercial mobility, marine propulsion, and heavy process plants.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Industrial Applications & Strategic Partnerships Banner -->
-        <div style="background:linear-gradient(135deg, #f0f7fd 0%, #ffffff 100%);border:1px solid #c7daf2;border-radius:20px;padding:2.5rem;box-shadow:var(--shadow-sm);margin-bottom:3.5rem;">
-          <div class="hero-grid" style="align-items:start;">
-            <div>
-              <span class="section-eyebrow">ONE FOUNDATION &bull; MULTIPLE SECTORS</span>
-              <h3 style="font-size:1.45rem;margin-bottom:0.6rem;color:var(--text-900);">Industrial Applications</h3>
-              <p style="font-size:0.9rem;color:var(--text-600);margin-bottom:1.25rem;">Deploying proprietary engineering technologies across high-impact economic sectors:</p>
-              <ul style="list-style:none;display:flex;flex-direction:column;gap:0.6rem;font-size:0.88rem;color:var(--text-700);">
-                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Sustainable Mobility &amp; Transportation:</strong> Electric road coaches, buses and passenger transport fleets</li>
-                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Marine Engineering &amp; Electrification:</strong> Electric passenger boats, ferries and marine propulsion units</li>
-                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Energy Systems &amp; Infrastructure:</strong> Battery pack integration, fast charging and microgrid power</li>
-                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Industrial Engineering &amp; Automation:</strong> Heavy ASME process skids, clean air and modular automation</li>
-                <li style="display:flex;gap:0.6rem;"><span style="color:var(--primary);font-weight:800;">&bull;</span> <strong>Emerging Technology Applications:</strong> Green hydrogen piping and next-gen exotic metallurgy</li>
-              </ul>
-            </div>
-            <div>
-              <span class="section-eyebrow" style="background:#e8f4f1 !important;color:#1c7c54 !important;border-color:#bce3d4 !important;">STRATEGIC PARTNERSHIPS</span>
-              <h3 style="font-size:1.45rem;margin-bottom:0.6rem;color:var(--text-900);">Collaborating to Accelerate Innovation</h3>
-              <p style="font-size:0.9rem;color:var(--text-600);margin-bottom:1.25rem;">Building strategic alliances to advance technology deployment and commercial growth:</p>
-              <div style="display:flex;flex-direction:column;gap:0.65rem;">
-                <div style="background:#ffffff;border:1px solid #d2e1f3;padding:0.75rem 1rem;border-radius:10px;font-size:0.85rem;">
-                  <strong style="color:var(--text-900);">Technology Development &amp; Joint Innovation</strong>
-                  <div style="color:var(--text-600);font-size:0.78rem;">Co-development programs with industry OEMs and technology creators.</div>
-                </div>
-                <div style="background:#ffffff;border:1px solid #d2e1f3;padding:0.75rem 1rem;border-radius:10px;font-size:0.85rem;">
-                  <strong style="color:var(--text-900);">OEM &amp; Manufacturing Collaborations</strong>
-                  <div style="color:var(--text-600);font-size:0.78rem;">Licensing and manufacturing execution alliances with established partners.</div>
-                </div>
-                <div style="background:#ffffff;border:1px solid #d2e1f3;padding:0.75rem 1rem;border-radius:10px;font-size:0.85rem;">
-                  <strong style="color:var(--text-900);">Research &amp; Academic Partnerships</strong>
-                  <div style="color:var(--text-600);font-size:0.78rem;">Joint metallurgical and electrification studies with top universities.</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div style="text-align:center;">
-          <button class="btn btn-primary" onclick="openRfqModal('CoE Advance Engineering Research Collaboration')">
-            <span>Propose R&amp;D Collaboration with CoE</span>
-            <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </button>
-        </div>
-      </div>
-    </div>
+        <!-- 3. Centre of Excellence on Advance Engineering Research -->
 
     <!-- ========================================================================
          4. LEADERSHIP & ADVISORY COUNCIL (ADANI GOVERNANCE STYLE)
@@ -1384,14 +1265,14 @@
             Send your P&amp;ID, equipment datasheet, or piping isometric BOQ for a 24-hour engineering turnaround.
           </p>
           <div class="mono" style="font-size:0.8rem;margin-bottom:1.15rem;color:var(--text-900);font-weight:600;line-height:1.7;">
-            <div>rfq@axonpetro.in</div>
+            <div>projects@axonpetro.in</div>
             <div>+91 98450 12345</div>
             <div>www.axonpetro.in</div>
           </div>
-          <button class="btn btn-primary btn-sm" style="width:100%;" onclick="openRfqModal('Footer RFQ Button')">
-            <span>Request a Quote Now</span>
+          <a class="btn btn-primary btn-sm" style="width:100%;" href="mailto:projects@axonpetro.in">
+            <span>Contact Our Team</span>
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-          </button>
+          </a>
         </div>
       </div>
 
@@ -1407,7 +1288,7 @@
   </footer>
 
   <!-- Scripts with Cache Busting -->
-  <script src="assets/js/data.js?v=2026.13"></script>
-  <script src="assets/js/app.js?v=2026.13"></script>
+  <script src="assets/js/data.js?v=2026.14"></script>
+  <script src="assets/js/app.js?v=2026.14"></script>
 </body>
 </html>

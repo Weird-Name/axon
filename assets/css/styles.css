@@ -255,6 +255,8 @@ img {
   position: relative;
   display: inline-flex;
   align-items: center;
+  padding-bottom: 6px;
+  margin-bottom: -6px;
 }
 
 .nav-btn {
