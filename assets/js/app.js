@@ -238,15 +238,23 @@ function renderAdaniBusinessVerticals() {
         <div class="mono" style="font-size:0.84rem;font-weight:700;color:var(--cyan);margin-bottom:1rem;">${current.tagline}</div>
         <p style="font-size:0.98rem;color:var(--text-600);margin-bottom:1.4rem;line-height:1.7;">${current.desc}</p>
         
-        <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:14px;padding:1.25rem 1.4rem;margin-bottom:1.5rem;">
-          <div style="font-weight:700;font-size:0.84rem;color:var(--text-900);margin-bottom:0.75rem;text-transform:uppercase;letter-spacing:0.04em;">Key Capabilities & Focus Areas</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.5rem;">
-            ${current.pillars.map(p => `
-              <li style="display:flex;align-items:flex-start;gap:0.6rem;font-size:0.88rem;color:var(--text-700);">
-                <span style="color:var(--primary);font-weight:800;line-height:1.4;">✓</span>
-                <span>${p}</span>
-              </li>
-            `).join('')}
+        <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:14px;padding:1.35rem 1.5rem;margin-bottom:1.5rem;">
+          <div style="font-weight:700;font-size:0.86rem;color:var(--text-900);margin-bottom:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Detailed Capabilities &amp; Strategic Solutions</div>
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+            ${current.pillars.map(p => {
+              const parts = p.split(':');
+              const heading = parts.length > 1 ? parts[0] : '';
+              const detail = parts.length > 1 ? parts.slice(1).join(':') : p;
+              return `
+                <li style="display:flex;align-items:flex-start;gap:0.7rem;font-size:0.89rem;color:var(--text-700);line-height:1.55;">
+                  <span style="color:var(--primary);font-weight:800;font-size:1rem;line-height:1.2;">✓</span>
+                  <div>
+                    ${heading ? `<strong style="color:var(--text-900);">${heading}:</strong>` : ''}
+                    <span>${detail}</span>
+                  </div>
+                </li>
+              `;
+            }).join('')}
           </ul>
         </div>
 

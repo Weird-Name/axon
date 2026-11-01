@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" href="assets/images/axon-favicon.png">
   <link rel="shortcut icon" href="favicon.ico">
   <!-- Main Stylesheet with Cache Busting -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.14">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.15">
 
   <!-- Critical Inline Light Theme Styles -->
   <style>
@@ -1128,19 +1128,19 @@
   </div>
 
   <!-- ========================================================================
-       MODAL 2: QUICK REQUEST A QUOTE (RFQ) MODAL
+       MODAL 2: QUICK ENQUIRY MODAL (NO HORIZONTAL SCROLL)
        ======================================================================== -->
   <div class="modal-backdrop" id="rfqModal" role="dialog" aria-modal="true">
-    <div class="modal-dialog" style="max-width:680px;">
+    <div class="modal-dialog" style="max-width:620px;overflow-x:hidden;">
       <div class="modal-header">
         <div>
-          <span class="mono" style="font-size:0.7rem;color:var(--primary);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">FAST-TRACK ENGINEERING QUOTE</span>
-          <h3 style="font-size:1.25rem;margin:0;">Request a Quote (RFQ) / Technical Datasheet</h3>
+          <span class="mono" style="font-size:0.7rem;color:var(--primary);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">FAST-TRACK ENGINEERING DESK</span>
+          <h3 style="font-size:1.25rem;margin:0;">Project &amp; Technology Enquiry</h3>
         </div>
         <button class="modal-close" onclick="closeRfqModal()" aria-label="Close">&times;</button>
       </div>
-      <div class="modal-body">
-        <form onsubmit="handleRfqSubmit(event, 'Quick RFQ Modal')">
+      <div class="modal-body" style="overflow-x:hidden;">
+        <form onsubmit="handleRfqSubmit(event, 'Quick Enquiry Modal')">
           <div class="form-grid">
             <div class="form-group">
               <label>Your Name *</label>
@@ -1159,28 +1159,32 @@
               <input type="tel" name="phone" class="form-control" required placeholder="+91 / +60 / +65 ...">
             </div>
             <div class="form-group">
-              <label>Equipment / Service *</label>
-              <select id="modalRfqProduct" name="productInterest" class="form-control rfq-product-select"></select>
+              <label>Vertical / Area of Interest *</label>
+              <select name="productInterest" class="form-control">
+                <option value="EPC & Turnkey Plants">EPC &amp; Turnkey Plants</option>
+                <option value="Sustainable Mobility">Sustainable Mobility (EV & Marine)</option>
+                <option value="HVAC & Thermal Engineering">HVAC &amp; Thermal Engineering</option>
+                <option value="Trading & Commodities">Trading &amp; Strategic Commodities</option>
+                <option value="Other Technology Enquiry">Other Technology Enquiry</option>
+              </select>
             </div>
             <div class="form-group">
-              <label>Material Grade</label>
+              <label>Target Timeline</label>
               <select name="materialGrade" class="form-control">
-                <option value="SS 316L / 304L">SS 316L / 304L</option>
-                <option value="Carbon Steel (A106 Gr.B / SA 516 Gr.70 / S355JR)">Carbon Steel (A106 Gr.B / SA 516 Gr.70 / S355JR)</option>
-                <option value="Super Duplex UNS S32760">Super Duplex UNS S32760</option>
-                <option value="Hastelloy C276 (UNS N10276) / Monel 400">Hastelloy C276 (UNS N10276) / Monel 400</option>
-                <option value="Per Client P&ID / Datasheet">Per Client P&amp;ID / Datasheet</option>
+                <option value="Immediate (1–3 Months)">Immediate (1–3 Months)</option>
+                <option value="Medium Term (3–6 Months)">Medium Term (3–6 Months)</option>
+                <option value="Long Term Strategic Alliance">Long Term Strategic Alliance</option>
               </select>
             </div>
             <div class="form-group full">
-              <label>Project Specifications &amp; Delivery Location *</label>
-              <textarea id="modalRfqNotes" name="notes" rows="3" class="form-control" required placeholder="Specify capacity, pressure/temperature rating, quantity, and site location..."></textarea>
+              <label>Project Overview &amp; Specifications *</label>
+              <textarea id="modalRfqNotes" name="notes" rows="3" class="form-control" required placeholder="Please describe your requirements, specifications, or inquiry details..."></textarea>
             </div>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-top:1.5rem;">
-            <button type="submit" class="btn btn-primary">Submit RFQ Now</button>
-            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/919845012345?text=Hello%20Axonpetro%2C%20I%20want%20to%20request%20an%20urgent%20quote." target="_blank" rel="noopener">
-              Or Send via WhatsApp
+            <button type="submit" class="btn btn-primary">Send Enquiry</button>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/919845012345?text=Hello%20Axonpetro%2C%20I%20want%20to%20discuss%20a%20project%20inquiry." target="_blank" rel="noopener">
+              Or Message via WhatsApp
             </a>
           </div>
         </form>
@@ -1288,7 +1292,7 @@
   </footer>
 
   <!-- Scripts with Cache Busting -->
-  <script src="assets/js/data.js?v=2026.14"></script>
-  <script src="assets/js/app.js?v=2026.14"></script>
+  <script src="assets/js/data.js?v=2026.15"></script>
+  <script src="assets/js/app.js?v=2026.15"></script>
 </body>
 </html>

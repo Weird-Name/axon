@@ -1176,13 +1176,13 @@ const DEFAULT_AXON_DATA = {
       subtitle: "Engineering, Procurement, Construction & Commissioning",
       badge: "CORE INDUSTRIAL CAPABILITY",
       tagline: "Heavy Engineering • Process Equipment • Structural Steel • Plant Construction",
-      desc: "Delivering world-class turnkey engineering, heavy static equipment fabrication, ASME Sec VIII reactors, high-pressure process skids, and multi-thousand-ton structural steelwork with zero-LTI track record across international petrochemical, energy, and oleochemical plants.",
+      desc: "Delivering world-class turnkey engineering, heavy static equipment fabrication, ASME Sec VIII reactors, high-pressure process skids, and multi-thousand-ton structural steelwork with a proven zero-LTI track record across international petrochemical, energy, and oleochemical plants.",
       pillars: [
-        "Turnkey Plant Engineering & EPCC Execution",
-        "ASME Sec VIII Chemical Reactors & Distillation Columns",
-        "Modular Process & Custody-Transfer Metering Skids",
-        "3,000+ MT Heavy Structural Steel Erection",
-        "Exotic Alloy Piping (Super Duplex, Hastelloy, Monel)"
+        "Turnkey Plant Engineering & EPCC Execution: Complete concept-to-commissioning plant realization, modular scheduling, and multi-disciplinary site management.",
+        "ASME Sec VIII Chemical Reactors & Distillation Columns: High-pressure limpet-coil reactors, vacuum fractionating towers, and specialized alloy vessels.",
+        "Modular Process & Custody-Transfer Metering Skids: Integrated plug-and-play skid modules with Coriolis meters, PLC SCADA automation, and golden-pass weld traceability.",
+        "3,000+ MT Heavy Structural Steel Erection: Industrial portal frameworks, multi-story process structures, crane runways, and pipe racks with zero-LTI execution.",
+        "Exotic Alloy Metallurgy (ASME IX / AWS D1.1): Precision welding of Super Duplex UNS S32760, Monel 400 (UNS N0400), and Hastelloy C276 (UNS N10276)."
       ],
       linkText: "Explore EPC Equipment & Case Studies",
       linkTarget: "products",
@@ -1197,11 +1197,11 @@ const DEFAULT_AXON_DATA = {
       tagline: "Electric Road Mobility • Electric Marine • Battery Integration • Smart Control Systems",
       desc: "Developing next-generation mobility solutions through advanced engineering, electrification, and intelligent technologies that accelerate industrial decarbonisation and commercial clean transport.",
       pillars: [
-        "Electric Road Mobility: Electric coaches, buses and passenger transportation",
-        "Electric Marine Mobility: Electric boats, ferries and marine propulsion systems",
-        "Energy Technologies: Battery pack integration, charging and energy management",
-        "Intelligent Mobility: Telematics, remote monitoring and smart control systems",
-        "Advanced Vehicle Engineering: Aerodynamics, vehicle architecture and performance optimisation"
+        "Electric Road Mobility: Heavy electric passenger coaches, zero-emission urban transit buses, commercial delivery trucks, and high-duty electrified platforms.",
+        "Electric Marine Mobility: High-efficiency electric passenger ferries, commercial harbor boats, electric workboats, and specialized marine propulsion drivetrains.",
+        "Energy Technologies: Advanced lithium and high-density battery pack integration, active thermal management, multi-megawatt fast-charging systems, and smart microgrids.",
+        "Intelligent Mobility: Fleet telematics, remote cloud health monitoring, predictive maintenance algorithms, and integrated vehicle-to-cloud smart control loops.",
+        "Advanced Vehicle Engineering: Aerodynamic drag reduction, lightweight aluminum/composite vehicle architectures, crashworthiness, and dynamic performance optimisation."
       ],
       linkText: "Explore Sustainable Mobility Architecture",
       linkTarget: "services",
@@ -1213,14 +1213,14 @@ const DEFAULT_AXON_DATA = {
       title: "HVAC & Thermal Engineering",
       subtitle: "Industrial Climate Control & Heat Recovery",
       badge: "ENERGY EFFICIENCY & CLIMATE SYSTEMS",
-      tagline: "Industrial HVAC • Thermal Management • Heat Exchangers • Clean Air Systems",
-      desc: "Specialized industrial air handling, precision clean-room HVAC systems, heavy process ventilation, and high-efficiency thermal exchangers designed for extreme petrochemical and industrial plant environments.",
+      tagline: "District Cooling • Industrial HVAC • Heat Recovery • Energy Efficiency",
+      desc: "Specialized industrial air handling, hazardous-zone climate systems, energy-efficient district cooling networks, and high-efficiency thermal exchangers designed for extreme petrochemical, offshore, and industrial environments.",
       pillars: [
-        "Industrial Air Handling Units & Hazardous Zone HVAC Systems",
-        "TEMA Class R/C/B Shell & Tube Heat Exchangers",
-        "Waste Heat Recovery Units (WHRU) & Condensers",
-        "Large-Bore Heavy Industrial Ducting & Exhaust Stacks",
-        "Clean-Bay Environmental Air Filtration & Control"
+        "District Cooling & Energy-Efficient Central Networks: Centralized chilled-water distribution infrastructure reducing industrial power consumption and cooling footprints.",
+        "Industrial Air Handling Units & Hazardous Zone HVAC: Explosion-proof ATEX/IECEx compliant air handlers, clean-room environmental ventilation, and positive pressure units.",
+        "TEMA Class R/C/B Shell & Tube Heat Exchangers: High-temperature, high-pressure thermal exchange units engineered with HTRI ratings and zero cross-contamination.",
+        "Waste Heat Recovery Units (WHRU) & Condensers: Capturing industrial exhaust flue energy to generate secondary steam, process pre-heating, and thermal cycle optimization.",
+        "Large-Bore Heavy Ducting & Stack Fabrication: Custom heavy-gauge stainless and alloy exhaust ducting, flanged manifolds, and emission control stacks."
       ],
       linkText: "Explore HVAC & Thermal Solutions",
       linkTarget: "products",
@@ -1235,11 +1235,11 @@ const DEFAULT_AXON_DATA = {
       tagline: "Exotic Alloys • Process Hardware • Raw Materials • International Supply Chains",
       desc: "Connecting global industrial suppliers with certified raw materials, certified mill steel, exotic nickel alloy plates, titanium piping, valves, and specialized components for mission-critical engineering projects.",
       pillars: [
-        "Certified Exotic Alloy Sourcing (Hastelloy C276, Super Duplex, Monel)",
-        "Heavy Flanges, Forgings, Fittings & ASME B31.3 Spools",
-        "Industrial Valves, Actuators & Instrumentation Loops",
-        "Global EPC Supply Chain Optimization & JIT Delivery",
-        "Full Mill Test Certificate (MTC) & 3.1 / 3.2 Traceability"
+        "Certified Exotic Alloy Sourcing: Prime-mill plates, bars, and pipes in Hastelloy C276, Super Duplex S32760, Monel 400, Inconel 625, and high-purity SS 316L/317L.",
+        "Heavy Flanges, Forgings & ASME B31.3 Piping: ASME/ANSI/DIN high-pressure flanges, forged fittings, elbows, reducers, and pre-fabricated spool packages.",
+        "Industrial Valves & MOV Actuator Packages: High-pressure ball, gate, globe, check, and control valves with automated pneumatic and electric actuators.",
+        "Global EPC Supply Chain Optimization: End-to-end logistics, bonded staging yards across India, Malaysia, and Singapore, and Just-In-Time (JIT) project delivery.",
+        "100% Quality & Material Traceability: Certified EN 10204 3.1 & 3.2 Mill Test Certificates (MTC), independent laboratory verification, and XRF alloy PMI testing."
       ],
       linkText: "Enquire on Material Trading & Supply",
       linkTarget: "contact",
