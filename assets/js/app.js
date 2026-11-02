@@ -107,6 +107,20 @@ function navigateTo(pageId, scrollTargetId = null) {
   const mainNav = document.getElementById('mainNav');
   if (mainNav) mainNav.classList.remove('open');
 
+  // Collapse dropdown menus immediately when a link is clicked
+  document.querySelectorAll('.adani-dropdown-menu').forEach(menu => {
+    menu.style.display = 'none';
+  });
+  setTimeout(() => {
+    document.querySelectorAll('.adani-dropdown-menu').forEach(menu => {
+      menu.style.display = '';
+    });
+  }, 300);
+
+  if (document.activeElement && typeof document.activeElement.blur === 'function') {
+    document.activeElement.blur();
+  }
+
   if (history.pushState) {
     history.replaceState(null, '', `#${scrollTargetId || pageId}`);
   }

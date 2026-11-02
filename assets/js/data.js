@@ -1312,6 +1312,9 @@ const DEFAULT_AXON_DATA = {
       bio: "Veteran automotive and marine propulsion strategist specializing in high-voltage battery architecture, electric ferry drivetrains, and telematics systems."
     }
   ],
+
+  // Executive Leadership
+  leadership: [
     {
       name: "Managing Director & Chief EPC Officer",
       role: "Turnkey EPCC & Strategic Operations",
