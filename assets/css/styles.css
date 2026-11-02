@@ -508,8 +508,169 @@ img {
 }
 
 /* ============================================================================
-   ADANI-STYLE 4 BUSINESS VERTICALS ECOSYSTEM (MILD PALETTE)
+   DETAILED ADANI-STYLE TIMELINE & CORPORATE MILESTONES
    ============================================================================ */
+.timeline-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.25rem;
+  position: relative;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.timeline-card {
+  background: #ffffff;
+  border: 1px solid var(--surface-200);
+  border-radius: 20px;
+  padding: clamp(1.75rem, 3.5vw, 2.5rem);
+  box-shadow: 0 4px 20px -4px rgba(22, 36, 54, 0.06);
+  position: relative;
+  transition: transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s;
+  display: grid;
+  grid-template-columns: 1.25fr 0.85fr;
+  gap: 2.25rem;
+  align-items: center;
+}
+
+.timeline-card:hover {
+  transform: translateY(-3px);
+  border-color: #a9c7ed;
+  box-shadow: 0 12px 32px -6px rgba(27, 82, 153, 0.12);
+}
+
+.timeline-card-full {
+  grid-template-columns: 1fr !important;
+}
+
+.milestone-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  margin-bottom: 0.85rem;
+}
+
+.milestone-year-pill {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  font-weight: 700;
+  background: #eaf2fc;
+  color: var(--primary);
+  border: 1px solid #c7daf2;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.milestone-phase-label {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--text-500);
+  font-weight: 600;
+}
+
+.milestone-title {
+  font-size: clamp(1.35rem, 2.2vw, 1.75rem);
+  color: var(--text-900);
+  margin-bottom: 0.75rem;
+  line-height: 1.25;
+}
+
+.milestone-desc {
+  font-size: 0.95rem;
+  color: var(--text-600);
+  line-height: 1.7;
+  margin-bottom: 1.35rem;
+}
+
+.milestone-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 0.85rem;
+  margin-bottom: 1.35rem;
+  background: var(--surface-50);
+  border: 1px solid var(--surface-200);
+  border-radius: 12px;
+  padding: 1rem 1.15rem;
+}
+
+.milestone-stat {
+  display: flex;
+  flex-direction: column;
+}
+
+.milestone-stat-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-900);
+  font-family: var(--font-display);
+}
+
+.milestone-stat-lbl {
+  font-size: 0.72rem;
+  color: var(--text-500);
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0.15rem;
+}
+
+.milestone-deliverables {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.milestone-deliverable-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--text-700);
+  line-height: 1.5;
+}
+
+.milestone-deliverable-item span.chk {
+  color: var(--primary);
+  font-weight: 800;
+  font-size: 0.95rem;
+}
+
+.milestone-img-wrap {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--surface-200);
+  box-shadow: var(--shadow-sm);
+  background: #ffffff;
+}
+
+.milestone-img-wrap img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+}
+
+.milestone-img-caption {
+  padding: 0.85rem 1.1rem;
+  background: #ffffff;
+  border-top: 1px solid var(--surface-100);
+  font-size: 0.78rem;
+  color: var(--text-600);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .timeline-card {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
 .adani-verticals-nav {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
