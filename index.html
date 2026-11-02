@@ -12,10 +12,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" href="assets/images/axon-favicon.png">
+  <link rel="icon" type="image/png" href="assets/images/axon-symbol-user.png">
+  <link rel="icon" type="image/png" href="favicon.png">
   <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="assets/images/axon-symbol-user.png">
   <!-- Main Stylesheet with Cache Busting -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.15">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.17">
 
   <!-- Critical Inline Light Theme Styles -->
   <style>
@@ -89,7 +91,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <div class="brand-logo" onclick="navigateTo('company')" title="Axon Petro Engineering Pvt. Ltd. — Engineered to perform.">
-        <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd. Logo">
+        <img src="assets/images/axon-logo-user.png" alt="Axon Petro Engineering Pvt. Ltd. Logo" style="max-height:46px;width:auto;object-fit:contain;">
       </div>
 
       <button class="mobile-menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')" aria-label="Toggle Menu">
@@ -210,8 +212,8 @@
                 <span>Explore 30+ Equipment Lines</span>
                 <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
               </button>
-              <button class="btn btn-amber" onclick="openRfqModal('Turnkey EPC / Equipment RFQ')">
-                <span>Send RFQ / P&amp;ID for Quote</span>
+              <button class="btn btn-amber" onclick="openRfqModal('Turnkey EPC / Equipment Project Enquiry')">
+                <span>Send Project Enquiry</span>
                 <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
               </button>
               <a class="btn btn-ghost-light" href="wps-registry.html">
@@ -271,7 +273,7 @@
           <div class="section-header" style="margin-bottom:0;">
             <span class="section-eyebrow">PROCESS EQUIPMENT &amp; FABRICATION CATALOG</span>
             <h2>Engineered Equipment with Instant Spec Sheets &amp; RFQ</h2>
-            <p>Inspect technical datasheets, material grades, and ASME/TEMA/API design codes for every equipment type—and request a quote in one click.</p>
+            <p>Inspect technical datasheets, material grades, and ASME/TEMA/API design codes for every equipment type—and inquire directly with our engineering desk.</p>
           </div>
           <button class="btn btn-primary" onclick="navigateTo('products')">
             <span>View All 30 Equipment Types</span>
@@ -504,10 +506,91 @@
         </div>
 
         <!-- 4 Verticals Selector Tabs -->
-        <div class="adani-verticals-nav" id="adaniVerticalsNav"></div>
+        <div class="adani-verticals-nav" id="adaniVerticalsNav">
+          <button class="adani-vertical-tab active" onclick="switchBusinessVertical(0)">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">VERTICAL 01 //</div>
+            <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--text-900);line-height:1.25;margin-bottom:0.3rem;">EPC &amp; Turnkey Industrial Plants</div>
+            <div style="font-size:0.8rem;color:var(--text-500);">Engineering, Procurement, Construction &amp; Commissioning</div>
+          </button>
+          <button class="adani-vertical-tab" onclick="switchBusinessVertical(1)">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">VERTICAL 02 //</div>
+            <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--text-900);line-height:1.25;margin-bottom:0.3rem;">Sustainable Mobility</div>
+            <div style="font-size:0.8rem;color:var(--text-500);">Engineering the Future of Mobility</div>
+          </button>
+          <button class="adani-vertical-tab" onclick="switchBusinessVertical(2)">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">VERTICAL 03 //</div>
+            <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--text-900);line-height:1.25;margin-bottom:0.3rem;">HVAC &amp; Thermal Engineering</div>
+            <div style="font-size:0.8rem;color:var(--text-500);">Industrial Climate Control &amp; Heat Recovery</div>
+          </button>
+          <button class="adani-vertical-tab" onclick="switchBusinessVertical(3)">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">VERTICAL 04 //</div>
+            <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--text-900);line-height:1.25;margin-bottom:0.3rem;">Trading &amp; Strategic Commodities</div>
+            <div style="font-size:0.8rem;color:var(--text-500);">Global Supply Chain &amp; Material Procurement</div>
+          </button>
+        </div>
 
         <!-- Active Vertical Interactive Showcase Container -->
-        <div class="adani-vertical-showcase" id="adaniVerticalShowcase"></div>
+        <div class="adani-vertical-showcase" id="adaniVerticalShowcase">
+          <div style="display:grid;grid-template-columns:1.1fr 0.9fr;gap:2.5rem;align-items:center;" class="hero-grid">
+            <div>
+              <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.85rem;">
+                <span class="utility-badge" style="background:#eaf2fc;color:#1b5299;border-color:#c7daf2;">CORE INDUSTRIAL CAPABILITY</span>
+                <span class="mono" style="font-size:0.76rem;color:var(--text-500);font-weight:600;">AXON ECOSYSTEM VERTICAL 01</span>
+              </div>
+              <h2 style="font-size:clamp(1.75rem,3vw,2.35rem);margin-bottom:0.75rem;color:var(--text-900);">EPC &amp; Turnkey Industrial Plants</h2>
+              <div class="mono" style="font-size:0.84rem;font-weight:700;color:var(--cyan);margin-bottom:1rem;">Heavy Engineering &bull; Process Equipment &bull; Structural Steel &bull; Plant Construction</div>
+              <p style="font-size:0.98rem;color:var(--text-600);margin-bottom:1.4rem;line-height:1.7;">
+                Delivering world-class turnkey engineering, heavy static equipment fabrication, ASME Sec VIII reactors, high-pressure process skids, and multi-thousand-ton structural steelwork with a proven zero-LTI track record across international petrochemical, energy, and oleochemical plants.
+              </p>
+              
+              <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:14px;padding:1.35rem 1.5rem;margin-bottom:1.5rem;">
+                <div style="font-weight:700;font-size:0.86rem;color:var(--text-900);margin-bottom:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Detailed Capabilities &amp; Strategic Solutions</div>
+                <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
+                  <li style="display:flex;align-items:flex-start;gap:0.7rem;font-size:0.89rem;color:var(--text-700);line-height:1.55;">
+                    <span style="color:var(--primary);font-weight:800;font-size:1rem;line-height:1.2;">✓</span>
+                    <div><strong style="color:var(--text-900);">Turnkey Plant Engineering &amp; EPCC Execution:</strong> Complete concept-to-commissioning plant realization, modular scheduling, and multi-disciplinary site management.</div>
+                  </li>
+                  <li style="display:flex;align-items:flex-start;gap:0.7rem;font-size:0.89rem;color:var(--text-700);line-height:1.55;">
+                    <span style="color:var(--primary);font-weight:800;font-size:1rem;line-height:1.2;">✓</span>
+                    <div><strong style="color:var(--text-900);">ASME Sec VIII Chemical Reactors &amp; Distillation Columns:</strong> High-pressure limpet-coil reactors, vacuum fractionating towers, and specialized alloy vessels.</div>
+                  </li>
+                  <li style="display:flex;align-items:flex-start;gap:0.7rem;font-size:0.89rem;color:var(--text-700);line-height:1.55;">
+                    <span style="color:var(--primary);font-weight:800;font-size:1rem;line-height:1.2;">✓</span>
+                    <div><strong style="color:var(--text-900);">Modular Process &amp; Custody-Transfer Metering Skids:</strong> Integrated plug-and-play skid modules with Coriolis meters, PLC SCADA automation, and golden-pass weld traceability.</div>
+                  </li>
+                  <li style="display:flex;align-items:flex-start;gap:0.7rem;font-size:0.89rem;color:var(--text-700);line-height:1.55;">
+                    <span style="color:var(--primary);font-weight:800;font-size:1rem;line-height:1.2;">✓</span>
+                    <div><strong style="color:var(--text-900);">3,000+ MT Heavy Structural Steel Erection:</strong> Industrial portal frameworks, multi-story process structures, crane runways, and pipe racks with zero-LTI execution.</div>
+                  </li>
+                  <li style="display:flex;align-items:flex-start;gap:0.7rem;font-size:0.89rem;color:var(--text-700);line-height:1.55;">
+                    <span style="color:var(--primary);font-weight:800;font-size:1rem;line-height:1.2;">✓</span>
+                    <div><strong style="color:var(--text-900);">Exotic Alloy Metallurgy (ASME IX / AWS D1.1):</strong> Precision welding of Super Duplex UNS S32760, Monel 400 (UNS N0400), and Hastelloy C276 (UNS N10276).</div>
+                  </li>
+                </ul>
+              </div>
+
+              <div style="display:flex;gap:0.85rem;flex-wrap:wrap;">
+                <a class="btn btn-primary" href="#view-contact" onclick="navigateTo('contact')">
+                  <span>Connect on EPC &amp; Turnkey Industrial Plants</span>
+                  <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <div>
+              <div style="border-radius:18px;overflow:hidden;border:1px solid var(--surface-200);box-shadow:var(--shadow-md);background:#ffffff;">
+                <img src="assets/images/project-turnkey-emery-main.jpg" alt="EPC &amp; Turnkey Industrial Plants" style="width:100%;height:380px;object-fit:cover;">
+                <div style="padding:1.25rem;background:#ffffff;border-top:1px solid var(--surface-100);display:flex;justify-content:space-between;align-items:center;">
+                  <div>
+                    <div style="font-weight:700;font-size:0.9rem;color:var(--text-900);">Axon Petro Engineering Pvt. Ltd.</div>
+                    <div style="font-size:0.76rem;color:var(--text-500);">Engineering Beyond Conventional Boundaries</div>
+                  </div>
+                  <img src="assets/images/axon-symbol-user.png" alt="Axon Emblem" style="height:34px;width:34px;object-fit:contain;">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -619,6 +702,146 @@
           <p>Stay updated on new business verticals, technological milestones from our Centre of Excellence, and corporate announcements.</p>
         </div>
         <div class="grid-3-col" id="newsMediaGrid"></div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         7. TECHNOLOGY & INNOVATION
+         ======================================================================== -->
+    <div class="section section-alt" id="techInnovationAnchor">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">TECHNOLOGY &amp; INNOVATION</span>
+          <h2>Innovation Driven. Technology Owned.</h2>
+          <p>Creating differentiated engineering technologies and intellectual property with scalable commercial applications.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;margin-bottom:2.5rem;">
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 01 //</div>
+            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Proprietary Technology Development</h3>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Continuous engineering of original process architectures, heat transfer innovations, and specialized clean-tech industrial equipment.</p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 02 //</div>
+            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Patents &amp; Intellectual Property</h3>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Aggressive protection and filing of patentable industrial designs, electrification schematics, and proprietary process flow cycles.</p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 03 //</div>
+            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Advanced Engineering Research</h3>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">CFD fluid simulation, FEA structural stress calculations, and empirical pilot testing in extreme pressure and temperature domains.</p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 04 //</div>
+            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Prototyping &amp; Technology Validation</h3>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Rapid physical prototyping, hardware-in-the-loop validation, and factory acceptance test trials before commercial deployment.</p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+            <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 05 //</div>
+            <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Technology Licensing &amp; Commercialisation</h3>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Structured commercial licensing models allowing regional OEMs and plant operators to adopt Axon-owned technology frameworks.</p>
+          </div>
+        </div>
+
+        <div style="background:linear-gradient(135deg,#eaf2fc 0%,#f0f7fe 100%);border:1px solid #c7daf2;border-radius:16px;padding:1.35rem 1.75rem;display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;">
+          <div style="font-weight:700;font-size:0.95rem;color:#1b5299;">Our Strategic Objective:</div>
+          <div style="font-size:0.92rem;color:var(--text-800);line-height:1.5;">Build a robust global portfolio of proprietary and patented technologies with scalable applications across heavy industry, clean mobility, and energy infrastructure.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         8. INDUSTRIAL APPLICATIONS
+         ======================================================================== -->
+    <div class="section" id="industrialApplicationsAnchor">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">CROSS-INDUSTRY APPLICATION SECTORS</span>
+          <h2>One Technology Foundation. Multiple Applications.</h2>
+          <p>Leveraging advanced engineering and proprietary technologies across diverse high-impact sectors.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));gap:1.25rem;">
+          <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:16px;padding:1.5rem;text-align:center;">
+            <div style="width:48px;height:48px;border-radius:12px;background:#eaf2fc;color:#1b5299;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-weight:800;font-size:1.25rem;">⚡</div>
+            <h3 style="font-size:1.05rem;margin-bottom:0.35rem;color:var(--text-900);">Sustainable Mobility &amp; Transportation</h3>
+            <p style="font-size:0.82rem;color:var(--text-600);line-height:1.5;">Electric commercial buses, coaches, heavy trucks, and intelligent fleet electrification.</p>
+          </div>
+
+          <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:16px;padding:1.5rem;text-align:center;">
+            <div style="width:48px;height:48px;border-radius:12px;background:#eaf2fc;color:#1b5299;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-weight:800;font-size:1.25rem;">⚓</div>
+            <h3 style="font-size:1.05rem;margin-bottom:0.35rem;color:var(--text-900);">Marine Engineering &amp; Electrification</h3>
+            <p style="font-size:0.82rem;color:var(--text-600);line-height:1.5;">Zero-emission electric passenger ferries, marine propulsion drives, and port charging systems.</p>
+          </div>
+
+          <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:16px;padding:1.5rem;text-align:center;">
+            <div style="width:48px;height:48px;border-radius:12px;background:#eaf2fc;color:#1b5299;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-weight:800;font-size:1.25rem;">🔋</div>
+            <h3 style="font-size:1.05rem;margin-bottom:0.35rem;color:var(--text-900);">Energy Systems &amp; Infrastructure</h3>
+            <p style="font-size:0.82rem;color:var(--text-600);line-height:1.5;">High-density battery energy storage (BESS), thermal management, and microgrid power conditioning.</p>
+          </div>
+
+          <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:16px;padding:1.5rem;text-align:center;">
+            <div style="width:48px;height:48px;border-radius:12px;background:#eaf2fc;color:#1b5299;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-weight:800;font-size:1.25rem;">🏭</div>
+            <h3 style="font-size:1.05rem;margin-bottom:0.35rem;color:var(--text-900);">Industrial Engineering &amp; Automation</h3>
+            <p style="font-size:0.82rem;color:var(--text-600);line-height:1.5;">High-pressure chemical reactors, automated metering skids, and SCADA-integrated process lines.</p>
+          </div>
+
+          <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:16px;padding:1.5rem;text-align:center;">
+            <div style="width:48px;height:48px;border-radius:12px;background:#eaf2fc;color:#1b5299;display:flex;align-items:center;justify-content:center;margin:0 auto 1rem;font-weight:800;font-size:1.25rem;">🚀</div>
+            <h3 style="font-size:1.05rem;margin-bottom:0.35rem;color:var(--text-900);">Emerging Technology Applications</h3>
+            <p style="font-size:0.82rem;color:var(--text-600);line-height:1.5;">Cross-industry technology translation into aerospace tooling, advanced metallurgy, and green hydrogen.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ========================================================================
+         9. STRATEGIC PARTNERSHIPS
+         ======================================================================== -->
+    <div class="section section-sand" id="strategicPartnershipsAnchor">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-eyebrow">COLLABORATION &amp; ALLIANCES</span>
+          <h2>Strategic Partnerships: Collaborating to Accelerate Innovation</h2>
+          <p>Building strategic alliances to advance technology development, industrial deployment and commercial growth.</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(280px, 1fr));gap:1.5rem;">
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="font-size:1.5rem;margin-bottom:0.6rem;color:var(--primary);">🤝</div>
+            <h3 style="font-size:1.15rem;margin-bottom:0.4rem;color:var(--text-900);">Technology Development &amp; Joint Innovation</h3>
+            <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;">Co-developing next-generation industrial machinery, thermal systems, and electric mobility platforms with leading technical partners.</p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="font-size:1.5rem;margin-bottom:0.6rem;color:var(--primary);">🏭</div>
+            <h3 style="font-size:1.15rem;margin-bottom:0.4rem;color:var(--text-900);">OEM &amp; Manufacturing Collaborations</h3>
+            <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;">Contract engineering, precision fabrication, and assembly lines supporting global original equipment manufacturers.</p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="font-size:1.5rem;margin-bottom:0.6rem;color:var(--primary);">🎓</div>
+            <h3 style="font-size:1.15rem;margin-bottom:0.4rem;color:var(--text-900);">Research &amp; Academic Partnerships</h3>
+            <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;">Collaborating with top engineering universities and research councils on battery electrochemistry and aerodynamics.</p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="font-size:1.5rem;margin-bottom:0.6rem;color:var(--primary);">📜</div>
+            <h3 style="font-size:1.15rem;margin-bottom:0.4rem;color:var(--text-900);">Intellectual Property &amp; Technology Licensing</h3>
+            <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;">Offering proprietary designs, patent licenses, and complete engineering packages for commercial deployment globally.</p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="font-size:1.5rem;margin-bottom:0.6rem;color:var(--primary);">📈</div>
+            <h3 style="font-size:1.15rem;margin-bottom:0.4rem;color:var(--text-900);">Strategic Investment &amp; Commercialisation</h3>
+            <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;">Partnering with visionary institutional investors and industrial syndicates to scale clean-tech infrastructure projects.</p>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -1034,7 +1257,7 @@
       <div class="container">
         <div class="contact-split-grid">
           <div style="background:#fff;border:1px solid var(--surface-200);border-radius:20px;padding:clamp(1.25rem, 3.5vw, 2.5rem);box-shadow:var(--shadow-sm);">
-            <h2 style="font-size:1.6rem;margin-bottom:0.4rem;">Submit an Industrial RFQ / Project Enquiry</h2>
+            <h2 style="font-size:1.6rem;margin-bottom:0.4rem;">Submit an Industrial Project or Technology Enquiry</h2>
             <p style="color:var(--text-600);font-size:0.9rem;margin-bottom:1.5rem;">All enquiries are logged directly into our engineering queue and answered within 24 business hours.</p>
             <form onsubmit="handleRfqSubmit(event, 'Contact Page Full RFQ')">
               <div class="form-grid">
@@ -1075,7 +1298,7 @@
               </div>
               <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
                 <button type="submit" class="btn btn-primary">
-                  <span>Submit Official RFQ</span>
+                  <span>Submit Project Enquiry</span>
                   <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
                 </button>
                 <a class="btn btn-whatsapp" href="https://wa.me/919845012345?text=Hello%20Axon%20Petro%20Engineering%2C%20I%20would%20like%20to%20discuss%20an%20RFQ%20for%20our%20upcoming%20project." target="_blank" rel="noopener">
@@ -1087,13 +1310,13 @@
 
           <div style="display:flex;flex-direction:column;gap:1.25rem;">
             <div style="background:linear-gradient(180deg,#f0f9ff 0%,#f8fafc 100%);color:var(--text-900);padding:2rem;border-radius:20px;border:1px solid #bae6fd;box-shadow:var(--shadow-xs);">
-              <span class="utility-badge" style="background:#ffffff;">DIRECT RFQ &amp; ESTIMATING DESK</span>
+              <span class="utility-badge" style="background:#ffffff;">DIRECT ENGINEERING &amp; PROJECT DESK</span>
               <h3 style="color:var(--text-900);font-size:1.35rem;margin:0.85rem 0 0.4rem;">Axon Petro Engineering Pvt. Ltd.</h3>
               <p style="font-size:0.88rem;color:var(--text-600);margin-bottom:1.25rem;">In Strategic Joint Venture with <strong style="color:var(--text-900);">Greengold Energy (JV)</strong></p>
               <div style="font-size:0.88rem;display:flex;flex-direction:column;gap:0.85rem;color:var(--text-700);">
                 <div><strong style="color:var(--text-900);">Corporate &amp; Engineering Hub (India):</strong><br>Industrial Estate, Bengaluru, Karnataka, India</div>
                 <div><strong style="color:var(--text-900);">Regional EPC Execution Hubs:</strong><br>Pasir Gudang (Johor, Malaysia) &bull; Kuala Langsat (Selangor, Malaysia) &bull; Jurong Island (Singapore)</div>
-                <div><strong style="color:var(--text-900);">RFQ &amp; Tenders:</strong> rfq@axonpetro.in</div>
+                <div><strong style="color:var(--text-900);">Enquiries &amp; Tenders:</strong> rfq@axonpetro.in</div>
                 <div><strong style="color:var(--text-900);">General Projects:</strong> projects@axonpetro.in</div>
                 <div><strong style="color:var(--text-900);">Direct Phone / WhatsApp:</strong> <span class="mono">+91 98450 12345</span></div>
               </div>
@@ -1118,12 +1341,12 @@
        MODAL 1: DEDICATED PRODUCT DETAIL & SPEC SHEET MODAL
        ======================================================================== -->
   <div class="modal-backdrop" id="productDetailModal" role="dialog" aria-modal="true">
-    <div class="modal-dialog">
+    <div class="modal-dialog" style="max-width:680px;overflow-x:hidden;">
       <div class="modal-header">
         <h3 id="modalProductTitle" style="font-size:1.15rem;margin:0;">Equipment Specification Sheet</h3>
         <button class="modal-close" onclick="closeProductModal()" aria-label="Close">&times;</button>
       </div>
-      <div class="modal-body" id="modalProductBody"></div>
+      <div class="modal-body" id="modalProductBody" style="overflow-x:hidden;"></div>
     </div>
   </div>
 
@@ -1160,7 +1383,7 @@
             </div>
             <div class="form-group">
               <label>Vertical / Area of Interest *</label>
-              <select name="productInterest" class="form-control">
+              <select name="productInterest" class="form-control" id="modalRfqProduct">
                 <option value="EPC & Turnkey Plants">EPC &amp; Turnkey Plants</option>
                 <option value="Sustainable Mobility">Sustainable Mobility (EV & Marine)</option>
                 <option value="HVAC & Thermal Engineering">HVAC &amp; Thermal Engineering</option>
@@ -1182,7 +1405,7 @@
             </div>
           </div>
           <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-top:1.5rem;">
-            <button type="submit" class="btn btn-primary">Send Enquiry</button>
+            <button type="submit" class="btn btn-primary">Send Project Enquiry</button>
             <a class="btn btn-whatsapp btn-sm" href="https://wa.me/919845012345?text=Hello%20Axonpetro%2C%20I%20want%20to%20discuss%20a%20project%20inquiry." target="_blank" rel="noopener">
               Or Message via WhatsApp
             </a>
@@ -1228,7 +1451,7 @@
       <div class="footer-grid">
         <div>
           <div style="background:#fff;border:1px solid var(--surface-200);display:inline-block;padding:0.45rem 0.75rem;border-radius:10px;margin-bottom:1rem;">
-            <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Logo" style="height:42px;width:auto;">
+            <img src="assets/images/axon-logo-user.png" alt="Axon Petro Engineering Logo" style="height:42px;width:auto;object-fit:contain;">
           </div>
           <p style="font-size:0.86rem;color:var(--text-600);margin-bottom:1rem;">
             <strong style="color:var(--text-900);">Axon Petro Engineering Pvt. Ltd.</strong> — <em>Engineered to perform.</em><br>
@@ -1264,7 +1487,7 @@
         </div>
 
         <div>
-          <div class="footer-title">Fast-Track RFQ Desk</div>
+          <div class="footer-title">Fast-Track Project Desk</div>
           <p style="font-size:0.85rem;margin-bottom:0.85rem;">
             Send your P&amp;ID, equipment datasheet, or piping isometric BOQ for a 24-hour engineering turnaround.
           </p>
@@ -1292,7 +1515,7 @@
   </footer>
 
   <!-- Scripts with Cache Busting -->
-  <script src="assets/js/data.js?v=2026.15"></script>
-  <script src="assets/js/app.js?v=2026.15"></script>
+  <script src="assets/js/data.js?v=2026.17"></script>
+  <script src="assets/js/app.js?v=2026.17"></script>
 </body>
 </html>

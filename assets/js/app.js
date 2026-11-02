@@ -3,7 +3,7 @@
 // Main Interactive Application Controller, Router, WPS Explorer & Editable CMS
 // ============================================================================
 
-const STORAGE_KEY = 'AXONPETRO_CMS_DATA_V6';
+const STORAGE_KEY = 'AXONPETRO_CMS_DATA_V7';
 const LEADS_KEY = 'AXONPETRO_LEADS_V2';
 
 let appData = loadAppData();
@@ -25,7 +25,8 @@ function loadAppData() {
     const saved = localStorage.getItem(STORAGE_KEY);
     if (saved) {
       const parsed = JSON.parse(saved);
-      if (parsed && parsed.products && parsed.products.length >= 30) {
+      // Validate that the cached object has the modern business verticals structure
+      if (parsed && parsed.products && parsed.products.length >= 30 && parsed.businessVerticals && parsed.businessVerticals.length >= 4) {
         return parsed;
       }
     }
@@ -33,6 +34,11 @@ function loadAppData() {
     console.warn('Could not load saved CMS data:', e);
   }
   return JSON.parse(JSON.stringify(DEFAULT_AXON_DATA));
+}
+
+// Ensure businessVerticals is always present
+if (!appData.businessVerticals || appData.businessVerticals.length < 4) {
+  appData.businessVerticals = JSON.parse(JSON.stringify(DEFAULT_AXON_DATA.businessVerticals));
 }
 
 function saveAppData() {
@@ -73,6 +79,19 @@ function navigateTo(pageId, scrollTargetId = null) {
     window.location.href = 'admin.html';
     return;
   }
+
+  // Handle anchor targets or direct section IDs
+  const knownAnchors = [
+    'groupVisionAnchor', 'businessVerticalsAnchor', 'leadershipAnchor',
+    'advisersAnchor', 'ourJourneyAnchor', 'newsroomAnchor',
+    'techInnovationAnchor', 'industrialApplicationsAnchor',
+    'strategicPartnershipsAnchor', 'commitmentAnchor'
+  ];
+  if (knownAnchors.includes(pageId) || (document.getElementById(pageId) && !['home','company','products','services','rnd','infra-hse','contact'].includes(pageId))) {
+    scrollTargetId = pageId;
+    pageId = 'company';
+  }
+
   const validPages = ['home', 'company', 'products', 'services', 'rnd', 'infra-hse', 'contact'];
   if (!validPages.includes(pageId)) pageId = 'company';
   activePage = pageId;
@@ -99,7 +118,7 @@ function navigateTo(pageId, scrollTargetId = null) {
       if (el) {
         el.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
-    }, 50);
+    }, 60);
   } else {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }
@@ -216,7 +235,10 @@ let activeVerticalIndex = 0;
 function renderAdaniBusinessVerticals() {
   const navEl = document.getElementById('adaniVerticalsNav');
   const showcaseEl = document.getElementById('adaniVerticalShowcase');
-  if (!navEl || !showcaseEl || !appData.businessVerticals) return;
+  if (!navEl || !showcaseEl) return;
+  if (!appData.businessVerticals || appData.businessVerticals.length < 4) {
+    appData.businessVerticals = JSON.parse(JSON.stringify(DEFAULT_AXON_DATA.businessVerticals));
+  }
 
   navEl.innerHTML = appData.businessVerticals.map((v, idx) => `
     <button class="adani-vertical-tab ${idx === activeVerticalIndex ? 'active' : ''}" onclick="switchBusinessVertical(${idx})">
@@ -240,8 +262,8 @@ function renderAdaniBusinessVerticals() {
         
         <div style="background:var(--surface-50);border:1px solid var(--surface-200);border-radius:14px;padding:1.35rem 1.5rem;margin-bottom:1.5rem;">
           <div style="font-weight:700;font-size:0.86rem;color:var(--text-900);margin-bottom:0.85rem;text-transform:uppercase;letter-spacing:0.04em;">Detailed Capabilities &amp; Strategic Solutions</div>
-          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;">
-            ${current.pillars.map(p => {
+          <ul style="list-style:none;display:flex;flex-direction:column;gap:0.75rem;padding:0;margin:0;">
+            ${(current.pillars || []).map(p => {
               const parts = p.split(':');
               const heading = parts.length > 1 ? parts[0] : '';
               const detail = parts.length > 1 ? parts.slice(1).join(':') : p;
@@ -274,7 +296,7 @@ function renderAdaniBusinessVerticals() {
               <div style="font-weight:700;font-size:0.9rem;color:var(--text-900);">Axon Petro Engineering Pvt. Ltd.</div>
               <div style="font-size:0.76rem;color:var(--text-500);">Engineering Beyond Conventional Boundaries</div>
             </div>
-            <img src="assets/images/axon-favicon.png" alt="Axon Emblem" style="height:34px;width:34px;">
+            <img src="assets/images/axon-symbol-user.png" alt="Axon Emblem" style="height:34px;width:34px;object-fit:contain;">
           </div>
         </div>
       </div>
@@ -316,7 +338,7 @@ function createProductCardHtml(p) {
             <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg> Spec Sheet
           </button>
           <button class="btn btn-primary btn-sm" onclick="openRfqModal('${p.name} (${p.code})')">
-            Request Quote
+            Enquire Now
           </button>
         </div>
       </div>
@@ -446,12 +468,12 @@ function openProductModal(productId) {
 
         <div style="display:flex;flex-wrap:wrap;gap:0.75rem;margin-top:1.5rem;">
           <button class="btn btn-primary" onclick="closeProductModal(); openRfqModal('${p.name} (${p.code})')">
-            Request a Quote (RFQ) →
+            Submit Project Enquiry &rarr;
           </button>
           <button class="btn btn-outline" onclick="printProductSpecSheet('${p.id}')">
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg> Print / Save Spec Brochure (PDF)
           </button>
-          <a class="btn btn-whatsapp" href="https://wa.me/${appData.company.whatsapp}?text=${encodeURIComponent('Hello Axonpetro Engineering, I would like a quote and technical datasheet for ' + p.name + ' (' + p.code + ').')}" target="_blank" rel="noopener">
+          <a class="btn btn-whatsapp" href="https://wa.me/${appData.company.whatsapp}?text=${encodeURIComponent('Hello Axonpetro Engineering, I would like technical details and specifications for ' + p.name + ' (' + p.code + ').')}" target="_blank" rel="noopener">
             Enquire on WhatsApp
           </a>
         </div>
