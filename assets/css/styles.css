@@ -495,6 +495,18 @@ img {
   border-bottom: 1px solid #d2e1f3;
 }
 
+.adani-about-hero {
+  position: relative;
+  background:
+    radial-gradient(circle at 85% 20%, rgba(27, 82, 153, 0.50) 0%, transparent 55%),
+    radial-gradient(circle at 15% 80%, rgba(31, 122, 140, 0.40) 0%, transparent 55%),
+    linear-gradient(135deg, #162436 0%, #1b3a5b 50%, #1b5299 100%);
+  color: #ffffff;
+  padding: 4.5rem 0 4rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 4px 20px rgba(22, 36, 54, 0.08);
+}
+
 /* ============================================================================
    ADANI-STYLE 4 BUSINESS VERTICALS ECOSYSTEM (MILD PALETTE)
    ============================================================================ */

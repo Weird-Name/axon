@@ -71,38 +71,43 @@ function saveLead(lead) {
 // NAVIGATION & ROUTING
 // ============================================================================
 function navigateTo(pageId, scrollTargetId = null) {
-  if (pageId === 'wps-registry.html' || pageId === 'wps') {
-    window.location.href = 'wps-registry.html';
+  const pageMap = {
+    'home': 'index.html',
+    'company': 'about.html',
+    'about': 'about.html',
+    'verticals': 'business-verticals.html',
+    'business-verticals': 'business-verticals.html',
+    'technology': 'technology.html',
+    'rnd': 'technology.html',
+    'news': 'newsroom.html',
+    'newsroom': 'newsroom.html',
+    'contact': 'contact.html',
+    'wps': 'wps-registry.html',
+    'wps-registry.html': 'wps-registry.html',
+    'admin': 'admin.html',
+    'admin.html': 'admin.html'
+  };
+
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+
+  if (pageMap[pageId]) {
+    const targetFile = pageMap[pageId];
+    if (currentPath !== targetFile) {
+      window.location.href = targetFile + (scrollTargetId ? '#' + scrollTargetId : '');
+      return;
+    }
+  }
+
+  // Handle anchor targets or direct section IDs on the current page
+  const targetElementId = scrollTargetId || pageId;
+  const el = document.getElementById(targetElementId);
+  if (el) {
+    el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    if (history.pushState) {
+      history.replaceState(null, '', '#' + targetElementId);
+    }
     return;
   }
-  if (pageId === 'admin' || pageId === 'admin.html') {
-    window.location.href = 'admin.html';
-    return;
-  }
-
-  // Handle anchor targets or direct section IDs
-  const knownAnchors = [
-    'groupVisionAnchor', 'businessVerticalsAnchor', 'leadershipAnchor',
-    'advisersAnchor', 'ourJourneyAnchor', 'newsroomAnchor',
-    'techInnovationAnchor', 'industrialApplicationsAnchor',
-    'strategicPartnershipsAnchor', 'commitmentAnchor'
-  ];
-  if (knownAnchors.includes(pageId) || (document.getElementById(pageId) && !['home','company','products','services','rnd','infra-hse','contact'].includes(pageId))) {
-    scrollTargetId = pageId;
-    pageId = 'company';
-  }
-
-  const validPages = ['home', 'company', 'products', 'services', 'rnd', 'infra-hse', 'contact'];
-  if (!validPages.includes(pageId)) pageId = 'company';
-  activePage = pageId;
-
-  document.querySelectorAll('.page-view').forEach(sec => {
-    sec.classList.toggle('active', sec.id === `view-${pageId}`);
-  });
-
-  document.querySelectorAll('.nav-btn').forEach(btn => {
-    btn.classList.toggle('active', btn.dataset.page === pageId);
-  });
 
   const mainNav = document.getElementById('mainNav');
   if (mainNav) mainNav.classList.remove('open');
@@ -119,22 +124,6 @@ function navigateTo(pageId, scrollTargetId = null) {
 
   if (document.activeElement && typeof document.activeElement.blur === 'function') {
     document.activeElement.blur();
-  }
-
-  if (history.pushState) {
-    history.replaceState(null, '', `#${scrollTargetId || pageId}`);
-  }
-
-  if (scrollTargetId) {
-    // If the target element is inside a page view that is now active, give browser a brief tick to layout
-    setTimeout(() => {
-      const el = document.getElementById(scrollTargetId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 60);
-  } else {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
 
@@ -295,7 +284,7 @@ function renderAdaniBusinessVerticals() {
         </div>
 
         <div style="display:flex;gap:0.85rem;flex-wrap:wrap;">
-          <a class="btn btn-primary" href="#view-contact" onclick="navigateTo('contact')">
+          <a class="btn btn-primary" href="contact.html">
             <span>Connect on ${current.title}</span>
             <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </a>
