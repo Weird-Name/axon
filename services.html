@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology &amp; Engineering Services | Axon Petro Engineering</title>
+  <meta name="description" content="End-to-end engineering and technology development services: Concept, Design (ISO 26262/FMEA), Prototyping, Validation, Homologation (ECE R-100), Series Production, and 15-Year Aftersales.">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/axon-emblem-favicon.png?v=2026.23">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=2026.23">
+  <link rel="shortcut icon" href="favicon.ico?v=2026.23">
+  <link rel="apple-touch-icon" href="assets/images/axon-emblem-favicon.png?v=2026.23">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.23">
+
+  <style>
+    svg { flex-shrink: 0; vertical-align: middle; }
+    .svg-icon { width: 15px; height: 15px; stroke: currentColor; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; fill: none; flex-shrink: 0; }
+    .top-utility-bar { background: #f8fafc; color: #475569; font-size: 0.76rem; height: 40px; display: flex; align-items: center; border-bottom: 1px solid #e2e8f0; }
+    .top-utility-inner { display: flex; justify-content: space-between; align-items: center; width: 100%; gap: 1rem; white-space: nowrap; overflow: hidden; }
+    .utility-left, .utility-right { display: flex; align-items: center; gap: 1.15rem; white-space: nowrap; }
+    .utility-divider { width: 1px; height: 12px; background: #cbd5e1; display: inline-block; }
+    .utility-badge { display: inline-flex; align-items: center; gap: 0.4rem; background: #e0f2fe; color: #0369a1; border: 1px solid #bae6fd; padding: 0.15rem 0.65rem; border-radius: 9999px; font-family: 'JetBrains Mono', monospace; font-weight: 600; font-size: 0.68rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .utility-link { display: inline-flex; align-items: center; gap: 0.4rem; color: #475569; font-weight: 500; background: none; border: none; cursor: pointer; font-size: 0.76rem; font-family: inherit; padding: 0; text-decoration: none; transition: color 0.2s; }
+    .utility-link:hover { color: #1b5299; }
+    .utility-link.accent { color: #1b5299; font-weight: 600; }
+
+    /* Elinta-Style High-Tech Interactive Showcase */
+    .elinta-showcase-box {
+      background: #0b1320;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 24px;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 340px 1fr;
+      box-shadow: 0 20px 50px -10px rgba(11, 19, 32, 0.45);
+      margin-bottom: 3.5rem;
+    }
+
+    @media (max-width: 900px) {
+      .elinta-showcase-box {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .elinta-stages-list {
+      background: #0f1a2e;
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+      padding: 1.75rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .elinta-stage-btn {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      width: 100%;
+      text-align: left;
+      background: transparent;
+      border: 1px solid transparent;
+      border-radius: 12px;
+      padding: 0.85rem 1.15rem;
+      color: #94a3b8;
+      font-size: 1.05rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      font-family: inherit;
+    }
+
+    .elinta-stage-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .elinta-stage-btn.active {
+      color: #38bdf8;
+      background: rgba(56, 189, 248, 0.12);
+      border-color: rgba(56, 189, 248, 0.35);
+      font-weight: 700;
+      box-shadow: 0 4px 14px rgba(56, 189, 248, 0.15);
+    }
+
+    .elinta-stage-num {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      opacity: 0.75;
+      min-width: 20px;
+    }
+
+    .elinta-stage-content {
+      padding: clamp(2rem, 3.5vw, 3rem);
+      color: #ffffff;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      background:
+        radial-gradient(circle at 90% 10%, rgba(56, 189, 248, 0.15) 0%, transparent 50%),
+        linear-gradient(180deg, #0b1320 0%, #0d1726 100%);
+    }
+
+    .elinta-content-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #38bdf8;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 0.75rem;
+    }
+
+    .elinta-content-title {
+      font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+      font-weight: 800;
+      color: #ffffff;
+      margin-bottom: 0.5rem;
+      line-height: 1.25;
+    }
+
+    .elinta-content-sub {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      margin-bottom: 1.25rem;
+      line-height: 1.5;
+    }
+
+    .elinta-content-desc {
+      font-size: 1.02rem;
+      color: #e2e8f0;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .elinta-content-delivs {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.75rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.65rem;
+    }
+
+    .elinta-deliv-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+      font-size: 0.92rem;
+      color: #cbd5e1;
+      line-height: 1.5;
+    }
+
+    .elinta-deliv-item .dot {
+      color: #38bdf8;
+      font-weight: bold;
+      font-size: 1.1rem;
+      line-height: 1;
+    }
+
+    .elinta-chip {
+      display: inline-flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.08);
+      color: #cbd5e1;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 9999px;
+      padding: 0.2rem 0.75rem;
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+    }
+  </style>
+</head>
+<body>
+  <!-- Top Utility Bar -->
+  <div class="top-utility-bar">
+    <div class="container top-utility-inner">
+      <div class="utility-left">
+        <span class="utility-badge">ASME IX.2010 &amp; AWS D1.1 CERTIFIED</span>
+        <span class="utility-hide-sm">Strategic Alliance: <strong style="color:#0f172a;">Greengold Energy (JV)</strong></span>
+        <span class="utility-divider utility-hide-md"></span>
+        <span class="utility-hide-md" style="color:#64748b;">India &bull; Malaysia &bull; Singapore</span>
+      </div>
+      <div class="utility-right">
+        <a href="mailto:projects@axonpetro.in" class="utility-link">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span>projects@axonpetro.in</span>
+        </a>
+        <span class="utility-divider utility-hide-sm"></span>
+        <a href="tel:+919845012345" class="utility-link utility-hide-sm">
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span class="mono">+91 98450 12345</span>
+        </a>
+        <span class="utility-divider utility-hide-md"></span>
+        <a href="wps-registry.html" class="utility-link accent utility-hide-md">
+          <span>WPS Registry (26)</span>
+          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand-logo" href="index.html" title="Axon Petro Engineering Pvt. Ltd. — Engineered to perform.">
+        <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd. Logo" style="height:44px;width:auto;object-fit:contain;">
+      </a>
+
+      <button class="mobile-menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')" aria-label="Toggle Menu">
+        <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+        <!-- 1. About Us Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-btn " href="about.html">
+            <span>ABOUT US</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="adani-dropdown-menu">
+            <a class="adani-dropdown-link" href="about.html#groupVisionAnchor">
+              <div>
+                <span class="adani-dropdown-title">Group Vision &amp; Mission</span>
+                <span class="adani-dropdown-sub">Engineering Beyond Conventional Boundaries</span>
+              </div>
+            </a>
+            <a class="adani-dropdown-link" href="about.html#leadershipAnchor">
+              <div>
+                <span class="adani-dropdown-title">Leadership &amp; Governance</span>
+                <span class="adani-dropdown-sub">Executive Council &amp; Technical Officers</span>
+              </div>
+            </a>
+            <a class="adani-dropdown-link" href="about.html#ourJourneyAnchor">
+              <div>
+                <span class="adani-dropdown-title">Our Journey &amp; Milestones</span>
+                <span class="adani-dropdown-sub">Two Decades of Industrial Growth</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 2. Business Verticals Dropdown -->
+        <div class="nav-item-dropdown">
+          <a class="nav-btn " href="business-verticals.html">
+            <span>BUSINESS VERTICALS</span>
+            <svg class="nav-chevron" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+          <div class="adani-dropdown-menu">
+            <a class="adani-dropdown-link" href="epc-turnkey.html">
+              <div>
+                <span class="adani-dropdown-title">EPC &amp; Turnkey Industrial Plants</span>
+                <span class="adani-dropdown-sub">Process Equipment, Static Vessels &amp; 3,000 MT Steel</span>
+              </div>
+            </a>
+            <a class="adani-dropdown-link" href="sustainable-mobility.html">
+              <div>
+                <span class="adani-dropdown-title">Sustainable Mobility</span>
+                <span class="adani-dropdown-sub">Electric Road &amp; Marine Mobility Electrification</span>
+              </div>
+            </a>
+            <a class="adani-dropdown-link" href="hvac-thermal.html">
+              <div>
+                <span class="adani-dropdown-title">HVAC &amp; Thermal Engineering</span>
+                <span class="adani-dropdown-sub">Industrial Air Handling, WHRU &amp; Exchangers</span>
+              </div>
+            </a>
+            <a class="adani-dropdown-link" href="trading-commodities.html">
+              <div>
+                <span class="adani-dropdown-title">Trading &amp; Strategic Commodities</span>
+                <span class="adani-dropdown-sub">Exotic Alloys, Valves &amp; Global EPC Supply Chain</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- 3. Technology & Services -->
+        <a class="nav-btn active" href="technology.html">
+          <span>TECHNOLOGY &amp; SERVICES</span>
+        </a>
+
+        <!-- 4. Newsroom -->
+        <a class="nav-btn " href="newsroom.html">
+          <span>NEWSROOM</span>
+        </a>
+
+        <!-- 5. Contact Us -->
+        <a class="nav-btn " href="contact.html">
+          <span>CONTACT US</span>
+        </a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-primary btn-sm" href="contact.html" style="gap:0.4rem;">
+          <span>Get In Touch</span>
+          <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Page Header Hero Banner -->
+  <div class="adani-about-hero">
+    <div class="container">
+      <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap;">
+        <span class="utility-badge" style="background:rgba(255,255,255,0.18);color:#ffffff;border-color:rgba(255,255,255,0.25);">CENTRE OF EXCELLENCE</span>
+        <span class="mono" style="font-size:0.8rem;color:#c5d9f2;">FULL-CYCLE ENGINEERING SERVICES &amp; IP</span>
+      </div>
+      <h1 class="page-hero-title">
+        Technology &amp; Engineering Services
+      </h1>
+      <p style="font-size:clamp(1rem,1.8vw,1.2rem);color:#e2ecf8;max-width:850px;line-height:1.65;margin-bottom:1.75rem;">
+        Complete end-to-end engineering, prototyping, functional safety validation, and series production lifecycle—transforming innovative concepts into certified industrial systems.
+      </p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+        <button class="btn btn-primary" onclick="openRfqModal('Engineering Services Collaboration')" style="background:#ffffff;color:#1b5299;font-weight:700;box-shadow:none;">
+          <span>Initiate Engineering Project</span>
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </button>
+        <a class="btn btn-outline" href="#lifecycleAnchor" style="color:#ffffff;border-color:rgba(255,255,255,0.4);">
+          <span>Explore 7 Engineering Stages</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- 7-Stage Engineering Services Lifecycle Section -->
+  <div class="section" id="lifecycleAnchor" style="padding-top:3.5rem;">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-eyebrow">ELINTA-INSPIRED FULL-CYCLE LIFECYCLE</span>
+        <h2>End-to-End Engineering &amp; Technology Stages</h2>
+        <p>From initial concept calculations to 15-year guaranteed aftersales support—how we bring high-performance systems to market.</p>
+      </div>
+
+      <!-- Interactive High-Tech Showcase Box -->
+      <div class="elinta-showcase-box">
+        <div class="elinta-stages-list">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:#64748b;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.75rem;padding-left:0.5rem;">
+            DEVELOPMENT LIFECYCLE
+          </div>
+        <button class="elinta-stage-btn active" onclick="switchElintaStage(0)" id="elintaBtn0">
+          <span class="elinta-stage-num">01</span>
+          <span class="elinta-stage-name">Concept Stage</span>
+        </button>
+        <button class="elinta-stage-btn " onclick="switchElintaStage(1)" id="elintaBtn1">
+          <span class="elinta-stage-num">02</span>
+          <span class="elinta-stage-name">Design Stage</span>
+        </button>
+        <button class="elinta-stage-btn " onclick="switchElintaStage(2)" id="elintaBtn2">
+          <span class="elinta-stage-num">03</span>
+          <span class="elinta-stage-name">Prototyping Stage</span>
+        </button>
+        <button class="elinta-stage-btn " onclick="switchElintaStage(3)" id="elintaBtn3">
+          <span class="elinta-stage-num">04</span>
+          <span class="elinta-stage-name">Validation Stage</span>
+        </button>
+        <button class="elinta-stage-btn " onclick="switchElintaStage(4)" id="elintaBtn4">
+          <span class="elinta-stage-num">05</span>
+          <span class="elinta-stage-name">Homologation Stage</span>
+        </button>
+        <button class="elinta-stage-btn " onclick="switchElintaStage(5)" id="elintaBtn5">
+          <span class="elinta-stage-num">06</span>
+          <span class="elinta-stage-name">Series Production</span>
+        </button>
+        <button class="elinta-stage-btn " onclick="switchElintaStage(6)" id="elintaBtn6">
+          <span class="elinta-stage-num">07</span>
+          <span class="elinta-stage-name">Aftersales & Lifecycle Support</span>
+        </button>
+        </div>
+
+        <div class="elinta-stage-content" id="elintaContentBox">
+          <!-- Dynamic JS Populated Stage Content -->
+        </div>
+      </div>
+
+      <!-- Comprehensive 7-Stage Detailed Cards -->
+      <div class="section-header" style="margin-top:2rem;">
+        <span class="section-eyebrow">DETAILED STAGE SPECIFICATIONS</span>
+        <h2>Comprehensive Technical Breakdown Across All 7 Stages</h2>
+        <p>In-depth deliverables, applied international codes, and verification protocols for every engineering phase.</p>
+      </div>
+
+      <div class="timeline-container" style="margin-bottom:4rem;">
+      <!-- Stage 01: Concept Stage -->
+      <article class="timeline-card" id="stage-concept">
+        <div>
+          <div class="milestone-badge-row">
+            <span class="milestone-year-pill">STAGE 01 // 07</span>
+            <span class="milestone-phase-label">CONCEPT STAGE</span>
+          </div>
+          <h3 class="milestone-title">Concept Stage: Requirements Definition, Calculations & Performance Estimations</h3>
+          <p class="milestone-desc">During the concept stage of a new product or system, we help identify key features and technical requirements, providing multi-physics calculations, powertrain sizing, and performance estimations to de-risk investment before detailed engineering.</p>
+          
+          <div style="margin:1rem 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="elinta-chip">Duty Cycle Analysis</span> <span class="elinta-chip">Power & Torque Sizing</span> <span class="elinta-chip">3D Space-Claim</span> <span class="elinta-chip">TCO Feasibility</span>
+          </div>
+
+          <ul class="milestone-deliverables">
+            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Identification of client operating envelopes, duty cycles, and payload/speed requirements.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Multi-physics preliminary calculations, power-to-weight optimization, and range/energy estimations.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Powertrain component sizing: motor continuous/peak torque, inverter DC voltage, and battery kWh capacity.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Vehicle packaging space-claim benchmarking and preliminary 3D CAD envelope integration.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Total Cost of Ownership (TCO) modeling and initial feasibility risk matrix.</li>
+          </ul>
+        </div>
+
+        <div class="milestone-img-wrap">
+          <img src="assets/images/project-turnkey-cad-1.jpg" alt="Concept Stage">
+          <div class="milestone-img-caption">
+            <span>Concept Stage Technical Execution</span>
+            <span class="mono" style="font-weight:700;color:var(--primary);">STAGE 01</span>
+          </div>
+        </div>
+      </article>
+      <!-- Stage 02: Design Stage -->
+      <article class="timeline-card" id="stage-design">
+        <div>
+          <div class="milestone-badge-row">
+            <span class="milestone-year-pill">STAGE 02 // 07</span>
+            <span class="milestone-phase-label">DESIGN STAGE</span>
+          </div>
+          <h3 class="milestone-title">Design Stage: Automotive Standards, Functional Safety, Cybersecurity & Multi-Physics CAD</h3>
+          <p class="milestone-desc">Conducted using established automotive and industrial engineering standards. We integrate FMEA risk mitigation, ISO 26262 functional safety up to ASIL D, and ISO 21434 automotive cybersecurity from the very first CAD sketch and electrical schematic.</p>
+          
+          <div style="margin:1rem 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="elinta-chip">ISO 26262 (ASIL D)</span> <span class="elinta-chip">ISO 21434 Cybersecurity</span> <span class="elinta-chip">DFMEA / PFMEA</span> <span class="elinta-chip">3D CAD / FEA / CFD</span>
+          </div>
+
+          <ul class="milestone-deliverables">
+            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> System & Design FMEA (DFMEA / PFMEA) to systematically identify and mitigate failure modes.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> ISO 26262 Functional Safety architecture: HARA, safety goals, and ASIL D hardware/software metrics.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> ISO 21434 Automotive Cybersecurity: Threat Analysis and Risk Assessment (TARA) for connected ECUs.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> High-precision 3D CAD modeling, FEA mechanical stress analysis, and CFD thermal/fluid cooling simulations.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Schematic electrical design, high-voltage wiring architecture, and PCB electronic hardware layouts.</li>
+          </ul>
+        </div>
+
+        <div class="milestone-img-wrap">
+          <img src="assets/images/project-turnkey-cad-1.jpg" alt="Design Stage">
+          <div class="milestone-img-caption">
+            <span>Design Stage Technical Execution</span>
+            <span class="mono" style="font-weight:700;color:var(--primary);">STAGE 02</span>
+          </div>
+        </div>
+      </article>
+      <!-- Stage 03: Prototyping Stage -->
+      <article class="timeline-card" id="stage-prototyping">
+        <div>
+          <div class="milestone-badge-row">
+            <span class="milestone-year-pill">STAGE 03 // 07</span>
+            <span class="milestone-phase-label">PROTOTYPING STAGE</span>
+          </div>
+          <h3 class="milestone-title">Prototyping Stage: Rapid Fabrication, Subsystem Assembly & In-House Laboratory Bench Trials</h3>
+          <p class="milestone-desc">Product prototypes are engineered, fabricated, and evaluated rapidly. Utilizing our comprehensive in-house laboratory testing bays, we evaluate performance, electrical efficiency, thermal equilibrium, and EMI/EMC parameters against target specifications.</p>
+          
+          <div style="margin:1rem 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="elinta-chip">Rapid CNC & ASME Welding</span> <span class="elinta-chip">HV Wire Harnessing</span> <span class="elinta-chip">Dyno Motor Calibration</span> <span class="elinta-chip">Pre-Compliance EMI</span>
+          </div>
+
+          <ul class="milestone-deliverables">
+            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Fast-turnaround CNC 5-axis machining, laser plate cutting, and certified ASME IX / AWS D1.1 welding.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> High-voltage wiring harness assembly, automated crimping, and custom PCB pilot manufacturing.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Battery pack pilot assembly featuring laser-welded busbars and active liquid thermal cold-plates.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> In-house test bay evaluation: dynamometer motor characterization and inverter switching efficiency curves.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Pre-compliance EMI/EMC screening to evaluate radiated emissions and signal integrity.</li>
+          </ul>
+        </div>
+
+        <div class="milestone-img-wrap">
+          <img src="assets/images/project-reactor-crayvalley.jpg" alt="Prototyping Stage">
+          <div class="milestone-img-caption">
+            <span>Prototyping Stage Technical Execution</span>
+            <span class="mono" style="font-weight:700;color:var(--primary);">STAGE 03</span>
+          </div>
+        </div>
+      </article>
+      <!-- Stage 04: Validation Stage -->
+      <article class="timeline-card" id="stage-validation">
+        <div>
+          <div class="milestone-badge-row">
+            <span class="milestone-year-pill">STAGE 04 // 07</span>
+            <span class="milestone-phase-label">VALIDATION STAGE</span>
+          </div>
+          <h3 class="milestone-title">Validation Stage: Environmental Stress, Dyno Endurance & Rigorous Standards Compliance</h3>
+          <p class="milestone-desc">Individual components, power electronics, and fully integrated vehicle powertrains undergo rigorous validation under extreme environmental stress and extended duty cycles to ensure strict compliance with international standards before tooling freeze.</p>
+          
+          <div style="margin:1rem 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="elinta-chip">-40°C to +85°C Thermal Shock</span> <span class="elinta-chip">Multi-Axis Vibration Shaker</span> <span class="elinta-chip">IP67 / IP6K9K Ingress</span> <span class="elinta-chip">HIL Fault Injection</span>
+          </div>
+
+          <ul class="milestone-deliverables">
+            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Thermal chamber stress testing: cyclic thermal shock from -40°C to +85°C and high-humidity endurance.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Multi-axis shaker table vibration and mechanical shock simulating 1,000,000+ km of rugged commercial usage.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> High-voltage electrical safety testing: dielectric withstand breakdown, isolation monitoring, and IP67/IP6K9K ingress protection.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Full-load dynamometer endurance runs verifying continuous torque, thermal saturation, and regenerative braking.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Hardware-in-the-Loop (HIL) automated fault injection, short-circuit protection, and fail-safe recovery validation.</li>
+          </ul>
+        </div>
+
+        <div class="milestone-img-wrap">
+          <img src="assets/images/project-ducting-lanxess-shop.jpg" alt="Validation Stage">
+          <div class="milestone-img-caption">
+            <span>Validation Stage Technical Execution</span>
+            <span class="mono" style="font-weight:700;color:var(--primary);">STAGE 04</span>
+          </div>
+        </div>
+      </article>
+      <!-- Stage 05: Homologation Stage -->
+      <article class="timeline-card" id="stage-homologation">
+        <div>
+          <div class="milestone-badge-row">
+            <span class="milestone-year-pill">STAGE 05 // 07</span>
+            <span class="milestone-phase-label">HOMOLOGATION STAGE</span>
+          </div>
+          <h3 class="milestone-title">Homologation Stage: UN/ECE Type Approval, Regulatory Compliance & Vehicle Certification</h3>
+          <p class="milestone-desc">In close collaboration with accredited international technical services and regulatory authorities, we provide end-to-end homologation support including UN ECE R-100, ECE R-85, and ECE R-10 certifications alongside complete vehicle integration sign-off.</p>
+          
+          <div style="margin:1rem 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="elinta-chip">ECE R-100 (EV Safety)</span> <span class="elinta-chip">ECE R-85 (Net Power)</span> <span class="elinta-chip">ECE R-10 (EMC)</span> <span class="elinta-chip">TÜV / ARAI Homologation</span>
+          </div>
+
+          <ul class="milestone-deliverables">
+            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> UN ECE R-100 Type Approval: Complete electrical powertrain safety, isolation resistance, and REESS battery compliance.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> UN ECE R-85 Certification: Official net power and 30-minute maximum continuous power rating verification.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> UN ECE R-10 EMC Type Approval: Comprehensive electromagnetic compatibility testing in accredited anechoic chambers.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Preparation of exhaustive regulatory documentation dossiers, test reports, and technical descriptions.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Direct liaison with certification authorities (TÜV, UTAC, IDIADA, ARAI) through official Certificate of Conformity (CoC).</li>
+          </ul>
+        </div>
+
+        <div class="milestone-img-wrap">
+          <img src="assets/images/project-metering-skid-valves.jpg" alt="Homologation Stage">
+          <div class="milestone-img-caption">
+            <span>Homologation Stage Technical Execution</span>
+            <span class="mono" style="font-weight:700;color:var(--primary);">STAGE 05</span>
+          </div>
+        </div>
+      </article>
+      <!-- Stage 06: Series Production -->
+      <article class="timeline-card" id="stage-production">
+        <div>
+          <div class="milestone-badge-row">
+            <span class="milestone-year-pill">STAGE 06 // 07</span>
+            <span class="milestone-phase-label">SERIES PRODUCTION</span>
+          </div>
+          <h3 class="milestone-title">Series Production: Robotized Assembly Bays, IATF 16949 Quality & 100% End-of-Line Testing</h3>
+          <p class="milestone-desc">Leveraging decades of industrial manufacturing experience, we operate advanced robotized and semi-automated assembly bays designed for high-volume automotive and industrial equipment production under strict IATF 16949 and ISO 9001 frameworks.</p>
+          
+          <div style="margin:1rem 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="elinta-chip">IATF 16949 Automotive</span> <span class="elinta-chip">ISO 9001:2015</span> <span class="elinta-chip">100% Automated EOL</span> <span class="elinta-chip">2D DataMatrix Traceability</span>
+          </div>
+
+          <ul class="milestone-deliverables">
+            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Advanced automated assembly lines with robotic laser welding and precision torque-angle fastening.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> IATF 16949 and ISO 9001 quality management with Statistical Process Control (SPC) across all stations.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> 100% automated End-of-Line (EOL) testing: electrical flash, isolation resistance, and dynamic calibration.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Complete component traceability with 2D DataMatrix serialization linking every unit to a digital birth history.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Scalable contract manufacturing, bonded logistics, and Just-In-Time (JIT) line-side delivery.</li>
+          </ul>
+        </div>
+
+        <div class="milestone-img-wrap">
+          <img src="assets/images/project-turnkey-emery-main.jpg" alt="Series Production">
+          <div class="milestone-img-caption">
+            <span>Series Production Technical Execution</span>
+            <span class="mono" style="font-weight:700;color:var(--primary);">STAGE 06</span>
+          </div>
+        </div>
+      </article>
+      <!-- Stage 07: Aftersales & Lifecycle Support -->
+      <article class="timeline-card" id="stage-aftersales">
+        <div>
+          <div class="milestone-badge-row">
+            <span class="milestone-year-pill">STAGE 07 // 07</span>
+            <span class="milestone-phase-label">AFTERSALES & LIFECYCLE SUPPORT</span>
+          </div>
+          <h3 class="milestone-title">Aftersales & Lifecycle Support: 15+ Years Guaranteed Support, IoT Fleet Telematics & Field Engineering</h3>
+          <p class="milestone-desc">Our commitment extends across the full commercial life of your system. We guarantee comprehensive customer and technical support, spare parts availability, remote telematics monitoring, and field engineering service for at least 15 years after design release.</p>
+          
+          <div style="margin:1rem 0;display:flex;gap:0.5rem;flex-wrap:wrap;">
+            <span class="elinta-chip">15-Year Spares Guarantee</span> <span class="elinta-chip">Cloud IoT Fleet Telematics</span> <span class="elinta-chip">Remote OTA Diagnostics</span> <span class="elinta-chip">On-Site Engineering Desk</span>
+          </div>
+
+          <ul class="milestone-deliverables">
+            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> 15-year contractual guarantee for spare parts availability, replacement modules, and software updates.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Real-time IoT cloud fleet telematics: continuous monitoring of battery health (SoH/SoC), motor thermals, and fault codes.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Remote over-the-air (OTA) firmware diagnostics and preventive maintenance notifications.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> On-site field service engineering dispatch across India, Malaysia, Singapore, and regional client sites.</li>
+<li class="milestone-deliverable-item"><span class="chk">&#10003;</span> Detailed technical workshop documentation, operator training modules, and dedicated diagnostic toolkits.</li>
+          </ul>
+        </div>
+
+        <div class="milestone-img-wrap">
+          <img src="assets/images/project-turnkey-cad-1.jpg" alt="Aftersales & Lifecycle Support">
+          <div class="milestone-img-caption">
+            <span>Aftersales & Lifecycle Support Technical Execution</span>
+            <span class="mono" style="font-weight:700;color:var(--primary);">STAGE 07</span>
+          </div>
+        </div>
+      </article>
+      </div>
+
+      <!-- Core Competencies Grid -->
+      <div class="section-header" style="margin-top:2rem;">
+        <span class="section-eyebrow">CENTRE OF EXCELLENCE COMPETENCIES</span>
+        <h2>Advanced Engineering &amp; Proprietary Technologies</h2>
+        <p>Developing advanced engineering solutions and proprietary technologies that drive innovation, efficiency, and sustainable industrial transformation.</p>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;margin-bottom:3.5rem;">
+        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 01 //</div>
+          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Proprietary Technology Development</h3>
+          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Continuous engineering of original process architectures, heat transfer innovations, and specialized clean-tech industrial equipment.</p>
+        </div>
+
+        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 02 //</div>
+          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Patents &amp; Intellectual Property</h3>
+          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Aggressive protection and filing of patentable industrial designs, electrification schematics, and proprietary process flow cycles.</p>
+        </div>
+
+        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 03 //</div>
+          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Advanced Engineering Research</h3>
+          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">CFD fluid simulation, FEA structural stress calculations, and empirical pilot testing in extreme pressure and temperature domains.</p>
+        </div>
+
+        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 04 //</div>
+          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Prototyping &amp; Technology Validation</h3>
+          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Rapid physical prototyping, hardware-in-the-loop validation, and factory acceptance test trials before commercial deployment.</p>
+        </div>
+
+        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">FOCUS AREA 05 //</div>
+          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Technology Licensing &amp; Commercialisation</h3>
+          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Structured commercial licensing models allowing regional OEMs and plant operators to adopt Axon-owned technology frameworks.</p>
+        </div>
+      </div>
+
+      <!-- Commitment Callout Banner -->
+      <div style="background:linear-gradient(135deg, #162436 0%, #1b5299 100%);color:#ffffff;border-radius:24px;padding:clamp(2rem, 4vw, 3.5rem);box-shadow:var(--shadow-md);position:relative;overflow:hidden;">
+        <div style="max-width:820px;position:relative;z-index:2;">
+          <span class="utility-badge" style="background:rgba(255,255,255,0.15);color:#ffffff;border-color:rgba(255,255,255,0.25);margin-bottom:1rem;">OUR COMMITMENT</span>
+          <h2 style="font-size:clamp(1.75rem,3.2vw,2.5rem);color:#ffffff !important;margin-bottom:1rem;line-height:1.2;">
+            Engineering Innovation. Creating Sustainable Value.
+          </h2>
+          <p style="font-size:1.05rem;color:#e2ecf8;margin-bottom:1.5rem;line-height:1.7;">
+            We are committed to developing advanced technologies and delivering rigorous services across all 7 stages that enhance performance, improve efficiency, and enable sustainable industrial transformation.
+          </p>
+          <div style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,0.18);padding-top:1.5rem;">
+            <div>
+              <div style="font-family:var(--font-display);font-weight:800;font-size:1.15rem;letter-spacing:0.02em;">AXON PETRO ENGINEERING PVT. LTD.</div>
+              <div style="font-family:var(--font-mono);font-size:0.85rem;color:#9ec3ef;font-style:italic;">Engineering Beyond Conventional Boundaries.</div>
+            </div>
+            <div style="margin-left:auto;">
+              <button class="btn btn-primary" onclick="openRfqModal('Centre of Excellence Services')" style="background:#ffffff;color:#1b5299;box-shadow:none;">
+                <span>Partner With Our R&amp;D Team</span>
+                <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Interactive Switcher Script -->
+  <script>
+    const elintaStagesData = [{'id': 'concept', 'num': '01', 'name': 'Concept Stage', 'subtitle': 'Requirements Definition, Calculations & Performance Estimations', 'summary': 'During the concept stage of a new product or system, we help identify key features and technical requirements, providing multi-physics calculations, powertrain sizing, and performance estimations to de-risk investment before detailed engineering.', 'deliverables': ['Identification of client operating envelopes, duty cycles, and payload/speed requirements.', 'Multi-physics preliminary calculations, power-to-weight optimization, and range/energy estimations.', 'Powertrain component sizing: motor continuous/peak torque, inverter DC voltage, and battery kWh capacity.', 'Vehicle packaging space-claim benchmarking and preliminary 3D CAD envelope integration.', 'Total Cost of Ownership (TCO) modeling and initial feasibility risk matrix.'], 'standards': ['Duty Cycle Analysis', 'Power & Torque Sizing', '3D Space-Claim', 'TCO Feasibility'], 'image': 'assets/images/project-turnkey-cad-1.jpg'}, {'id': 'design', 'num': '02', 'name': 'Design Stage', 'subtitle': 'Automotive Standards, Functional Safety, Cybersecurity & Multi-Physics CAD', 'summary': 'Conducted using established automotive and industrial engineering standards. We integrate FMEA risk mitigation, ISO 26262 functional safety up to ASIL D, and ISO 21434 automotive cybersecurity from the very first CAD sketch and electrical schematic.', 'deliverables': ['System & Design FMEA (DFMEA / PFMEA) to systematically identify and mitigate failure modes.', 'ISO 26262 Functional Safety architecture: HARA, safety goals, and ASIL D hardware/software metrics.', 'ISO 21434 Automotive Cybersecurity: Threat Analysis and Risk Assessment (TARA) for connected ECUs.', 'High-precision 3D CAD modeling, FEA mechanical stress analysis, and CFD thermal/fluid cooling simulations.', 'Schematic electrical design, high-voltage wiring architecture, and PCB electronic hardware layouts.'], 'standards': ['ISO 26262 (ASIL D)', 'ISO 21434 Cybersecurity', 'DFMEA / PFMEA', '3D CAD / FEA / CFD'], 'image': 'assets/images/project-turnkey-cad-1.jpg'}, {'id': 'prototyping', 'num': '03', 'name': 'Prototyping Stage', 'subtitle': 'Rapid Fabrication, Subsystem Assembly & In-House Laboratory Bench Trials', 'summary': 'Product prototypes are engineered, fabricated, and evaluated rapidly. Utilizing our comprehensive in-house laboratory testing bays, we evaluate performance, electrical efficiency, thermal equilibrium, and EMI/EMC parameters against target specifications.', 'deliverables': ['Fast-turnaround CNC 5-axis machining, laser plate cutting, and certified ASME IX / AWS D1.1 welding.', 'High-voltage wiring harness assembly, automated crimping, and custom PCB pilot manufacturing.', 'Battery pack pilot assembly featuring laser-welded busbars and active liquid thermal cold-plates.', 'In-house test bay evaluation: dynamometer motor characterization and inverter switching efficiency curves.', 'Pre-compliance EMI/EMC screening to evaluate radiated emissions and signal integrity.'], 'standards': ['Rapid CNC & ASME Welding', 'HV Wire Harnessing', 'Dyno Motor Calibration', 'Pre-Compliance EMI'], 'image': 'assets/images/project-reactor-crayvalley.jpg'}, {'id': 'validation', 'num': '04', 'name': 'Validation Stage', 'subtitle': 'Environmental Stress, Dyno Endurance & Rigorous Standards Compliance', 'summary': 'Individual components, power electronics, and fully integrated vehicle powertrains undergo rigorous validation under extreme environmental stress and extended duty cycles to ensure strict compliance with international standards before tooling freeze.', 'deliverables': ['Thermal chamber stress testing: cyclic thermal shock from -40°C to +85°C and high-humidity endurance.', 'Multi-axis shaker table vibration and mechanical shock simulating 1,000,000+ km of rugged commercial usage.', 'High-voltage electrical safety testing: dielectric withstand breakdown, isolation monitoring, and IP67/IP6K9K ingress protection.', 'Full-load dynamometer endurance runs verifying continuous torque, thermal saturation, and regenerative braking.', 'Hardware-in-the-Loop (HIL) automated fault injection, short-circuit protection, and fail-safe recovery validation.'], 'standards': ['-40°C to +85°C Thermal Shock', 'Multi-Axis Vibration Shaker', 'IP67 / IP6K9K Ingress', 'HIL Fault Injection'], 'image': 'assets/images/project-ducting-lanxess-shop.jpg'}, {'id': 'homologation', 'num': '05', 'name': 'Homologation Stage', 'subtitle': 'UN/ECE Type Approval, Regulatory Compliance & Vehicle Certification', 'summary': 'In close collaboration with accredited international technical services and regulatory authorities, we provide end-to-end homologation support including UN ECE R-100, ECE R-85, and ECE R-10 certifications alongside complete vehicle integration sign-off.', 'deliverables': ['UN ECE R-100 Type Approval: Complete electrical powertrain safety, isolation resistance, and REESS battery compliance.', 'UN ECE R-85 Certification: Official net power and 30-minute maximum continuous power rating verification.', 'UN ECE R-10 EMC Type Approval: Comprehensive electromagnetic compatibility testing in accredited anechoic chambers.', 'Preparation of exhaustive regulatory documentation dossiers, test reports, and technical descriptions.', 'Direct liaison with certification authorities (TÜV, UTAC, IDIADA, ARAI) through official Certificate of Conformity (CoC).'], 'standards': ['ECE R-100 (EV Safety)', 'ECE R-85 (Net Power)', 'ECE R-10 (EMC)', 'TÜV / ARAI Homologation'], 'image': 'assets/images/project-metering-skid-valves.jpg'}, {'id': 'production', 'num': '06', 'name': 'Series Production', 'subtitle': 'Robotized Assembly Bays, IATF 16949 Quality & 100% End-of-Line Testing', 'summary': 'Leveraging decades of industrial manufacturing experience, we operate advanced robotized and semi-automated assembly bays designed for high-volume automotive and industrial equipment production under strict IATF 16949 and ISO 9001 frameworks.', 'deliverables': ['Advanced automated assembly lines with robotic laser welding and precision torque-angle fastening.', 'IATF 16949 and ISO 9001 quality management with Statistical Process Control (SPC) across all stations.', '100% automated End-of-Line (EOL) testing: electrical flash, isolation resistance, and dynamic calibration.', 'Complete component traceability with 2D DataMatrix serialization linking every unit to a digital birth history.', 'Scalable contract manufacturing, bonded logistics, and Just-In-Time (JIT) line-side delivery.'], 'standards': ['IATF 16949 Automotive', 'ISO 9001:2015', '100% Automated EOL', '2D DataMatrix Traceability'], 'image': 'assets/images/project-turnkey-emery-main.jpg'}, {'id': 'aftersales', 'num': '07', 'name': 'Aftersales & Lifecycle Support', 'subtitle': '15+ Years Guaranteed Support, IoT Fleet Telematics & Field Engineering', 'summary': 'Our commitment extends across the full commercial life of your system. We guarantee comprehensive customer and technical support, spare parts availability, remote telematics monitoring, and field engineering service for at least 15 years after design release.', 'deliverables': ['15-year contractual guarantee for spare parts availability, replacement modules, and software updates.', 'Real-time IoT cloud fleet telematics: continuous monitoring of battery health (SoH/SoC), motor thermals, and fault codes.', 'Remote over-the-air (OTA) firmware diagnostics and preventive maintenance notifications.', 'On-site field service engineering dispatch across India, Malaysia, Singapore, and regional client sites.', 'Detailed technical workshop documentation, operator training modules, and dedicated diagnostic toolkits.'], 'standards': ['15-Year Spares Guarantee', 'Cloud IoT Fleet Telematics', 'Remote OTA Diagnostics', 'On-Site Engineering Desk'], 'image': 'assets/images/project-turnkey-cad-1.jpg'}];
+
+    function switchElintaStage(idx) {
+      const data = elintaStagesData[idx];
+      if (!data) return;
+
+      // Update button active classes
+      for (let i = 0; i < elintaStagesData.length; i++) {
+        const btn = document.getElementById('elintaBtn' + i);
+        if (btn) {
+          if (i === idx) btn.classList.add('active');
+          else btn.classList.remove('active');
+        }
+      }
+
+      // Build right content
+      const box = document.getElementById('elintaContentBox');
+      if (!box) return;
+
+      const delivsHtml = data.deliverables.map(d => `<li class="elinta-deliv-item"><span class="dot">&bull;</span><span>${d}</span></li>`).join('');
+      const chipsHtml = data.standards.map(s => `<span class="elinta-chip">${s}</span>`).join(' ');
+
+      box.innerHTML = `
+        <div class="elinta-content-eyebrow">
+          <span>STAGE ${data.num} // 07</span>
+          <span style="opacity:0.4;">&bull;</span>
+          <span>${data.name.toUpperCase()}</span>
+        </div>
+        <h3 class="elinta-content-title">${data.name}</h3>
+        <div class="elinta-content-sub">${data.subtitle}</div>
+        <p class="elinta-content-desc">${data.summary}</p>
+        
+        <div style="margin-bottom:1.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+          ${chipsHtml}
+        </div>
+
+        <ul class="elinta-content-delivs">
+          ${delivsHtml}
+        </ul>
+
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+          <a class="btn btn-primary btn-sm" href="#stage-${data.id}" style="background:#38bdf8;color:#0b1320;font-weight:700;">
+            <span>Read Stage Specifications</span>
+            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <button class="btn btn-outline btn-sm" onclick="openRfqModal('Stage ${data.num}: ${data.name}')" style="color:#ffffff;border-color:rgba(255,255,255,0.3);">
+            <span>Enquire on this Stage</span>
+          </button>
+        </div>
+      `;
+    }
+
+    // Auto initialize to Stage 0
+    document.addEventListener('DOMContentLoaded', () => {
+      switchElintaStage(0);
+    });
+  </script>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col" style="max-width:340px;">
+        <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd." style="height:42px;width:auto;margin-bottom:1.15rem;filter:brightness(0) invert(1);">
+        <p style="font-size:0.86rem;color:#94a3b8;line-height:1.65;margin-bottom:1.25rem;">
+          Engineering Beyond Conventional Boundaries. Multi-disciplinary turnkey EPCC, sustainable mobility, industrial thermal engineering, and strategic trading.
+        </p>
+        <span class="utility-badge" style="background:rgba(255,255,255,0.08);color:#93c5fd;border-color:rgba(255,255,255,0.15);">ASME IX.2010 &bull; AWS D1.1</span>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">About Axon</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">Company Overview</a></li>
+          <li><a href="about.html#leadershipAnchor">Executive Council</a></li>
+          <li><a href="about.html#ourJourneyAnchor">Our Journey &amp; Milestones</a></li>
+          <li><a href="technology.html">Technology &amp; Services</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Business Verticals</h4>
+        <ul class="footer-links">
+          <li><a href="epc-turnkey.html">EPC &amp; Turnkey Industrial Plants</a></li>
+          <li><a href="sustainable-mobility.html">Sustainable Mobility (EV &amp; Marine)</a></li>
+          <li><a href="hvac-thermal.html">HVAC &amp; Thermal Engineering</a></li>
+          <li><a href="trading-commodities.html">Trading &amp; Strategic Commodities</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Contact &amp; Hubs</h4>
+        <div style="font-size:0.86rem;color:#94a3b8;line-height:1.7;">
+          <p><strong>Bengaluru:</strong> Peenya / Electronic City Phase II, Bengaluru, Karnataka, India</p>
+          <p><strong>Malaysia:</strong> Pasir Gudang (Johor) &bull; Kuala Langsat (Selangor)</p>
+          <p><strong>Singapore:</strong> Jurong Island Regional Office</p>
+          <p style="margin-top:0.5rem;"><a href="mailto:projects@axonpetro.in" style="color:#60a5fa;">projects@axonpetro.in</a> &bull; <a href="tel:+919845012345" style="color:#60a5fa;">+91 98450 12345</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Axon Petro Engineering Pvt. Ltd. All rights reserved. &bull; Engineered to perform.</p>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="admin.html" style="color:#64748b;font-size:0.75rem;">CMS Admin</a>
+        <a href="wps-registry.html" style="color:#64748b;font-size:0.75rem;">WPS Registry</a>
+        <a href="contact.html" style="color:#64748b;font-size:0.75rem;">Fast-Track RFQ Desk</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Fast-Track Enquiry Modal -->
+  <div class="modal-backdrop" id="rfqModal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width:620px;overflow-x:hidden;">
+      <div class="modal-header">
+        <div>
+          <span class="mono" style="font-size:0.7rem;color:var(--primary);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">FAST-TRACK ENGINEERING DESK</span>
+          <h3 style="font-size:1.25rem;margin:0;">Project &amp; Technology Enquiry</h3>
+        </div>
+        <button class="modal-close" onclick="closeRfqModal()" aria-label="Close">&times;</button>
+      </div>
+      <div class="modal-body" style="overflow-x:hidden;">
+        <form onsubmit="handleRfqSubmit(event, 'Quick Enquiry Modal')">
+          <div class="form-grid">
+            <div class="form-group">
+              <label>Your Name *</label>
+              <input type="text" name="fullName" class="form-control" required placeholder="Full Name">
+            </div>
+            <div class="form-group">
+              <label>Company Name *</label>
+              <input type="text" name="companyName" class="form-control" required placeholder="Company / EPC Name">
+            </div>
+            <div class="form-group">
+              <label>Official Email *</label>
+              <input type="email" name="email" class="form-control" required placeholder="name@company.com">
+            </div>
+            <div class="form-group">
+              <label>Phone / WhatsApp *</label>
+              <input type="tel" name="phone" class="form-control" required placeholder="+91 / +60 / +65 ...">
+            </div>
+            <div class="form-group">
+              <label>Vertical / Area of Interest *</label>
+              <select name="productInterest" class="form-control" id="modalRfqProduct">
+                <option value="Concept & Design Services">Concept &amp; Design Services (FMEA/ISO 26262)</option>
+                <option value="Prototyping & Validation">Prototyping &amp; Testing Validation</option>
+                <option value="Homologation (ECE R-100/R-85)">Homologation (UN ECE R-100 / R-85)</option>
+                <option value="Series Production (IATF 16949)">Series Production (IATF 16949)</option>
+                <option value="Aftersales & Telematics">Aftersales &amp; IoT Telematics</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>Target Timeline</label>
+              <select name="materialGrade" class="form-control">
+                <option value="Immediate (1–3 Months)">Immediate (1–3 Months)</option>
+                <option value="Medium Term (3–6 Months)">Medium Term (3–6 Months)</option>
+                <option value="Long Term Strategic Alliance">Long Term Strategic Alliance</option>
+              </select>
+            </div>
+            <div class="form-group full">
+              <label>Project Specifications &amp; System Scope *</label>
+              <textarea id="modalRfqNotes" name="notes" rows="3" class="form-control" required placeholder="Please describe required performance specifications, vehicle/plant architecture, and target timeline..."></textarea>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-top:1.5rem;">
+            <button type="submit" class="btn btn-primary">Send Engineering Enquiry</button>
+            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/919845012345?text=Hello%20Axon%2C%20I%20want%20to%20discuss%20Engineering%20Services." target="_blank" rel="noopener">
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              <span>WhatsApp Direct</span>
+            </a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts with Cache Busting -->
+  <script src="assets/js/data.js?v=2026.23"></script>
+  <script src="assets/js/app.js?v=2026.23"></script>
+</body>
+</html>
