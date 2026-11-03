@@ -442,16 +442,16 @@ img {
 }
 
 .btn-ghost-light {
-  background: #ffffff;
-  color: var(--text-700);
-  border: 1px solid var(--surface-200);
-  box-shadow: var(--shadow-xs);
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: none !important;
 }
 
 .btn-ghost-light:hover {
-  background: var(--surface-50);
-  border-color: var(--primary);
-  color: var(--primary);
+  background: rgba(255, 255, 255, 0.2) !important;
+  border-color: #ffffff !important;
+  color: #ffffff !important;
 }
 
 .btn-whatsapp {
