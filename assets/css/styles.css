@@ -502,9 +502,27 @@ img {
     radial-gradient(circle at 15% 80%, rgba(31, 122, 140, 0.40) 0%, transparent 55%),
     linear-gradient(135deg, #162436 0%, #1b3a5b 50%, #1b5299 100%);
   color: #ffffff;
-  padding: 4.5rem 0 4rem;
+  padding: 4.25rem 0 3.75rem;
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   box-shadow: 0 4px 20px rgba(22, 36, 54, 0.08);
+}
+
+.adani-about-hero h1,
+.page-hero-title {
+  font-size: clamp(1.4rem, 2.35vw, 2.2rem) !important;
+  color: #ffffff !important;
+  line-height: 1.25 !important;
+  max-width: 100% !important;
+  margin-bottom: 1rem !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+
+@media (min-width: 992px) {
+  .adani-about-hero h1,
+  .page-hero-title {
+    white-space: nowrap !important;
+  }
 }
 
 /* ============================================================================

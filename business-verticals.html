@@ -4,21 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Four Business Verticals | Axon Petro Engineering</title>
-  <meta name="description" content="Axon Petro Engineering Pvt. Ltd. — Turnkey EPC, Sustainable Mobility, Industrial HVAC, Strategic Commodities, and Proprietary Clean-Tech R&D.">
+  <meta name="description" content="Explore Axon's four specialized industrial sectors: EPC & Turnkey Plants, Sustainable Mobility, HVAC & Thermal Engineering, and Strategic Commodities.">
   
-  <!-- Google Fonts: Inter, Plus Jakarta Sans & JetBrains Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <!-- Crisp Axon 3D Emblem Favicon -->
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/axon-emblem-favicon.png?v=2026.22">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=2026.22">
-  <link rel="shortcut icon" href="favicon.ico?v=2026.22">
-  <link rel="apple-touch-icon" href="assets/images/axon-emblem-favicon.png?v=2026.22">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/axon-emblem-favicon.png?v=2026.23">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=2026.23">
+  <link rel="shortcut icon" href="favicon.ico?v=2026.23">
+  <link rel="apple-touch-icon" href="assets/images/axon-emblem-favicon.png?v=2026.23">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.23">
 
-  <!-- Main Stylesheet with Cache Busting -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.22">
+  <script>
+    // Seamless URL redirect for legacy query parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const v = urlParams.get('v');
+    if (v === '0') window.location.replace('epc-turnkey.html');
+    else if (v === '1') window.location.replace('sustainable-mobility.html');
+    else if (v === '2') window.location.replace('hvac-thermal.html');
+    else if (v === '3') window.location.replace('trading-commodities.html');
+  </script>
 
   <style>
     svg { flex-shrink: 0; vertical-align: middle; }
@@ -93,12 +99,6 @@
                 <span class="adani-dropdown-sub">Executive Council &amp; Technical Officers</span>
               </div>
             </a>
-            <a class="adani-dropdown-link" href="about.html#advisersAnchor">
-              <div>
-                <span class="adani-dropdown-title">Advisory Council</span>
-                <span class="adani-dropdown-sub">Industry, Metallurgy &amp; Mobility Specialists</span>
-              </div>
-            </a>
             <a class="adani-dropdown-link" href="about.html#ourJourneyAnchor">
               <div>
                 <span class="adani-dropdown-title">Our Journey &amp; Milestones</span>
@@ -115,25 +115,25 @@
             <svg class="nav-chevron" viewBox="0 0 24 24" fill="none"><path d="m6 9 6 6 6-6" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <div class="adani-dropdown-menu">
-            <a class="adani-dropdown-link" href="business-verticals.html?v=0">
+            <a class="adani-dropdown-link" href="epc-turnkey.html">
               <div>
                 <span class="adani-dropdown-title">EPC &amp; Turnkey Industrial Plants</span>
                 <span class="adani-dropdown-sub">Process Equipment, Static Vessels &amp; 3,000 MT Steel</span>
               </div>
             </a>
-            <a class="adani-dropdown-link" href="business-verticals.html?v=1">
+            <a class="adani-dropdown-link" href="sustainable-mobility.html">
               <div>
                 <span class="adani-dropdown-title">Sustainable Mobility</span>
                 <span class="adani-dropdown-sub">Electric Road &amp; Marine Mobility Electrification</span>
               </div>
             </a>
-            <a class="adani-dropdown-link" href="business-verticals.html?v=2">
+            <a class="adani-dropdown-link" href="hvac-thermal.html">
               <div>
                 <span class="adani-dropdown-title">HVAC &amp; Thermal Engineering</span>
                 <span class="adani-dropdown-sub">Industrial Air Handling, WHRU &amp; Exchangers</span>
               </div>
             </a>
-            <a class="adani-dropdown-link" href="business-verticals.html?v=3">
+            <a class="adani-dropdown-link" href="trading-commodities.html">
               <div>
                 <span class="adani-dropdown-title">Trading &amp; Strategic Commodities</span>
                 <span class="adani-dropdown-sub">Exotic Alloys, Valves &amp; Global EPC Supply Chain</span>
@@ -166,6 +166,7 @@
       </div>
     </div>
   </header>
+
   <!-- Page Header Hero Banner -->
   <div class="adani-about-hero">
     <div class="container">
@@ -173,32 +174,226 @@
         <span class="utility-badge" style="background:rgba(255,255,255,0.18);color:#ffffff;border-color:rgba(255,255,255,0.25);">AXON GROUP ECOSYSTEM</span>
         <span class="mono" style="font-size:0.8rem;color:#c5d9f2;">FOUR STRATEGIC BUSINESS VERTICALS</span>
       </div>
-      <h1 style="font-size:clamp(2.1rem,4.2vw,3.2rem);color:#ffffff !important;line-height:1.15;max-width:960px;margin-bottom:1.25rem;">
-        Four Pillars of Industrial &amp; Clean-Tech Leadership
+      <h1 class="page-hero-title">
+        Four Strategic Business Verticals
       </h1>
-      <p style="font-size:clamp(1rem,1.8vw,1.2rem);color:#e2ecf8;max-width:850px;line-height:1.65;">
-        From heavy turnkey plant construction and ASME static equipment to electric road &amp; marine mobility, industrial HVAC, and global commodity sourcing.
+      <p style="font-size:clamp(1rem,1.8vw,1.2rem);color:#e2ecf8;max-width:850px;line-height:1.65;margin-bottom:1.75rem;">
+        Axon operates four specialized industrial sectors—each with dedicated engineering divisions, international code certifications, and verified execution track records.
       </p>
+      <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
+        <a class="btn btn-primary" href="epc-turnkey.html" style="background:#ffffff;color:#1b5299;font-weight:700;box-shadow:none;">
+          <span>Explore Flagship EPC Vertical</span>
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </a>
+        <button class="btn btn-outline" onclick="openRfqModal('General Verticals Inquiry')" style="color:#ffffff;border-color:rgba(255,255,255,0.4);">
+          <span>Request Corporate Dossier</span>
+        </button>
+      </div>
     </div>
   </div>
 
-  <!-- Interactive 4 Verticals Section -->
-  <div class="section" id="businessVerticalsAnchor" style="padding-top:3rem;">
+  <div class="section" style="padding-top:3.5rem;">
     <div class="container">
-      <!-- 4 Verticals Selector Tabs -->
-      <div class="adani-verticals-nav" id="adaniVerticalsNav"></div>
+<div class="adani-verticals-nav" style="margin-bottom:2.5rem;">
+  <a class="adani-vertical-tab " href="epc-turnkey.html" style="text-decoration:none;display:block;">
+    <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">VERTICAL 01 //</div>
+    <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">EPC & Turnkey Industrial Plants</div>
+    <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Process Equipment, Static Vessels & 3,000 MT Steel</div>
+  </a>
+  <a class="adani-vertical-tab " href="sustainable-mobility.html" style="text-decoration:none;display:block;">
+    <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">VERTICAL 02 //</div>
+    <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">Sustainable Mobility</div>
+    <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Electric Road & Marine Mobility Electrification</div>
+  </a>
+  <a class="adani-vertical-tab " href="hvac-thermal.html" style="text-decoration:none;display:block;">
+    <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">VERTICAL 03 //</div>
+    <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">HVAC & Thermal Engineering</div>
+    <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Industrial Air Handling, WHRU & Exchangers</div>
+  </a>
+  <a class="adani-vertical-tab " href="trading-commodities.html" style="text-decoration:none;display:block;">
+    <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">VERTICAL 04 //</div>
+    <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">Trading & Strategic Commodities</div>
+    <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Exotic Alloys, Valves & Global EPC Supply Chain</div>
+  </a>
+</div>
 
-      <!-- Active Vertical Interactive Showcase Container -->
-      <div class="adani-vertical-showcase" id="adaniVerticalShowcase"></div>
-    </div>
-  </div>
+      <!-- 4 Dedicated Verticals Showcase Grid -->
+      <div style="display:flex;flex-direction:column;gap:2.5rem;margin-bottom:4rem;">
+        
+        <!-- Card 1: EPC -->
+        <article class="timeline-card">
+          <div>
+            <div class="milestone-badge-row">
+              <span class="milestone-year-pill">VERTICAL 01 // CORE EPC</span>
+              <span class="milestone-phase-label">HEAVY PROCESS PLANTS</span>
+            </div>
+            <h2 style="font-size:1.6rem;margin-bottom:0.75rem;color:var(--text-900);">EPC &amp; Turnkey Industrial Plants</h2>
+            <p class="milestone-desc">
+              Complete turnkey plant realization, ASME Sec VIII reactors, limpet-coil vessels, modular metering skids, and 3,000+ MT structural steelwork delivered with zero Lost Time Incidents across ASEAN and India.
+            </p>
+            <div class="milestone-metrics-grid" style="margin:1.25rem 0;">
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">3,000+ MT</span>
+                <span class="milestone-stat-lbl">Structural Steel</span>
+              </div>
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">ASME SEC VIII</span>
+                <span class="milestone-stat-lbl">Pressure Vessels</span>
+              </div>
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">ZERO LTI</span>
+                <span class="milestone-stat-lbl">Safety Milestone</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+              <a class="btn btn-primary btn-sm" href="epc-turnkey.html">
+                <span>View Dedicated EPC Page</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <button class="btn btn-outline btn-sm" onclick="openRfqModal('EPC &amp; Turnkey Plants')">Project Enquiry</button>
+            </div>
+          </div>
+          <div class="milestone-img-wrap">
+            <img src="assets/images/project-turnkey-emery-main.jpg" alt="Turnkey Sulphonation Complex">
+            <div class="milestone-img-caption">
+              <span>Emery Oleochemicals Sulphonation Complex</span>
+              <span class="mono" style="font-weight:700;color:var(--primary);">3,000 MT STEEL</span>
+            </div>
+          </div>
+        </article>
 
-  <!-- Additional Technical Qualification Strip -->
-  <div class="section section-sand">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">TECHNICAL ASSURANCE &amp; CODE COMPLIANCE</span>
-        <h2>Unified Quality Framework Across All Verticals</h2>
+        <!-- Card 2: Sustainable Mobility -->
+        <article class="timeline-card">
+          <div>
+            <div class="milestone-badge-row">
+              <span class="milestone-year-pill">VERTICAL 02 // CLEAN-TECH</span>
+              <span class="milestone-phase-label">ROAD &bull; MARINE MOBILITY</span>
+            </div>
+            <h2 style="font-size:1.6rem;margin-bottom:0.75rem;color:var(--text-900);">Sustainable Mobility &amp; Electrification</h2>
+            <p class="milestone-desc">
+              Engineering zero-emission road and marine transportation systems: heavy electric passenger coaches, commercial transit buses, clean passenger ferries, and intelligent liquid-cooled battery architectures.
+            </p>
+            <div class="milestone-metrics-grid" style="margin:1.25rem 0;">
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">HEAVY EV</span>
+                <span class="milestone-stat-lbl">Passenger Buses</span>
+              </div>
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">CLEAN FERRY</span>
+                <span class="milestone-stat-lbl">Marine Powertrains</span>
+              </div>
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">CLOUD IOT</span>
+                <span class="milestone-stat-lbl">Fleet Telematics</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+              <a class="btn btn-primary btn-sm" href="sustainable-mobility.html">
+                <span>View Dedicated Mobility Page</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <button class="btn btn-outline btn-sm" onclick="openRfqModal('Sustainable Mobility')">Mobility Enquiry</button>
+            </div>
+          </div>
+          <div class="milestone-img-wrap">
+            <img src="assets/images/project-turnkey-cad-1.jpg" alt="Electric Powertrain CAD Model">
+            <div class="milestone-img-caption">
+              <span>RTIC Advance Engineering Digital Twin</span>
+              <span class="mono" style="font-weight:700;color:var(--primary);">CLEAN-TECH R&amp;D</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3: HVAC & Thermal -->
+        <article class="timeline-card">
+          <div>
+            <div class="milestone-badge-row">
+              <span class="milestone-year-pill">VERTICAL 03 // THERMAL</span>
+              <span class="milestone-phase-label">ATEX HVAC &bull; EXCHANGERS</span>
+            </div>
+            <h2 style="font-size:1.6rem;margin-bottom:0.75rem;color:var(--text-900);">HVAC &amp; Thermal Engineering Systems</h2>
+            <p class="milestone-desc">
+              Specialized industrial climate systems, explosion-proof ATEX Zone 1/2 air handling units, district cooling networks, and TEMA Class R/C/B heat exchangers with flue gas waste heat recovery (WHRU).
+            </p>
+            <div class="milestone-metrics-grid" style="margin:1.25rem 0;">
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">ATEX ZONE 1</span>
+                <span class="milestone-stat-lbl">Explosion Proof</span>
+              </div>
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">TEMA R/C/B</span>
+                <span class="milestone-stat-lbl">Shell &amp; Tube</span>
+              </div>
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">WHRU</span>
+                <span class="milestone-stat-lbl">Heat Recovery</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+              <a class="btn btn-primary btn-sm" href="hvac-thermal.html">
+                <span>View Dedicated HVAC Page</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <button class="btn btn-outline btn-sm" onclick="openRfqModal('HVAC &amp; Thermal Engineering')">Thermal Enquiry</button>
+            </div>
+          </div>
+          <div class="milestone-img-wrap">
+            <img src="assets/images/project-ducting-lanxess-shop.jpg" alt="Stainless Steel Ducting">
+            <div class="milestone-img-caption">
+              <span>Heavy Stainless Ducting &amp; Thermal Manifolds</span>
+              <span class="mono" style="font-weight:700;color:var(--primary);">SS 316L / CORROSION SHIELD</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4: Trading & Commodities -->
+        <article class="timeline-card">
+          <div>
+            <div class="milestone-badge-row">
+              <span class="milestone-year-pill">VERTICAL 04 // SOURCING</span>
+              <span class="milestone-phase-label">EXOTIC ALLOYS &bull; PIPING</span>
+            </div>
+            <h2 style="font-size:1.6rem;margin-bottom:0.75rem;color:var(--text-900);">Trading &amp; Strategic Commodities</h2>
+            <p class="milestone-desc">
+              Direct mill sourcing of certified Hastelloy C276, Super Duplex S32760, Monel 400, ASME B31.3 piping, heavy flanges, and automated valve actuator packages backed by 100% EN 10204 3.1 MTC traceability.
+            </p>
+            <div class="milestone-metrics-grid" style="margin:1.25rem 0;">
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">EN 10204 3.1</span>
+                <span class="milestone-stat-lbl">100% MTC Trace</span>
+              </div>
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">HASTELLOY</span>
+                <span class="milestone-stat-lbl">Super Duplex Plates</span>
+              </div>
+              <div class="milestone-stat">
+                <span class="milestone-stat-val">3 HUBS</span>
+                <span class="milestone-stat-lbl">India &bull; ASEAN</span>
+              </div>
+            </div>
+            <div style="display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.5rem;">
+              <a class="btn btn-primary btn-sm" href="trading-commodities.html">
+                <span>View Dedicated Trading Page</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+              </a>
+              <button class="btn btn-outline btn-sm" onclick="openRfqModal('Trading &amp; Commodities')">Material Enquiry</button>
+            </div>
+          </div>
+          <div class="milestone-img-wrap">
+            <img src="assets/images/project-metering-skid-valves.jpg" alt="Metering Skid &amp; Valves">
+            <div class="milestone-img-caption">
+              <span>Industrial Valves &amp; Skid Hardware</span>
+              <span class="mono" style="font-weight:700;color:var(--primary);">ASME B31.3 / EN 10204 3.1</span>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <!-- Technical Assurance Strip -->
+      <div class="section-header" style="margin-top:1rem;">
+        <span class="section-eyebrow">QUALITY ASSURANCE &amp; CODE COMPLIANCE</span>
+        <h2>Unified Standards Across All Four Verticals</h2>
         <p>Every vertical operates under verified international codes, qualified welding metallurgy, and strict HSE protocols.</p>
       </div>
 
@@ -230,18 +425,57 @@
     </div>
   </div>
 
-  <script>
-    // Support URL search parameter ?v=0, ?v=1, ?v=2, ?v=3 to auto-activate the vertical tab
-    document.addEventListener('DOMContentLoaded', () => {
-      const urlParams = new URLSearchParams(window.location.search);
-      const v = urlParams.get('v');
-      if (v !== null && !isNaN(v)) {
-        setTimeout(() => {
-          switchBusinessVertical(parseInt(v, 10));
-        }, 80);
-      }
-    });
-  </script>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-col" style="max-width:340px;">
+        <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd." style="height:42px;width:auto;margin-bottom:1.15rem;filter:brightness(0) invert(1);">
+        <p style="font-size:0.86rem;color:#94a3b8;line-height:1.65;margin-bottom:1.25rem;">
+          Engineering Beyond Conventional Boundaries. Multi-disciplinary turnkey EPCC, sustainable mobility, industrial thermal engineering, and strategic trading.
+        </p>
+        <span class="utility-badge" style="background:rgba(255,255,255,0.08);color:#93c5fd;border-color:rgba(255,255,255,0.15);">ASME IX.2010 &bull; AWS D1.1</span>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">About Axon</h4>
+        <ul class="footer-links">
+          <li><a href="about.html">Company Overview</a></li>
+          <li><a href="about.html#leadershipAnchor">Executive Council</a></li>
+          <li><a href="about.html#ourJourneyAnchor">Our Journey &amp; Milestones</a></li>
+          <li><a href="technology.html">Advance Engineering Research</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Business Verticals</h4>
+        <ul class="footer-links">
+          <li><a href="epc-turnkey.html">EPC &amp; Turnkey Industrial Plants</a></li>
+          <li><a href="sustainable-mobility.html">Sustainable Mobility (EV &amp; Marine)</a></li>
+          <li><a href="hvac-thermal.html">HVAC &amp; Thermal Engineering</a></li>
+          <li><a href="trading-commodities.html">Trading &amp; Strategic Commodities</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Contact &amp; Hubs</h4>
+        <div style="font-size:0.86rem;color:#94a3b8;line-height:1.7;">
+          <p><strong>Bengaluru:</strong> Peenya / Electronic City Phase II, Bengaluru, Karnataka, India</p>
+          <p><strong>Malaysia:</strong> Pasir Gudang (Johor) &bull; Kuala Langsat (Selangor)</p>
+          <p><strong>Singapore:</strong> Jurong Island Regional Office</p>
+          <p style="margin-top:0.5rem;"><a href="mailto:projects@axonpetro.in" style="color:#60a5fa;">projects@axonpetro.in</a> &bull; <a href="tel:+919845012345" style="color:#60a5fa;">+91 98450 12345</a></p>
+        </div>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p>&copy; 2026 Axon Petro Engineering Pvt. Ltd. All rights reserved. &bull; Engineered to perform.</p>
+      <div style="display:flex;gap:1.5rem;">
+        <a href="admin.html" style="color:#64748b;font-size:0.75rem;">CMS Admin</a>
+        <a href="wps-registry.html" style="color:#64748b;font-size:0.75rem;">WPS Registry</a>
+        <a href="contact.html" style="color:#64748b;font-size:0.75rem;">Fast-Track RFQ Desk</a>
+      </div>
+    </div>
+  </footer>
 
   <!-- Fast-Track Enquiry Modal -->
   <div class="modal-backdrop" id="rfqModal" role="dialog" aria-modal="true">
@@ -298,7 +532,8 @@
           <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-top:1.5rem;">
             <button type="submit" class="btn btn-primary">Send Project Enquiry</button>
             <a class="btn btn-whatsapp btn-sm" href="https://wa.me/919845012345?text=Hello%20Axonpetro%2C%20I%20want%20to%20discuss%20a%20project%20inquiry." target="_blank" rel="noopener">
-              Or Message via WhatsApp
+              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
+              <span>WhatsApp Direct</span>
             </a>
           </div>
         </form>
@@ -306,87 +541,8 @@
     </div>
   </div>
 
-  <!-- Sticky WhatsApp Widget -->
-  <div class="floating-cta-stack">
-    <a class="whatsapp-float-btn"
-       href="https://wa.me/919845012345?text=Hello%20Axon%20Petro%20Engineering%2C%20I%20would%20like%20to%20enquire%20about%20your%20services."
-       target="_blank" rel="noopener" title="One-click WhatsApp Engineering Desk">
-      <span class="wa-dot"></span>
-      <span>WhatsApp Engineering Desk</span>
-      <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-    </a>
-  </div>
-
-  <!-- Corporate Footer -->
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div>
-          <div style="background:#fff;border:1px solid var(--surface-200);display:inline-block;padding:0.45rem 0.75rem;border-radius:10px;margin-bottom:1rem;">
-            <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Logo" style="height:42px;width:auto;object-fit:contain;">
-          </div>
-          <p style="font-size:0.86rem;color:var(--text-600);margin-bottom:1rem;">
-            <strong style="color:var(--text-900);">Axon Petro Engineering Pvt. Ltd.</strong> — <em>Engineered Beyond Conventional Boundaries.</em><br>
-            Turnkey EPCC Construction, Sustainable Mobility, Industrial HVAC, and Global Material Trading in strategic partnership with <strong style="color:var(--text-900);">Greengold Energy (JV)</strong>.
-          </p>
-          <div class="mono" style="font-size:0.74rem;color:var(--primary);font-weight:700;">
-            ASME IX.2010 &bull; AWS D1.1 2006 &bull; ISO 9001:2015 &bull; ISO 45001:2018
-          </div>
-        </div>
-
-        <div>
-          <div class="footer-title">Business Verticals</div>
-          <ul class="footer-links">
-            <li><a href="business-verticals.html?v=0">EPC &amp; Turnkey Plants</a></li>
-            <li><a href="business-verticals.html?v=1">Sustainable Mobility</a></li>
-            <li><a href="business-verticals.html?v=2">HVAC &amp; Thermal Engineering</a></li>
-            <li><a href="business-verticals.html?v=3">Trading &amp; Strategic Commodities</a></li>
-            <li><a href="technology.html">Centre of Excellence Research</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-title">Company &amp; Governance</div>
-          <ul class="footer-links">
-            <li><a href="about.html">About Axon Group</a></li>
-            <li><a href="about.html#groupVisionAnchor">Vision &amp; Mission</a></li>
-            <li><a href="about.html#leadershipAnchor">Executive Council</a></li>
-            <li><a href="about.html#advisersAnchor">Advisory Council</a></li>
-            <li><a href="about.html#ourJourneyAnchor">Our Journey &amp; Milestones</a></li>
-            <li><a href="wps-registry.html">WPS Specification Registry (26)</a></li>
-          </ul>
-        </div>
-
-        <div>
-          <div class="footer-title">Fast-Track Project Desk</div>
-          <p style="font-size:0.85rem;margin-bottom:0.85rem;">
-            Direct inquiries, project specifications, and technology partnership proposals:
-          </p>
-          <div class="mono" style="font-size:0.8rem;margin-bottom:1.15rem;color:var(--text-900);font-weight:600;line-height:1.7;">
-            <div>projects@axonpetro.in</div>
-            <div>+91 98450 12345</div>
-            <div>www.axonpetro.in</div>
-          </div>
-          <a class="btn btn-primary btn-sm" style="width:100%;" href="contact.html">
-            <span>Contact Our Team</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M7 17 17 7"/><path d="M7 7h10v10"/></svg>
-          </a>
-        </div>
-      </div>
-
-      <div style="border-top:1px solid var(--surface-200);padding-top:1.5rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;font-size:0.78rem;color:var(--text-500);">
-        <div>&copy; 2026 Axon Petro Engineering Pvt. Ltd. (axonpetro.in) &amp; Greengold Energy (JV). All rights reserved.</div>
-        <div style="display:flex;gap:1.25rem;align-items:center;">
-          <a href="wps-registry.html" style="color:var(--text-600);">WPS Registry</a>
-          <span>&bull;</span>
-          <a href="admin.html" style="color:var(--text-500);">Staff Portal</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
   <!-- Scripts with Cache Busting -->
-  <script src="assets/js/data.js?v=2026.22"></script>
-  <script src="assets/js/app.js?v=2026.22"></script>
+  <script src="assets/js/data.js?v=2026.23"></script>
+  <script src="assets/js/app.js?v=2026.23"></script>
 </body>
 </html>
