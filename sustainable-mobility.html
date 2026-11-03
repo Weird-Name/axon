@@ -10,11 +10,12 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
 
-  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/axon-emblem-favicon.png?v=2026.23">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=2026.23">
-  <link rel="shortcut icon" href="favicon.ico?v=2026.23">
-  <link rel="apple-touch-icon" href="assets/images/axon-emblem-favicon.png?v=2026.23">
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.23">
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/axon-logo-favicon.png?v=2026.24">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=2026.24">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=2026.24">
+  <link rel="shortcut icon" href="favicon.ico?v=2026.24">
+  <link rel="apple-touch-icon" href="assets/images/axon-logo-favicon.png?v=2026.24">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.24">
 
   <style>
     svg { flex-shrink: 0; vertical-align: middle; }
@@ -29,30 +30,34 @@
     .utility-link.accent { color: #1b5299; font-weight: 600; }
   </style>
 </head>
-<body>
-  <!-- Top Utility Bar -->
-  <div class="top-utility-bar">
-    <div class="container top-utility-inner">
-      <div class="utility-left">
-        <span class="utility-badge">ASME IX.2010 &amp; AWS D1.1 CERTIFIED</span>
-        <span class="utility-hide-sm">Strategic Alliance: <strong style="color:#0f172a;">Greengold Energy (JV)</strong></span>
-        <span class="utility-divider utility-hide-md"></span>
-        <span class="utility-hide-md" style="color:#64748b;">India &bull; Malaysia &bull; Singapore</span>
+<body class="hide-header">
+  <!-- Business Vertical Header-Hidden Top Bar -->
+  <div class="bv-back-bar">
+    <div class="container bv-back-bar-inner">
+      <a href="index.html" style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;">
+        <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd." style="height:52px;width:auto;object-fit:contain;background:#ffffff;padding:4px 10px;border-radius:10px;">
+      </a>
+      <div style="display:flex;align-items:center;gap:1.25rem;">
+        <a href="index.html" class="bv-back-link">
+          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></svg>
+          <span>Back to Main Website</span>
+        </a>
+        <a href="contact.html" class="btn btn-primary btn-sm" style="background:#ffffff;color:#1b5299;font-weight:700;">Get in Touch</a>
       </div>
+    </div>
+  </div>
+    <!-- Top Utility Bar (Contact Direct) -->
+  <div class="top-utility-bar">
+    <div class="container top-utility-inner" style="justify-content:flex-end;">
       <div class="utility-right">
         <a href="mailto:projects@axonpetro.in" class="utility-link">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
           <span>projects@axonpetro.in</span>
         </a>
-        <span class="utility-divider utility-hide-sm"></span>
-        <a href="tel:+919845012345" class="utility-link utility-hide-sm">
+        <span class="utility-divider"></span>
+        <a href="tel:+919845012345" class="utility-link">
           <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
           <span class="mono">+91 98450 12345</span>
-        </a>
-        <span class="utility-divider utility-hide-md"></span>
-        <a href="wps-registry.html" class="utility-link accent utility-hide-md">
-          <span>WPS Registry (26)</span>
-          <svg width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </a>
       </div>
     </div>
@@ -62,7 +67,7 @@
   <header class="site-header">
     <div class="container header-inner">
       <a class="brand-logo" href="index.html" title="Axon Petro Engineering Pvt. Ltd. — Engineered to perform.">
-        <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd. Logo" style="height:44px;width:auto;object-fit:contain;">
+        <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd. Logo" style="height:56px;width:auto;object-fit:contain;">
       </a>
 
       <button class="mobile-menu-toggle" onclick="document.getElementById('mainNav').classList.toggle('open')" aria-label="Toggle Menu">
@@ -227,42 +232,156 @@
         </div>
       </div>
 
-      <!-- Core Capabilities & Showcase Grid -->
-      <div class="timeline-card" style="margin-bottom:3.5rem;">
-        <div>
-          <div class="milestone-badge-row">
-            <span class="milestone-year-pill">ELECTRIFICATION LEADERSHIP</span>
-            <span class="milestone-phase-label">ROAD &bull; MARINE &bull; BATTERY INTEGRATION</span>
-          </div>
-          <h2 style="font-size:1.75rem;margin-bottom:1rem;color:var(--text-900);">Electric Transportation &amp; Energy Systems</h2>
-          <p class="milestone-desc">
-            Combining deep structural engineering heritage with advanced power electronics and digital control systems to pioneer zero-emission commercial transit on road and water.
-          </p>
-
-          <ul class="milestone-deliverables" style="margin-top:1.5rem;">
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Electric Road Mobility:</strong> High-payload electric transit buses, commercial delivery trucks, and modular powertrain integration.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Electric Marine Mobility:</strong> High-efficiency electric ferries, commercial harbor boats, electric workboats, and specialized marine propulsion drivetrains.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Energy Technologies:</strong> High-density lithium battery pack engineering, active liquid thermal cooling, and smart microgrid interfaces.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Intelligent Fleet Telematics:</strong> Real-time remote cloud monitoring, predictive battery health algorithms, and automated fault diagnostics.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Advanced Vehicle Engineering:</strong> Lightweight aluminum composite architectures, aerodynamic drag minimization, and crashworthiness certification.</li>
-          </ul>
-
-          <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-            <button class="btn btn-primary" onclick="openRfqModal('Sustainable Mobility')">Discuss Mobility Alliances</button>
-            <a class="btn btn-whatsapp" href="https://wa.me/919845012345?text=Hello%20Axon%2C%20I%20want%20to%20discuss%20Sustainable%20Mobility." target="_blank" rel="noopener">WhatsApp Direct</a>
-          </div>
-        </div>
-
-        <div class="milestone-img-wrap">
-          <img src="assets/images/project-turnkey-cad-1.jpg" alt="Mobility Powertrain Digital Model">
-          <div class="milestone-img-caption">
-            <span>Electric Powertrain CAD Digital Twin</span>
-            <span class="mono" style="font-weight:700;color:var(--primary);">RTIC R&amp;D</span>
-          </div>
-        </div>
+            <!-- 6. SUSTAINABLE MOBILITY -->
+      <div class="section-header" style="margin-top:2rem;text-align:left;">
+        <span class="section-eyebrow" style="font-size:0.85rem;font-weight:800;color:var(--primary);letter-spacing:0.08em;">SECTION 6 // SUSTAINABLE MOBILITY</span>
+        <h2 style="font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:0.6rem;color:var(--text-900);">## 6. SUSTAINABLE MOBILITY</h2>
+        <h3 style="font-size:clamp(1.2rem,2vw,1.55rem);color:var(--primary);margin-bottom:1rem;font-weight:700;">Engineering the Future of Mobility</h3>
+        <p style="font-size:1.08rem;color:var(--text-700);line-height:1.75;max-width:980px;">
+          Developing next-generation mobility solutions through advanced engineering, electrification and intelligent technologies.
+        </p>
       </div>
 
-      <!-- Technological Innovation Strip -->
+      <div style="margin-bottom:3.5rem;">
+        <div style="font-size:1.25rem;font-weight:800;color:var(--text-900);margin-bottom:1.5rem;font-style:italic;">
+          *Key Focus Areas*
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:2rem;">
+          
+          <!-- Key Focus Area 1 -->
+          <article class="timeline-card">
+            <div>
+              <div class="milestone-badge-row">
+                <span class="milestone-year-pill">FOCUS AREA 01</span>
+                <span class="milestone-phase-label">ROAD ELECTRIFICATION</span>
+              </div>
+              <h3 class="milestone-title">*Electric Road Mobility:* Electric coaches, buses and passenger transportation</h3>
+              <p class="milestone-desc">
+                Engineering zero-emission transit solutions for municipal urban bus fleets, intercity luxury passenger coaches, and commercial delivery vehicles. Leveraging 800V silicon carbide (SiC) e-axle architecture and dual-motor propulsion, our platforms deliver ultra-high operating efficiency (>98%), low floor passenger accessibility, and 400+ km daily commercial range.
+              </p>
+              <ul class="milestone-deliverables" style="margin-top:1.25rem;">
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Electric Passenger Coaches &amp; Transit Buses:</strong> Low-entry municipal transit buses and intercity coaches with modular battery capacity up to 450 kWh.</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Regenerative Braking Systems:</strong> Multi-mode kinetic energy recovery converting over 30% of braking energy back into battery storage during urban stop-and-go cycles.</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Heavy Commercial Delivery Platforms:</strong> Medium and heavy-duty electric trucks engineered for high payload capacity and zero localized exhaust emissions.</li>
+              </ul>
+            </div>
+            <div class="milestone-img-wrap">
+              <img src="assets/images/project-turnkey-cad-1.jpg" alt="Electric Road Mobility">
+              <div class="milestone-img-caption">
+                <span>Heavy Electric Coach Powertrain Architecture</span>
+                <span class="mono" style="font-weight:700;color:var(--primary);">800V SiC e-AXLE</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Key Focus Area 2 -->
+          <article class="timeline-card">
+            <div>
+              <div class="milestone-badge-row">
+                <span class="milestone-year-pill">FOCUS AREA 02</span>
+                <span class="milestone-phase-label">CLEAN WATERWAYS</span>
+              </div>
+              <h3 class="milestone-title">*Electric Marine Mobility:* Electric boats, ferries and marine propulsion systems</h3>
+              <p class="milestone-desc">
+                Transforming coastal and inland water transit with zero-emission electric passenger ferries, harbor workboats, and specialized marine electric propulsion systems. Direct-drive permanent magnet synchronous motors (PMSM) eliminate mechanical gearbox losses, lubricating oil contamination hazards, and engine noise in ecologically sensitive waterways.
+              </p>
+              <ul class="milestone-deliverables" style="margin-top:1.25rem;">
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Electric Passenger Ferries:</strong> High-capacity commercial passenger catamaran vessels delivering silent cruising and up to 80% lower operating costs than diesel.</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Electric Harbor Workboats &amp; Tugs:</strong> High-torque electric propulsion for port pilot boats, line handlers, and commercial harbor logistics craft.</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Turnkey Marine Shore Charging:</strong> Automated high-power pontoon and dockside charging connections enabling rapid 15-minute turnaround at passenger terminals.</li>
+              </ul>
+            </div>
+            <div class="milestone-img-wrap">
+              <img src="assets/images/project-turnkey-cad-2.jpg" alt="Electric Marine Mobility">
+              <div class="milestone-img-caption">
+                <span>Direct-Drive Marine Propulsion Assembly</span>
+                <span class="mono" style="font-weight:700;color:var(--primary);">ZERO SPILL / PMSM</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Key Focus Area 3 -->
+          <article class="timeline-card">
+            <div>
+              <div class="milestone-badge-row">
+                <span class="milestone-year-pill">FOCUS AREA 03</span>
+                <span class="milestone-phase-label">ADVANCED ENERGY SYSTEMS</span>
+              </div>
+              <h3 class="milestone-title">*Energy Technologies:* Battery integration, charging and energy management</h3>
+              <p class="milestone-desc">
+                High-density energy storage, active thermal management, and intelligent power conditioning designed for mission-critical duty cycles. Our proprietary liquid-cooled cold plates maintain battery cell temperatures strictly within optimal 25°C–32°C bands even under harsh 50°C tropical ambient conditions, preventing degradation and extending pack lifespan past 4,000 cycles.
+              </p>
+              <ul class="milestone-deliverables" style="margin-top:1.25rem;">
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Liquid-Cooled Battery Packs:</strong> High-density LFP and NMC battery modules featuring laser-welded copper busbars and cell-level fuse protection.</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Megawatt Fast-Charging (MCS):</strong> DC fast-charging integration up to 1.2 MW supporting rapid opportunity charging for heavy commercial vehicles and ferries.</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Smart Energy Management Systems (EMS):</strong> Microgrid energy storage (BESS), peak-shaving control, and bidirectional vehicle-to-grid (V2G) power transfer.</li>
+              </ul>
+            </div>
+            <div class="milestone-img-wrap">
+              <img src="assets/images/project-reactor-crayvalley.jpg" alt="Energy Technologies &amp; Battery Systems">
+              <div class="milestone-img-caption">
+                <span>Active Liquid-Cooled Thermal Cold Plate</span>
+                <span class="mono" style="font-weight:700;color:var(--primary);">25°C-32°C OPTIMAL</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Key Focus Area 4 -->
+          <article class="timeline-card">
+            <div>
+              <div class="milestone-badge-row">
+                <span class="milestone-year-pill">FOCUS AREA 04</span>
+                <span class="milestone-phase-label">DIGITAL INTELLIGENCE</span>
+              </div>
+              <h3 class="milestone-title">*Intelligent Mobility:* Telematics, remote monitoring and smart control systems</h3>
+              <p class="milestone-desc">
+                Connected vehicle architectures powered by high-performance Vehicle Control Units (VCU) and secure IoT telematics. Continuous CAN-bus/CAN-FD telemetry streams battery State-of-Health (SoH), motor thermals, and power curves to real-time cloud analytics dashboards with predictive failure detection and over-the-air firmware management.
+              </p>
+              <ul class="milestone-deliverables" style="margin-top:1.25rem;">
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>24/7 Cloud Fleet Telematics:</strong> Comprehensive live telemetry dashboards tracking vehicle location, speed, real-time energy consumption, and operating efficiency.</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Predictive Health Monitoring:</strong> Artificial intelligence algorithms analyzing cell degradation and component stress to alert operators before failure occurs.</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Over-the-Air (OTA) Updates:</strong> Secure remote firmware updates, torque curve optimizations, and diagnostic fault clearing without workshop downtime.</li>
+              </ul>
+            </div>
+            <div class="milestone-img-wrap">
+              <img src="assets/images/project-metering-skid-valves.jpg" alt="Intelligent Mobility &amp; Telematics">
+              <div class="milestone-img-caption">
+                <span>VCU Smart Telematics &amp; CAN-Bus Hub</span>
+                <span class="mono" style="font-weight:700;color:var(--primary);">CLOUD IoT &bull; OTA</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- Key Focus Area 5 -->
+          <article class="timeline-card">
+            <div>
+              <div class="milestone-badge-row">
+                <span class="milestone-year-pill">FOCUS AREA 05</span>
+                <span class="milestone-phase-label">DYNAMIC OPTIMIZATION</span>
+              </div>
+              <h3 class="milestone-title">*Advanced Vehicle Engineering:* Aerodynamics, vehicle architecture and performance optimisation</h3>
+              <p class="milestone-desc">
+                Combining high-strength structural engineering with multi-physics computer-aided simulation. Utilizing lightweight modular aluminum space-frames and composite structural paneling, our architectures cut tare weight by up to 25% while Computational Fluid Dynamics (CFD) optimization minimizes aerodynamic drag to maximize driving range.
+              </p>
+              <ul class="milestone-deliverables" style="margin-top:1.25rem;">
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>CFD Aerodynamic Optimization:</strong> Aerodynamic body shaping and underbody airflow channeling achieving low drag coefficients (Cd <= 0.32).</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Lightweight Vehicle Architectures:</strong> High-tensile aluminum space-frames reducing gross vehicle weight and increasing passenger payload capacity.</li>
+                <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Crashworthiness &amp; Safety Compliance:</strong> Structural FEA simulation validating frontal impact, side intrusion, and rollover protection under UNECE safety standards.</li>
+              </ul>
+            </div>
+            <div class="milestone-img-wrap">
+              <img src="assets/images/project-turnkey-emery-main.jpg" alt="Advanced Vehicle Engineering">
+              <div class="milestone-img-caption">
+                <span>Structural Finite Element Analysis (FEA)</span>
+                <span class="mono" style="font-weight:700;color:var(--primary);">LIGHTWEIGHT COMPOSITE</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+<!-- Technological Innovation Strip -->
       <div class="section-header" style="margin-top:2rem;">
         <span class="section-eyebrow">INTELLIGENT POWERTRAIN ECOSYSTEM</span>
         <h2>Advanced Subsystems &amp; Industrial Applications</h2>
@@ -414,7 +533,7 @@
   </div>
 
   <!-- Scripts with Cache Busting -->
-  <script src="assets/js/data.js?v=2026.23"></script>
-  <script src="assets/js/app.js?v=2026.23"></script>
+  <script src="assets/js/data.js?v=2026.24"></script>
+  <script src="assets/js/app.js?v=2026.24"></script>
 </body>
 </html>
