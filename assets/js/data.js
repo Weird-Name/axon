@@ -1294,24 +1294,6 @@ const DEFAULT_AXON_DATA = {
     ]
   },
 
-  // Corporate Advisers (Adani Governance Model)
-  advisers: [
-    {
-      name: "Senior EPC & Energy Transition Adviser",
-      role: "Strategic EPC & Global Megaprojects",
-      bio: "Over 35 years advising international energy conglomerates on mega-scale refinery, petrochemical, and renewable infrastructure investments across Asia-Pacific."
-    },
-    {
-      name: "Metallurgical & Advanced Materials Adviser",
-      role: "Exotic Alloys & ASME IX Code Standards",
-      bio: "Former Lead Materials Specialist with top classification bodies, guiding exotic nickel metallurgy, high-temperature creep resistance, and hydrogen embrittlement research."
-    },
-    {
-      name: "Sustainable Mobility & EV Systems Adviser",
-      role: "E-Mobility Architecture & Marine Propulsion",
-      bio: "Veteran automotive and marine propulsion strategist specializing in high-voltage battery architecture, electric ferry drivetrains, and telematics systems."
-    }
-  ],
 
   // Executive Leadership
   leadership: [

@@ -2592,3 +2592,86 @@ body.hide-header .site-header {
 .bv-back-link:hover {
   color: #38bdf8;
 }
+
+/* ============================================================================
+   BULLETPROOF BUTTON TEXT VISIBILITY & CONTRAST
+   ============================================================================ */
+.btn-outline {
+  background: transparent !important;
+  color: #1b5299 !important;
+  border: 1.5px solid #1b5299 !important;
+  font-weight: 600 !important;
+}
+
+.btn-outline:hover {
+  background: #1b5299 !important;
+  color: #ffffff !important;
+}
+
+/* Dark Hero / Dark Banner / Dark Section Outline Buttons */
+.adani-about-hero .btn-outline,
+.section-dark .btn-outline,
+.page-hero .btn-outline,
+.cta-banner .btn-outline,
+.btn-hero-outline,
+.btn-outline[style*="color:#ffffff"],
+.btn-outline[style*="color: #ffffff"],
+.btn-outline[style*="color:white"] {
+  background: transparent !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.75) !important;
+  font-weight: 600 !important;
+}
+
+.adani-about-hero .btn-outline:hover,
+.section-dark .btn-outline:hover,
+.page-hero .btn-outline:hover,
+.cta-banner .btn-outline:hover,
+.btn-hero-outline:hover,
+.btn-outline[style*="color:#ffffff"]:hover,
+.btn-outline[style*="color: #ffffff"]:hover,
+.btn-outline[style*="color:white"]:hover {
+  background: rgba(255, 255, 255, 0.2) !important;
+  color: #ffffff !important;
+  border-color: #ffffff !important;
+}
+
+/* White Solid Buttons for Dark Heroes */
+.adani-about-hero .btn-primary,
+.page-hero .btn-primary,
+.cta-banner .btn-primary,
+.bv-back-bar .btn-primary,
+.btn-hero-white,
+.btn[style*="background:#ffffff"],
+.btn[style*="background: #ffffff"],
+.btn[style*="background:white"] {
+  background: #ffffff !important;
+  color: #1b5299 !important;
+  font-weight: 700 !important;
+  border: 1.5px solid #ffffff !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+}
+
+.adani-about-hero .btn-primary:hover,
+.page-hero .btn-primary:hover,
+.cta-banner .btn-primary:hover,
+.bv-back-bar .btn-primary:hover,
+.btn-hero-white:hover,
+.btn[style*="background:#ffffff"]:hover,
+.btn[style*="background: #ffffff"]:hover,
+.btn[style*="background:white"]:hover {
+  background: #eaf2fc !important;
+  color: #133c73 !important;
+}
+
+/* Standard Primary Buttons on Light Backgrounds */
+.btn-primary {
+  background: #1b5299 !important;
+  color: #ffffff !important;
+  font-weight: 600 !important;
+}
+
+.btn-primary:hover {
+  background: #133c73 !important;
+  color: #ffffff !important;
+}

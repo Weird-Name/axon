@@ -193,8 +193,6 @@ function renderBuyerPillars() {
 
 function renderLeadershipAndNews() {
   const leadEl = document.getElementById('leadershipGrid');
-  const advEl = document.getElementById('advisersGrid');
-  const newsEl = document.getElementById('newsMediaGrid');
   if (leadEl && appData.leadership) {
     leadEl.innerHTML = appData.leadership.map(l => `
       <div class="pillar-card">
@@ -203,31 +201,6 @@ function renderLeadershipAndNews() {
           <h3 style="font-size:1.15rem;margin-bottom:0.45rem;">${l.name}</h3>
           <p style="font-size:0.86rem;color:var(--slate-600);">${l.bio}</p>
         </div>
-      </div>
-    `).join('');
-  }
-  if (advEl && appData.advisers) {
-    advEl.innerHTML = appData.advisers.map(a => `
-      <div class="pillar-card" style="border-top:3px solid #1f7a8c;">
-        <div>
-          <span class="section-eyebrow" style="background:#eaf2fc;color:#1b5299;border-color:#c7daf2;">ADVISORY COUNCIL &bull; ${a.role}</span>
-          <h3 style="font-size:1.15rem;margin-bottom:0.45rem;">${a.name}</h3>
-          <p style="font-size:0.86rem;color:var(--slate-600);">${a.bio}</p>
-        </div>
-      </div>
-    `).join('');
-  }
-  if (newsEl && appData.newsMedia) {
-    newsEl.innerHTML = appData.newsMedia.map(n => `
-      <div class="pillar-card">
-        <div>
-          <span class="section-eyebrow">${n.category} • ${n.date}</span>
-          <h3 style="font-size:1.15rem;margin-bottom:0.5rem;">${n.title}</h3>
-          <p style="font-size:0.88rem;color:var(--slate-600);">${n.summary}</p>
-        </div>
-        <span class="pillar-link" style="margin-top:1rem;" onclick="openRfqModal('Media / Technical Press Inquiry: ${n.title}')">
-          Request Full Technical Bulletin →
-        </span>
       </div>
     `).join('');
   }
