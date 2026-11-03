@@ -176,12 +176,7 @@
         Delivering world-class turnkey engineering, heavy static equipment fabrication, ASME Sec VIII chemical reactors, modular skids, and multi-thousand-ton structural steelwork with a proven zero-LTI track record.
       </p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-        <button class="btn btn-primary" onclick="openRfqModal('EPC &amp; Turnkey Plants')" style="background:#ffffff;color:#1b5299;font-weight:700;box-shadow:none;">
-          <span>Request EPC Project Proposal</span>
-          <svg width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-        </button>
-        
-      </div>
+        </div>
     </div>
   </div>
 
@@ -251,7 +246,6 @@
           </ul>
 
           <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-            <button class="btn btn-primary" onclick="openRfqModal('EPC &amp; Turnkey Plants')">Submit Project Specifications</button>
             <a class="btn btn-whatsapp" href="https://wa.me/919845012345?text=Hello%20Axon%20Engineering%2C%20I%20have%20an%20EPC%20inquiry." target="_blank" rel="noopener">Chat on WhatsApp</a>
           </div>
         </div>
@@ -349,75 +343,10 @@
       <p>&copy; 2026 Axon Petro Engineering Pvt. Ltd. All rights reserved. &bull; Engineered to perform.</p>
       <div style="display:flex;gap:1.5rem;">
         <a href="admin.html" style="color:#64748b;font-size:0.75rem;">CMS Admin</a>
-        <a href="wps-registry.html" style="color:#64748b;font-size:0.75rem;">WPS Registry</a>
-        <a href="contact.html" style="color:#64748b;font-size:0.75rem;">Fast-Track RFQ Desk</a>
+        <a href="contact.html" style="color:#64748b;font-size:0.75rem;">Contact Desk</a>
       </div>
     </div>
   </footer>
-
-  <!-- Fast-Track Enquiry Modal -->
-  <div class="modal-backdrop" id="rfqModal" role="dialog" aria-modal="true">
-    <div class="modal-dialog" style="max-width:620px;overflow-x:hidden;">
-      <div class="modal-header">
-        <div>
-          <span class="mono" style="font-size:0.7rem;color:var(--primary);font-weight:700;text-transform:uppercase;letter-spacing:0.08em;">FAST-TRACK ENGINEERING DESK</span>
-          <h3 style="font-size:1.25rem;margin:0;">Project &amp; Technology Enquiry</h3>
-        </div>
-        <button class="modal-close" onclick="closeRfqModal()" aria-label="Close">&times;</button>
-      </div>
-      <div class="modal-body" style="overflow-x:hidden;">
-        <form onsubmit="handleRfqSubmit(event, 'Quick Enquiry Modal')">
-          <div class="form-grid">
-            <div class="form-group">
-              <label>Your Name *</label>
-              <input type="text" name="fullName" class="form-control" required placeholder="Full Name">
-            </div>
-            <div class="form-group">
-              <label>Company Name *</label>
-              <input type="text" name="companyName" class="form-control" required placeholder="Company / EPC Name">
-            </div>
-            <div class="form-group">
-              <label>Official Email *</label>
-              <input type="email" name="email" class="form-control" required placeholder="name@company.com">
-            </div>
-            <div class="form-group">
-              <label>Phone / WhatsApp *</label>
-              <input type="tel" name="phone" class="form-control" required placeholder="+91 / +60 / +65 ...">
-            </div>
-            <div class="form-group">
-              <label>Vertical / Area of Interest *</label>
-              <select name="productInterest" class="form-control" id="modalRfqProduct">
-                <option value="EPC & Turnkey Plants">EPC &amp; Turnkey Plants</option>
-                <option value="Sustainable Mobility">Sustainable Mobility (EV & Marine)</option>
-                <option value="HVAC & Thermal Engineering">HVAC &amp; Thermal Engineering</option>
-                <option value="Trading & Commodities">Trading &amp; Strategic Commodities</option>
-                <option value="Other Technology Enquiry">Other Technology Enquiry</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label>Target Timeline</label>
-              <select name="materialGrade" class="form-control">
-                <option value="Immediate (1–3 Months)">Immediate (1–3 Months)</option>
-                <option value="Medium Term (3–6 Months)">Medium Term (3–6 Months)</option>
-                <option value="Long Term Strategic Alliance">Long Term Strategic Alliance</option>
-              </select>
-            </div>
-            <div class="form-group full">
-              <label>Project Overview &amp; Specifications *</label>
-              <textarea id="modalRfqNotes" name="notes" rows="3" class="form-control" required placeholder="Please describe your requirements, specifications, or inquiry details..."></textarea>
-            </div>
-          </div>
-          <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.75rem;margin-top:1.5rem;">
-            <button type="submit" class="btn btn-primary">Send Project Enquiry</button>
-            <a class="btn btn-whatsapp btn-sm" href="https://wa.me/919845012345?text=Hello%20Axonpetro%2C%20I%20want%20to%20discuss%20a%20project%20inquiry." target="_blank" rel="noopener">
-              <svg width="15" height="15" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981z"/></svg>
-              <span>WhatsApp Direct</span>
-            </a>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
 
   <!-- Scripts with Cache Busting -->
   <script src="assets/js/data.js?v=2026.24"></script>
