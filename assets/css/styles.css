@@ -2340,41 +2340,85 @@ img {
     grid-template-columns: repeat(2, 1fr);
   }
   .header-inner {
-    min-height: 68px;
+    min-height: 64px;
     height: auto;
     padding: 0.5rem 0;
-    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    gap: 0.5rem;
+  }
+  .brand-logo img {
+    height: 44px !important;
+    width: auto;
+  }
+  .header-actions {
+    order: 2;
+    margin-left: auto;
+    margin-right: 0.4rem;
+  }
+  .header-actions .btn {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.82rem;
   }
   .mobile-menu-toggle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    order: 3;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.85);
+    border: 1.5px solid #bfd2eb;
+    color: #1b5299;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  .mobile-menu-toggle:hover {
+    background: #ffffff;
+    color: #133c73;
   }
   .main-nav {
     display: none;
     position: absolute;
-    top: 100%;
-    left: 0.75rem;
-    right: 0.75rem;
+    top: calc(100% + 4px);
+    left: 0.5rem;
+    right: 0.5rem;
     background: #ffffff;
     flex-direction: column;
     align-items: stretch;
-    padding: 0.85rem;
-    border-radius: var(--radius-md);
-    border: 1px solid var(--surface-200);
-    box-shadow: var(--shadow-lg);
+    padding: 1rem;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 20px 45px -10px rgba(15, 23, 42, 0.25);
     z-index: 1200;
+    max-height: calc(100vh - 90px);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    gap: 0.25rem;
   }
   .main-nav.open {
     display: flex;
   }
   .main-nav .nav-btn {
     text-align: left;
-    padding: 0.65rem 0.9rem;
-    font-size: 0.9rem;
-    border-radius: var(--radius-sm);
+    padding: 0.75rem 1rem;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #1e293b;
+    border-radius: 10px;
     width: 100%;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f1f5f9;
+  }
+  .main-nav .nav-btn:hover,
+  .main-nav .nav-btn.active {
+    background: #f0f7fe;
+    color: #1b5299;
   }
   .nav-item-dropdown {
     flex-direction: column;
@@ -2382,13 +2426,29 @@ img {
     width: 100%;
   }
   .adani-dropdown-menu {
+    display: flex !important;
     position: static;
     box-shadow: none;
     border: none;
-    border-left: 2px solid #c7d9ef;
+    border-left: 2.5px solid #1b5299;
     border-radius: 0;
-    margin-left: 1rem;
-    padding: 0.25rem 0 0.25rem 0.5rem;
+    margin: 0.25rem 0 0.5rem 0.85rem;
+    padding: 0.25rem 0 0.25rem 0.65rem;
+    gap: 0.2rem;
+  }
+  .adani-dropdown-link {
+    padding: 0.5rem 0.65rem;
+    border-radius: 8px;
+    width: 100%;
+  }
+  .adani-dropdown-title {
+    font-size: 0.86rem;
+    font-weight: 600;
+    color: #1e293b;
+  }
+  .adani-dropdown-sub {
+    font-size: 0.72rem;
+    color: #64748b;
   }
   .adani-verticals-nav {
     grid-template-columns: 1fr;
@@ -2403,13 +2463,32 @@ img {
     padding: 0 1rem;
   }
   .section, .section-dark {
-    padding: 3rem 0 !important;
+    padding: 2.75rem 0 !important;
+  }
+  .timeline-card {
+    grid-template-columns: 1fr !important;
+    padding: 1.35rem !important;
+    gap: 1.25rem !important;
+    border-radius: 18px !important;
+  }
+  .milestone-img-wrap img {
+    height: 210px !important;
+  }
+  .milestone-img-caption {
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.74rem;
+  }
+  .milestone-metrics-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
   }
   .hero-section {
     padding: 2.25rem 0 2.5rem;
   }
   .hero-title {
-    font-size: 1.85rem;
+    font-size: 1.75rem;
   }
   .hero-lead {
     font-size: 0.95rem;
@@ -2505,9 +2584,91 @@ img {
     padding: 0.6rem 1rem;
     font-size: 0.8rem;
   }
+  /* Elinta Showcase Mobile Optimization: Horizontal Touch Pill Tabs */
+  .elinta-showcase-box {
+    grid-template-columns: 1fr !important;
+    border-radius: 18px !important;
+    margin-bottom: 2.5rem !important;
+  }
+  .elinta-stages-list {
+    flex-direction: row !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch !important;
+    border-right: none !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1) !important;
+    padding: 0.75rem 0.85rem !important;
+    gap: 0.45rem !important;
+  }
+  .elinta-stages-list > .mono {
+    display: none !important;
+  }
+  .elinta-stage-btn {
+    flex-shrink: 0 !important;
+    width: auto !important;
+    padding: 0.5rem 0.85rem !important;
+    font-size: 0.84rem !important;
+    white-space: nowrap !important;
+    border-radius: 999px !important;
+    gap: 0.45rem !important;
+  }
+  .elinta-stage-content {
+    padding: 1.5rem 1.15rem !important;
+  }
+  .elinta-content-title {
+    font-size: 1.35rem !important;
+  }
+  .elinta-content-sub {
+    font-size: 0.86rem !important;
+    margin-bottom: 0.85rem !important;
+  }
+  .elinta-content-desc {
+    font-size: 0.92rem !important;
+    margin-bottom: 1.15rem !important;
+  }
+  .elinta-content-delivs {
+    margin-bottom: 1.25rem !important;
+  }
+  .elinta-deliv-item {
+    font-size: 0.84rem !important;
+  }
+  /* Swipe hint for tables */
+  .wps-table-container {
+    -webkit-overflow-scrolling: touch;
+  }
+  .wps-table-container::before {
+    content: "← Swipe horizontally to view full welding specifications →";
+    display: block;
+    background: #f1f5f9;
+    color: #64748b;
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-align: center;
+    padding: 0.35rem;
+    letter-spacing: 0.02em;
+    border-bottom: 1px solid #e2e8f0;
+  }
 }
 
 @media (max-width: 680px) {
+  .adani-about-hero {
+    padding: 2.5rem 0 2.25rem !important;
+  }
+  .adani-about-hero h1,
+  .page-hero-title {
+    font-size: 1.55rem !important;
+    line-height: 1.28 !important;
+    white-space: normal !important;
+  }
+  .adani-about-hero p {
+    font-size: 0.95rem !important;
+    line-height: 1.6 !important;
+    margin-bottom: 1.5rem !important;
+  }
+  .adani-about-hero div[style*="display:flex"] .btn,
+  .adani-about-hero .btn {
+    width: 100% !important;
+    justify-content: center !important;
+  }
   .pillars-grid,
   .grid-3-col,
   .hero-stats-bar,
@@ -2535,7 +2696,7 @@ img {
     display: none !important;
   }
   .brand-logo img {
-    height: 36px;
+    height: 38px !important;
   }
   .header-actions .btn span {
     font-size: 0.76rem;
@@ -2546,6 +2707,52 @@ img {
   }
   .product-actions {
     grid-template-columns: 1fr;
+  }
+  .adani-vertical-tab {
+    padding: 1rem 1.15rem !important;
+    border-radius: 14px !important;
+  }
+}
+
+@media (max-width: 640px) {
+  .bv-back-bar {
+    padding: 0.65rem 0;
+  }
+  .bv-back-bar-inner {
+    flex-wrap: wrap;
+    gap: 0.65rem;
+  }
+  .bv-back-link {
+    font-size: 0.82rem;
+    width: 100%;
+  }
+  .bv-back-bar-inner .brand-logo img {
+    height: 32px !important;
+  }
+  .bv-back-bar-inner .btn-sm {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .milestone-metrics-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .top-utility-bar {
+    height: auto !important;
+    padding: 0.35rem 0 !important;
+  }
+  .top-utility-inner {
+    justify-content: center !important;
+    flex-wrap: wrap !important;
+    gap: 0.35rem !important;
+  }
+  .utility-right {
+    gap: 0.65rem !important;
+    font-size: 0.72rem !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
   }
 }
 

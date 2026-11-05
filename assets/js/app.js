@@ -127,6 +127,28 @@ function navigateTo(pageId, scrollTargetId = null) {
   }
 }
 
+// Mobile Menu: Close when clicking outside or tapping any nav link
+document.addEventListener('click', (e) => {
+  const mainNav = document.getElementById('mainNav');
+  const toggleBtn = document.querySelector('.mobile-menu-toggle');
+  if (mainNav && mainNav.classList.contains('open')) {
+    if (!mainNav.contains(e.target) && (!toggleBtn || !toggleBtn.contains(e.target))) {
+      mainNav.classList.remove('open');
+    }
+  }
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.main-nav a').forEach(link => {
+    link.addEventListener('click', () => {
+      const mainNav = document.getElementById('mainNav');
+      if (mainNav && window.innerWidth <= 1024) {
+        mainNav.classList.remove('open');
+      }
+    });
+  });
+});
+
 // ============================================================================
 // RENDER FUNCTIONS
 // ============================================================================
