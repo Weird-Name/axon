@@ -240,7 +240,7 @@ function renderAdaniBusinessVerticals() {
 
   navEl.innerHTML = appData.businessVerticals.map((v, idx) => `
     <button class="adani-vertical-tab ${idx === activeVerticalIndex ? 'active' : ''}" onclick="switchBusinessVertical(${idx})">
-      <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">VERTICAL ${v.code} //</div>
+      <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.35rem;">ENGINEERING DISCIPLINE //</div>
       <div style="font-family:var(--font-display);font-size:1.15rem;font-weight:700;color:var(--text-900);line-height:1.25;margin-bottom:0.3rem;">${v.title}</div>
       <div style="font-size:0.8rem;color:var(--text-500);">${v.subtitle}</div>
     </button>
@@ -252,7 +252,7 @@ function renderAdaniBusinessVerticals() {
       <div>
         <div style="display:flex;align-items:center;gap:0.75rem;flex-wrap:wrap;margin-bottom:0.85rem;">
           <span class="utility-badge" style="background:#eaf2fc;color:#1b5299;border-color:#c7daf2;">${current.badge}</span>
-          <span class="mono" style="font-size:0.76rem;color:var(--text-500);font-weight:600;">AXON ECOSYSTEM VERTICAL ${current.code}</span>
+          <span class="mono" style="font-size:0.76rem;color:var(--text-500);font-weight:600;">AXON ECOSYSTEM DISCIPLINE</span>
         </div>
         <h2 style="font-size:clamp(1.75rem,3vw,2.35rem);margin-bottom:0.75rem;color:var(--text-900);">${current.title}</h2>
         <div class="mono" style="font-size:0.84rem;font-weight:700;color:var(--cyan);margin-bottom:1rem;">${current.tagline}</div>
