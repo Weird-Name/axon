@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png?v=2026.24">
   <link rel="shortcut icon" href="favicon.ico?v=2026.24">
   <!-- Main Stylesheet with Cache Busting -->
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.31">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.33">
 
   <style>
     svg { flex-shrink: 0; vertical-align: middle; }
@@ -88,11 +88,11 @@
       <form onsubmit="handleAdminLogin(event)">
         <div class="form-group" style="margin-bottom:1rem;">
           <label>Admin ID / Official Email *</label>
-          <input type="text" id="loginAdminId" class="form-control" required placeholder="admin@axonpetro.in" value="admin@axonpetro.in">
+          <input type="text" id="loginAdminId" class="form-control" required placeholder="Enter Admin ID / Official Email" value="" autocomplete="username">
         </div>
         <div class="form-group" style="margin-bottom:1.35rem;">
           <label>Password *</label>
-          <input type="password" id="loginAdminPass" class="form-control" required placeholder="•••••••••">
+          <input type="password" id="loginAdminPass" class="form-control" required placeholder="Enter password" autocomplete="current-password">
         </div>
         <button type="submit" class="btn btn-primary" style="width:100%;">
           <span>Sign In to Admin Portal</span>
@@ -278,8 +278,8 @@
     </div>
   </main>
 
-  <script src="assets/js/data.js?v=2026.31"></script>
-  <script src="assets/js/app.js?v=2026.31"></script>
+  <script src="assets/js/data.js?v=2026.33"></script>
+  <script src="assets/js/app.js?v=2026.33"></script>
   <script>
     const STAFF_ACCOUNTS = {
       'admin': { pass: 'Axon@2026', label: 'admin@axonpetro.in (Chief Engineer)' },
@@ -368,23 +368,20 @@
           Peenya Industrial Area, 3rd Phase<br>
           Bengaluru &ndash; 560058, Karnataka, India<br>
           <a href="mailto:projects@axonpetro.in" style="color:#60a5fa;text-decoration:none;">projects@axonpetro.in</a><br>
-          <a href="tel:+919845012345" style="color:#60a5fa;text-decoration:none;">+91 98450 12345</a>
+          <a href="tel:+919845530637" style="color:#60a5fa;text-decoration:none;">+91 98455 30637</a>
         </div>
       </div>
     </div>
 
-    <div class="footer-bottom">
+        <div class="footer-bottom">
       <div class="container footer-bottom-inner">
-        <div>&copy; 2026 Axon Petro Engineering Pvt. Ltd. All rights reserved. &bull; U29299KA2005PTC036789</div>
-        <div class="footer-legal-links">
-          <a href="privacy-policy.html">Privacy Policy</a>
-          <span>&bull;</span>
-          <a href="terms-conditions.html">Terms &amp; Conditions</a>
-          <span>&bull;</span>
-          <a href="sitemap.xml">Sitemap (XML)</a>
-          <span>&bull;</span>
-          <a href="admin.html">Staff Portal</a>
-        </div>
+        <span>&copy; 2026 Axon Petro Engineering Pvt. Ltd. All rights reserved. &bull; U29299KA2005PTC036789</span>
+        <span class="sep">&bull;</span>
+        <a href="privacy-policy.html">Privacy Policy</a>
+        <span class="sep">&bull;</span>
+        <a href="terms-conditions.html">Terms &amp; Conditions</a>
+        <span class="sep">&bull;</span>
+        <a href="admin.html">Staff Portal</a>
       </div>
     </div>
   </footer>
