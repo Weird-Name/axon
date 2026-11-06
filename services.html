@@ -292,7 +292,7 @@
                 <span class="adani-dropdown-sub">Industrial Air Handling, WHRU &amp; Exchangers</span>
               </div>
             </a>
-            <a class="adani-dropdown-link" href="trading-commodities.html">
+            <a class="adani-dropdown-link" href="trading.html">
               <div>
                 <span class="adani-dropdown-title">Trading</span>
                 <span class="adani-dropdown-sub">Oil &amp; Gas Equipment, Fertilizers &amp; Commodities</span>
@@ -342,378 +342,141 @@
     </div>
   </div>
 
-  <!-- 7-Stage Engineering Services Lifecycle Section -->
+    <!-- 7-Stage Engineering Services Lifecycle Section -->
   <div class="section" id="lifecycleAnchor" style="padding-top:3.5rem;">
     <div class="container">
-      <div class="section-header">
-        <span class="section-eyebrow">ELINTA-INSPIRED FULL-CYCLE LIFECYCLE</span>
-        <h2>End-to-End Engineering &amp; Technology Stages</h2>
-        <p>From initial concept calculations to 15-year guaranteed aftersales support—how we bring high-performance systems to market.</p>
+      <div class="section-header" style="max-width:1050px;margin-bottom:2.5rem;">
+        <span class="section-eyebrow">DEVELOPMENT LIFECYCLE</span>
+        <h2 style="font-size:clamp(1.5rem, 2.4vw, 2.2rem);margin-bottom:0.75rem;white-space:nowrap;max-width:100%;">Engineering &amp; Technology Lifecycle Stages</h2>
+        <p style="font-size:1.02rem;color:var(--text-600);line-height:1.65;max-width:900px;margin:0;">
+          Our standardized seven-stage engineering framework applicable across all R&amp;D processes, system innovations, and multi-product developments.
+        </p>
       </div>
 
-      <!-- Interactive High-Tech Showcase Box -->
-      <div class="elinta-showcase-box">
+      <!-- Interactive High-Tech Showcase Box with Animation -->
+      <div class="elinta-showcase-box" style="margin-bottom:3.5rem;">
         <div class="elinta-stages-list">
           <div class="mono" style="font-size:0.75rem;font-weight:700;color:#64748b;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:0.75rem;padding-left:0.5rem;">
             DEVELOPMENT LIFECYCLE
           </div>
-        <button class="elinta-stage-btn active" onclick="switchElintaStage(0)" id="elintaBtn0">
-          <span class="elinta-stage-num">01</span>
-          <span class="elinta-stage-name">Concept Stage</span>
-        </button>
-        <button class="elinta-stage-btn " onclick="switchElintaStage(1)" id="elintaBtn1">
-          <span class="elinta-stage-num">02</span>
-          <span class="elinta-stage-name">Design Stage</span>
-        </button>
-        <button class="elinta-stage-btn " onclick="switchElintaStage(2)" id="elintaBtn2">
-          <span class="elinta-stage-num">03</span>
-          <span class="elinta-stage-name">Prototyping Stage</span>
-        </button>
-        <button class="elinta-stage-btn " onclick="switchElintaStage(3)" id="elintaBtn3">
-          <span class="elinta-stage-num">04</span>
-          <span class="elinta-stage-name">Validation Stage</span>
-        </button>
-        <button class="elinta-stage-btn " onclick="switchElintaStage(4)" id="elintaBtn4">
-          <span class="elinta-stage-num">05</span>
-          <span class="elinta-stage-name">Homologation Stage</span>
-        </button>
-        <button class="elinta-stage-btn " onclick="switchElintaStage(5)" id="elintaBtn5">
-          <span class="elinta-stage-num">06</span>
-          <span class="elinta-stage-name">Series Production</span>
-        </button>
-        <button class="elinta-stage-btn " onclick="switchElintaStage(6)" id="elintaBtn6">
-          <span class="elinta-stage-num">07</span>
-          <span class="elinta-stage-name">Aftersales</span>
-        </button>
+          <button class="elinta-stage-btn active" onclick="switchElintaStage(0)" id="elintaBtn0">
+            <span class="elinta-stage-num">01</span>
+            <span class="elinta-stage-name">Concept Stage</span>
+          </button>
+          <button class="elinta-stage-btn" onclick="switchElintaStage(1)" id="elintaBtn1">
+            <span class="elinta-stage-num">02</span>
+            <span class="elinta-stage-name">Design Stage</span>
+          </button>
+          <button class="elinta-stage-btn" onclick="switchElintaStage(2)" id="elintaBtn2">
+            <span class="elinta-stage-num">03</span>
+            <span class="elinta-stage-name">Prototyping Stage</span>
+          </button>
+          <button class="elinta-stage-btn" onclick="switchElintaStage(3)" id="elintaBtn3">
+            <span class="elinta-stage-num">04</span>
+            <span class="elinta-stage-name">Validation Stage</span>
+          </button>
+          <button class="elinta-stage-btn" onclick="switchElintaStage(4)" id="elintaBtn4">
+            <span class="elinta-stage-num">05</span>
+            <span class="elinta-stage-name">Homologation Stage</span>
+          </button>
+          <button class="elinta-stage-btn" onclick="switchElintaStage(5)" id="elintaBtn5">
+            <span class="elinta-stage-num">06</span>
+            <span class="elinta-stage-name">Series Production</span>
+          </button>
+          <button class="elinta-stage-btn" onclick="switchElintaStage(6)" id="elintaBtn6">
+            <span class="elinta-stage-num">07</span>
+            <span class="elinta-stage-name">Aftersales</span>
+          </button>
         </div>
 
         <div class="elinta-stage-content" id="elintaContentBox">
-          <!-- Dynamic JS Populated Stage Content -->
+          <!-- Populated dynamically with smooth animation -->
         </div>
       </div>
 
-      <!-- Comprehensive 7-Stage Detailed Cards -->
-      <div class="section-header" style="margin-top:2rem;">
-        <span class="section-eyebrow">DETAILED STAGE SPECIFICATIONS</span>
-        <h2>Comprehensive Technical Breakdown Across All 7 Stages</h2>
-        <p>In-depth deliverables, applied international codes, and verification protocols for every engineering phase.</p>
-      </div>
-
-      <div class="timeline-container" style="margin-bottom:4rem;">
-      <!-- Stage 01: Concept Stage -->
-      <article class="timeline-card" id="stage-concept">
-        <div>
-          <div class="milestone-badge-row">
-            <span class="milestone-phase-label">CONCEPT &amp; FEASIBILITY</span>
-          </div>
-          <h3 class="milestone-title">Concept Stage: Requirements Definition, Multi-Physics Modeling &amp; Feasibility Analysis</h3>
-          <p class="milestone-desc">
-            We establish the technical foundation of new product and system developments through feasibility studies, requirement analysis, preliminary engineering assessments, and performance modelling to translate concepts into technically viable solutions.
-          </p>
-          <div class="milestone-tags" style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Requirements Synthesis</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Multi-Physics Simulation</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Feasibility Sizing</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">3D Space-Claim Optimization</span>
-          </div>
-          <ul class="milestone-deliverables" style="margin-top:1.25rem;">
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Comprehensive Requirements Synthesis:</strong> Defining operational duty cycles, environmental boundaries, load dynamics, and regulatory targets across electro-mechanical, thermal, and process domains.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Multi-Physics &amp; Energy Balances:</strong> Preliminary analytical calculations, power-to-weight optimization, thermal dissipation modeling, and lifecycle energy efficiency projections.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>System Architecture &amp; Subsystem Sizing:</strong> Sizing core modules, component selection matrices, and material compatibility envelopes against harsh duty cycles.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Preliminary 3D Space-Claim Benchmarking:</strong> Early spatial packaging, structural interface envelopes, ergonomic access analysis, and modular layout integration.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Total Cost of Ownership (TCO) &amp; Risk Assessment:</strong> Comprehensive techno-economic trade-off matrices, Capex/Opex modeling, and initial Design Failure Mode and Effects Analysis (DFMEA).</li>
-          </ul>
-        </div>
-        <div class="timeline-visual" style="align-self:center;">
-          <div style="background:linear-gradient(135deg, #0b192c 0%, #1e3a5f 100%);border-radius:14px;padding:1.5rem;color:#ffffff;border:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;justify-content:space-between;min-height:220px;">
-            <div>
-              <div class="mono" style="font-size:0.75rem;color:#9ec3ef;font-weight:700;margin-bottom:0.5rem;">TECHNICAL MILESTONE GATE</div>
-              <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;line-height:1.3;">Concept Design Freeze &amp; Technical Baseline</div>
-              <p style="font-size:0.8rem;color:#cbdcf2;line-height:1.5;margin:0;">Verification of mathematical models, multi-physics simulation runs, and formal stakeholder sign-off prior to detailed CAD.</p>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.15);padding-top:0.75rem;">
-              <span class="mono" style="font-size:0.75rem;color:#9ec3ef;">GATE REVIEW: PDR</span>
-              <span class="mono" style="font-weight:700;color:#ffffff;">CONCEPT STAGE</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Stage 02: Design Stage -->
-      <article class="timeline-card" id="stage-design">
-        <div>
-          <div class="milestone-badge-row">
-            <span class="milestone-phase-label">DETAILED ENGINEERING &amp; SIMULATION</span>
-          </div>
-          <h3 class="milestone-title">Design Stage: Multi-Discipline 3D CAD, FEA Structural Stress &amp; CFD Flow Optimization</h3>
-          <p class="milestone-desc">
-            We deliver integrated engineering design solutions, transforming defined requirements into optimized architectures, detailed technical specifications, engineering drawings, and design configurations, with a focus on functionality, reliability, and performance.
-          </p>
-          <div class="milestone-tags" style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Parametric 3D CAD</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">FEA Structural Analysis</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">CFD Thermal &amp; Fluid</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Functional Safety Architecture</span>
-          </div>
-          <ul class="milestone-deliverables" style="margin-top:1.25rem;">
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>High-Precision 3D CAD Modeling:</strong> Multi-discipline assembly models, sub-assembly component layouts, tolerance stack-up analysis, and detailed manufacturing drawings.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Finite Element Analysis (FEA):</strong> Static, cyclic fatigue, vibration modal analysis, and transient mechanical shock evaluations under maximum working loads.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Computational Fluid Dynamics (CFD):</strong> Multi-phase fluid dynamics, aerodynamic/hydrodynamic drag optimization, pressure loss reduction, and conjugate heat transfer analysis.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>System Safety &amp; Reliability Engineering:</strong> HAZOP/HAZID studies, quantitative risk modeling, DFMEA, and functional safety compliance (SIL / ASIL rating).</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Global Code &amp; Standards Alignment:</strong> Engineering verified strictly against ASME, ISO, IEC, IEEE, TEMA, API, and UNECE regulatory requirements.</li>
-          </ul>
-        </div>
-        <div class="timeline-visual" style="align-self:center;">
-          <div style="background:linear-gradient(135deg, #0b192c 0%, #1e3a5f 100%);border-radius:14px;padding:1.5rem;color:#ffffff;border:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;justify-content:space-between;min-height:220px;">
-            <div>
-              <div class="mono" style="font-size:0.75rem;color:#9ec3ef;font-weight:700;margin-bottom:0.5rem;">TECHNICAL MILESTONE GATE</div>
-              <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;line-height:1.3;">Critical Design Review (CDR)</div>
-              <p style="font-size:0.8rem;color:#cbdcf2;line-height:1.5;margin:0;">Multi-discipline technical review and sign-off on detailed engineering drawings, bills of materials (BOM), and simulation reports.</p>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.15);padding-top:0.75rem;">
-              <span class="mono" style="font-size:0.75rem;color:#9ec3ef;">GATE REVIEW: CDR</span>
-              <span class="mono" style="font-weight:700;color:#ffffff;">DESIGN STAGE</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Stage 03: Prototyping Stage -->
-      <article class="timeline-card" id="stage-prototyping">
-        <div>
-          <div class="milestone-badge-row">
-            <span class="milestone-phase-label">PROTOTYPING &amp; BENCH TESTING</span>
-          </div>
-          <h3 class="milestone-title">Prototyping Stage: Precision Fabrication, Subsystem Assembly &amp; Laboratory Trials</h3>
-          <p class="milestone-desc">
-            We facilitate the realization of engineering designs through prototype development, system integration, and functional implementation, enabling design refinement and early-stage assessment of technical feasibility.
-          </p>
-          <div class="milestone-tags" style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">5-Axis CNC Machining</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Qualified Welding (WPS/PQR)</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Pilot Subsystem Assembly</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Hardware-In-The-Loop (HIL)</span>
-          </div>
-          <ul class="milestone-deliverables" style="margin-top:1.25rem;">
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Rapid Precision Fabrication:</strong> Fast-turnaround 5-axis CNC machining, laser cutting, precision forming, and additive manufacturing for rapid proof-of-concept components.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Certified Welding &amp; Joining:</strong> Joining in accordance with Axon's 26 qualified ASME IX and AWS D1.1 WPS/PQR procedures across carbon steel, SS 316L, and exotic alloys.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Subsystem Integration &amp; Harnessing:</strong> Assembly of pilot mechanical frames, liquid thermal loops, high-voltage wiring harnesses, and custom electronic control modules.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Hardware-in-the-Loop (HIL) &amp; Dynamometer Testing:</strong> Characterization on dynamic test benches, electronic load banks, and thermal conditioning chambers.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Pre-Compliance Bench Screening:</strong> Preliminary radiated and conducted emissions (EMI/EMC), structural vibration response, and thermal boundary verification.</li>
-          </ul>
-        </div>
-        <div class="timeline-visual" style="align-self:center;">
-          <div style="background:linear-gradient(135deg, #0b192c 0%, #1e3a5f 100%);border-radius:14px;padding:1.5rem;color:#ffffff;border:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;justify-content:space-between;min-height:220px;">
-            <div>
-              <div class="mono" style="font-size:0.75rem;color:#9ec3ef;font-weight:700;margin-bottom:0.5rem;">TECHNICAL MILESTONE GATE</div>
-              <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;line-height:1.3;">Functional Alpha Prototype Freeze</div>
-              <p style="font-size:0.8rem;color:#cbdcf2;line-height:1.5;margin:0;">Empirical validation of physical benchmark parameters against theoretical multi-physics models.</p>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.15);padding-top:0.75rem;">
-              <span class="mono" style="font-size:0.75rem;color:#9ec3ef;">GATE REVIEW: TRR</span>
-              <span class="mono" style="font-weight:700;color:#ffffff;">PROTOTYPING STAGE</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Stage 04: Validation Stage -->
-      <article class="timeline-card" id="stage-validation">
-        <div>
-          <div class="milestone-badge-row">
-            <span class="milestone-phase-label">DESIGN VERIFICATION &amp; RELIABILITY</span>
-          </div>
-          <h3 class="milestone-title">Validation Stage: Design Verification Testing (DVT), Environmental Stress &amp; NDT</h3>
-          <p class="milestone-desc">
-            We execute structured verification and validation activities through engineering analysis, functional testing, and performance assessments to establish compliance with design specifications, operational requirements, and quality benchmarks.
-          </p>
-          <div class="milestone-tags" style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Design Verification Testing (DVT)</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">100% NDT Inspection</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Climatic Chamber Shock</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Multi-Axis Vibration</span>
-          </div>
-          <ul class="milestone-deliverables" style="margin-top:1.25rem;">
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Advanced Non-Destructive Testing (NDT):</strong> Radiographic (RT), Ultrasonic (UT), Magnetic Particle (MPI), and Dye Penetrant (DPT) inspections for total joint integrity.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Proof Pressure &amp; Structural Load Testing:</strong> Hydrostatic proof testing up to 1.5x design pressure and mass-spectrometer leak tests verifying zero emissions.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Environmental Climatic Stress Screening:</strong> Thermal cycling from -40&deg;C to +85&deg;C, accelerated corrosion salt-fog exposure, and high-humidity endurance.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Multi-Axis Dynamic Vibration &amp; Shock:</strong> Shaker table random vibration and mechanical shock profiles simulating decades of field service life.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Full-Load Continuous Endurance Runs:</strong> Continuous endurance trials verifying thermal saturation margins, power delivery efficiency, and control software stability.</li>
-          </ul>
-        </div>
-        <div class="timeline-visual" style="align-self:center;">
-          <div style="background:linear-gradient(135deg, #0b192c 0%, #1e3a5f 100%);border-radius:14px;padding:1.5rem;color:#ffffff;border:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;justify-content:space-between;min-height:220px;">
-            <div>
-              <div class="mono" style="font-size:0.75rem;color:#9ec3ef;font-weight:700;margin-bottom:0.5rem;">TECHNICAL MILESTONE GATE</div>
-              <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;line-height:1.3;">Design Verification Approval (DVT)</div>
-              <p style="font-size:0.8rem;color:#cbdcf2;line-height:1.5;margin:0;">Formal engineering sign-off verifying that physical test results meet or exceed all baseline specifications.</p>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.15);padding-top:0.75rem;">
-              <span class="mono" style="font-size:0.75rem;color:#9ec3ef;">GATE REVIEW: DVR</span>
-              <span class="mono" style="font-weight:700;color:#ffffff;">VALIDATION STAGE</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Stage 05: Homologation & Certification -->
-      <article class="timeline-card" id="stage-homologation">
-        <div>
-          <div class="milestone-badge-row">
-            <span class="milestone-phase-label">STATUTORY COMPLIANCE &amp; CERTIFICATION</span>
-          </div>
-          <h3 class="milestone-title">Homologation &amp; Certification: Statutory Approvals, Code Stamping &amp; Compliance Dossiers</h3>
-          <p class="milestone-desc">
-            We provide engineering and technical support for product certification and regulatory approval, ensuring conformity with applicable statutory requirements, industry standards, testing protocols, and homologation procedures.
-          </p>
-          <div class="milestone-tags" style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Third-Party Inspection</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Code Stamping (ASME / CE)</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Hazardous Area (ATEX / IECEx)</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Type Approvals &amp; CoC</span>
-          </div>
-          <ul class="milestone-deliverables" style="margin-top:1.25rem;">
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>International Boiler &amp; Pressure Vessel Compliance:</strong> ASME BPVC compliance, Authorized Inspector (AI) verification, and official code stamping.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Explosive Atmosphere &amp; Electrical Safety:</strong> ATEX and IECEx compliance certification for hazardous area mechanical and electrical systems.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Marine &amp; Offshore Classification:</strong> Classification society formal sign-offs (DNV, Lloyd's Register, ABS) for marine and offshore installations.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Specialized Mobility Type Approvals:</strong> Comprehensive regulatory approvals including UN/ECE safety, electromagnetic compatibility (EMC), and functional safety.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Manufacturer Data Books (MDB):</strong> Complete dossier containing Inspection Test Plans (ITP), certified 3.1/3.2 material test reports, and formal CoC documentation.</li>
-          </ul>
-        </div>
-        <div class="timeline-visual" style="align-self:center;">
-          <div style="background:linear-gradient(135deg, #0b192c 0%, #1e3a5f 100%);border-radius:14px;padding:1.5rem;color:#ffffff;border:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;justify-content:space-between;min-height:220px;">
-            <div>
-              <div class="mono" style="font-size:0.75rem;color:#9ec3ef;font-weight:700;margin-bottom:0.5rem;">TECHNICAL MILESTONE GATE</div>
-              <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;line-height:1.3;">Statutory Type Approval &amp; Code Stamp</div>
-              <p style="font-size:0.8rem;color:#cbdcf2;line-height:1.5;margin:0;">Formal regulatory clearance granting legal authorization for commercial sale and industrial operation.</p>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.15);padding-top:0.75rem;">
-              <span class="mono" style="font-size:0.75rem;color:#9ec3ef;">GATE REVIEW: HOM</span>
-              <span class="mono" style="font-weight:700;color:#ffffff;">HOMOLOGATION STAGE</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Stage 06: Series Production & Turnkey Execution -->
-      <article class="timeline-card" id="stage-production">
-        <div>
-          <div class="milestone-badge-row">
-            <span class="milestone-phase-label">SERIES PRODUCTION &amp; EXECUTION</span>
-          </div>
-          <h3 class="milestone-title">Series Production &amp; Execution: ISO 9001 / IATF Quality Systems &amp; End-of-Line QA</h3>
-          <p class="milestone-desc">
-            We support the industrialization and production ramp-up of validated designs through manufacturing process development, production optimization, quality assurance, and engineering integration to ensure consistency, scalability, and operational efficiency.
-          </p>
-          <div class="milestone-tags" style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">ISO 9001 / IATF 16949</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Automated Tooling &amp; Jigs</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Statistical Process Control (SPC)</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Automated End-of-Line (EOL)</span>
-          </div>
-          <ul class="milestone-deliverables" style="margin-top:1.25rem;">
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Scalable Precision Manufacturing:</strong> Dedicated fabrication bays, clean assembly stations, precision welding cells, and modular integration workflows.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Advanced Tooling &amp; Production Controls:</strong> Dedicated assembly fixtures, precision torque-angle fastening systems, and calibrated assembly equipment.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Statistical Process Control (SPC):</strong> Multi-point inline quality gates ensuring tight dimensional control, zero-defect repeatability, and continuous yield optimization.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Automated End-of-Line (EOL) Acceptance Testing:</strong> Comprehensive dielectric testing, automated pneumatic/hydraulic proof testing, and dynamic functional cycle validation.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Full Component Traceability:</strong> 2D DataMatrix serialization and material heat-number tracking linking every sub-component directly to its mill certificate.</li>
-          </ul>
-        </div>
-        <div class="timeline-visual" style="align-self:center;">
-          <div style="background:linear-gradient(135deg, #0b192c 0%, #1e3a5f 100%);border-radius:14px;padding:1.5rem;color:#ffffff;border:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;justify-content:space-between;min-height:220px;">
-            <div>
-              <div class="mono" style="font-size:0.75rem;color:#9ec3ef;font-weight:700;margin-bottom:0.5rem;">TECHNICAL MILESTONE GATE</div>
-              <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;line-height:1.3;">Production Part Approval (PPAP / FAT)</div>
-              <p style="font-size:0.8rem;color:#cbdcf2;line-height:1.5;margin:0;">Factory Acceptance Testing (FAT) sign-off authorizing unit dispatch and commercial client commissioning.</p>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.15);padding-top:0.75rem;">
-              <span class="mono" style="font-size:0.75rem;color:#9ec3ef;">GATE REVIEW: FAT</span>
-              <span class="mono" style="font-weight:700;color:#ffffff;">SERIES PRODUCTION</span>
-            </div>
-          </div>
-        </div>
-      </article>
-
-      <!-- Stage 07: Aftersales & Lifecycle Support -->
-      <article class="timeline-card" id="stage-aftersales">
-        <div>
-          <div class="milestone-badge-row">
-            <span class="milestone-phase-label">COMMISSIONING &amp; LIFECYCLE EXCELLENCE</span>
-          </div>
-          <h3 class="milestone-title">Aftersales &amp; Lifecycle Support: Commissioning, Guaranteed Spares &amp; Cloud Telematics</h3>
-          <p class="milestone-desc">
-            We deliver lifecycle engineering support through technical diagnostics, field performance analysis, failure investigation, maintenance optimization, and continuous product improvement to enhance reliability, serviceability, and long-term product performance.
-          </p>
-          <div class="milestone-tags" style="margin-top:1rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Site Acceptance Testing (SAT)</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">15+ Years Spare Guarantee</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Cloud Telemetry &amp; Diagnostics</span>
-            <span class="utility-badge" style="background:#f8fafc;color:#1b5299;border-color:#cbd5e1;">Global Rapid Field Support</span>
-          </div>
-          <ul class="milestone-deliverables" style="margin-top:1.25rem;">
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>On-Site Cold &amp; Hot Commissioning (SAT):</strong> Performance test runs, interface integration, and structured operational handover to client technical teams.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>15-Year Contractual Spare Parts Guarantee:</strong> Long-term guaranteed availability of replacement sub-assemblies, precision consumables, and electronic modules.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Real-Time Cloud IoT Telematics:</strong> Continuous cloud monitoring of thermal performance, vibration, power efficiency, and operating envelope health.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Predictive Maintenance &amp; RCFA:</strong> Structured predictive maintenance schedules, root-cause failure analysis (RCFA), and remote encrypted technical diagnosis.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Global Field Engineering &amp; Training:</strong> Rapid-response technical specialist dispatch alongside comprehensive operational training courses for client personnel.</li>
-          </ul>
-        </div>
-        <div class="timeline-visual" style="align-self:center;">
-          <div style="background:linear-gradient(135deg, #0b192c 0%, #1e3a5f 100%);border-radius:14px;padding:1.5rem;color:#ffffff;border:1px solid rgba(255,255,255,0.1);display:flex;flex-direction:column;justify-content:space-between;min-height:220px;">
-            <div>
-              <div class="mono" style="font-size:0.75rem;color:#9ec3ef;font-weight:700;margin-bottom:0.5rem;">TECHNICAL MILESTONE GATE</div>
-              <div style="font-size:1.1rem;font-weight:700;margin-bottom:0.75rem;line-height:1.3;">Operational Handover &amp; Telemetry</div>
-              <p style="font-size:0.8rem;color:#cbdcf2;line-height:1.5;margin:0;">Site Acceptance Testing (SAT) sign-off, live telemetry activation, and ongoing lifecycle performance monitoring.</p>
-            </div>
-            <div style="display:flex;justify-content:space-between;align-items:center;margin-top:1rem;border-top:1px solid rgba(255,255,255,0.15);padding-top:0.75rem;">
-              <span class="mono" style="font-size:0.75rem;color:#9ec3ef;">GATE REVIEW: SAT</span>
-              <span class="mono" style="font-weight:700;color:#ffffff;">AFTERSALES &amp; LIFECYCLE</span>
-            </div>
-          </div>
-        </div>
-      </article>
-    </div>
-
-      <!-- Core Competencies Grid -->
-      <div class="section-header" style="margin-top:2rem;">
-        <span class="section-eyebrow">CENTRE OF EXCELLENCE COMPETENCIES</span>
-        <h2>Advanced Engineering &amp; Proprietary Technologies</h2>
-        <p>Developing advanced engineering solutions and proprietary technologies that drive innovation, efficiency, and sustainable industrial transformation.</p>
-      </div>
-
-      <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;margin-bottom:3.5rem;">
-        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
-          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">CORE DISCIPLINE //</div>
-          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Proprietary Technology Development</h3>
-          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Continuous engineering of original process architectures, heat transfer innovations, and specialized clean-tech industrial equipment.</p>
+      <!-- Clean 7-Stage General Summary Grid -->
+      <div style="margin-bottom:3.5rem;">
+        <div class="section-header" style="max-width:1050px;margin-bottom:2rem;">
+          <span class="section-eyebrow">GENERAL R&amp;D PROCESS OVERVIEW</span>
+          <h2 style="font-size:clamp(1.4rem, 2.2vw, 1.95rem);margin-bottom:0.5rem;white-space:nowrap;max-width:100%;">Structured Engineering Across All 7 Stages</h2>
+          <p style="font-size:0.95rem;color:var(--text-600);margin:0;">Applicable for all research, innovation, and multi-product system realization.</p>
         </div>
 
-        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
-          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">INTELLECTUAL PROPERTY //</div>
-          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Patents &amp; Intellectual Property</h3>
-          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Aggressive protection and filing of patentable industrial designs, electrification schematics, and proprietary process flow cycles.</p>
-        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.5rem;">
+          
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+              <span class="utility-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;font-weight:700;">STAGE 01</span>
+              <h3 style="font-size:1.15rem;color:var(--text-900);margin:0;">Concept Stage</h3>
+            </div>
+            <p style="font-size:0.9rem;color:var(--text-600);line-height:1.65;margin:0;">
+              We establish the technical foundation of new product and system developments through feasibility studies, requirement analysis, preliminary engineering assessments, and performance modelling to translate concepts into technically viable solutions.
+            </p>
+          </div>
 
-        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
-          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">ADVANCED SIMULATION //</div>
-          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Advanced Engineering Research</h3>
-          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">CFD fluid simulation, FEA structural stress calculations, and empirical pilot testing in extreme pressure and temperature domains.</p>
-        </div>
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+              <span class="utility-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;font-weight:700;">STAGE 02</span>
+              <h3 style="font-size:1.15rem;color:var(--text-900);margin:0;">Design Stage</h3>
+            </div>
+            <p style="font-size:0.9rem;color:var(--text-600);line-height:1.65;margin:0;">
+              We deliver integrated engineering design solutions, transforming defined requirements into optimized architectures, detailed technical specifications, engineering drawings, and design configurations, with a focus on functionality, reliability, and performance.
+            </p>
+          </div>
 
-        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
-          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">BENCH VALIDATION //</div>
-          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Prototyping &amp; Technology Validation</h3>
-          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Rapid physical prototyping, hardware-in-the-loop validation, and factory acceptance test trials before commercial deployment.</p>
-        </div>
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+              <span class="utility-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;font-weight:700;">STAGE 03</span>
+              <h3 style="font-size:1.15rem;color:var(--text-900);margin:0;">Prototyping Stage</h3>
+            </div>
+            <p style="font-size:0.9rem;color:var(--text-600);line-height:1.65;margin:0;">
+              We facilitate the realization of engineering designs through prototype development, system integration, and functional implementation, enabling design refinement and early-stage assessment of technical feasibility.
+            </p>
+          </div>
 
-        <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:18px;padding:1.85rem;box-shadow:var(--shadow-xs);">
-          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">COMMERCIALISATION //</div>
-          <h3 style="font-size:1.18rem;margin-bottom:0.5rem;color:var(--text-900);">Technology Licensing &amp; Commercialisation</h3>
-          <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;">Structured commercial licensing models allowing regional OEMs and plant operators to adopt Axon-owned technology frameworks.</p>
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+              <span class="utility-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;font-weight:700;">STAGE 04</span>
+              <h3 style="font-size:1.15rem;color:var(--text-900);margin:0;">Validation Stage</h3>
+            </div>
+            <p style="font-size:0.9rem;color:var(--text-600);line-height:1.65;margin:0;">
+              We execute structured verification and validation activities through engineering analysis, functional testing, and performance assessments to establish compliance with design specifications, operational requirements, and quality benchmarks.
+            </p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+              <span class="utility-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;font-weight:700;">STAGE 05</span>
+              <h3 style="font-size:1.15rem;color:var(--text-900);margin:0;">Homologation Stage</h3>
+            </div>
+            <p style="font-size:0.9rem;color:var(--text-600);line-height:1.65;margin:0;">
+              We provide engineering and technical support for product certification and regulatory approval, ensuring conformity with applicable statutory requirements, industry standards, testing protocols, and homologation procedures.
+            </p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-xs);">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+              <span class="utility-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;font-weight:700;">STAGE 06</span>
+              <h3 style="font-size:1.15rem;color:var(--text-900);margin:0;">Series Production</h3>
+            </div>
+            <p style="font-size:0.9rem;color:var(--text-600);line-height:1.65;margin:0;">
+              We support the industrialization and production ramp-up of validated designs through manufacturing process development, production optimization, quality assurance, and engineering integration to ensure consistency, scalability, and operational efficiency.
+            </p>
+          </div>
+
+          <div style="background:#ffffff;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;box-shadow:var(--shadow-xs);grid-column:1/-1;">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.75rem;">
+              <span class="utility-badge" style="background:#e0f2fe;color:#0284c7;border-color:#bae6fd;font-weight:700;">STAGE 07</span>
+              <h3 style="font-size:1.15rem;color:var(--text-900);margin:0;">Aftersales</h3>
+            </div>
+            <p style="font-size:0.9rem;color:var(--text-600);line-height:1.65;margin:0;">
+              We deliver lifecycle engineering support through technical diagnostics, field performance analysis, failure investigation, maintenance optimization, and continuous product improvement to enhance reliability, serviceability, and long-term product performance.
+            </p>
+          </div>
+
         </div>
       </div>
-
-      <!-- Commitment Callout Banner -->
+<!-- Commitment Callout Banner -->
       <div style="background:linear-gradient(135deg, #162436 0%, #1b5299 100%);color:#ffffff;border-radius:24px;padding:clamp(2rem, 4vw, 3.5rem);box-shadow:var(--shadow-md);position:relative;overflow:hidden;">
         <div style="max-width:820px;position:relative;z-index:2;">
           <span class="utility-badge" style="background:rgba(255,255,255,0.15);color:#ffffff;border-color:rgba(255,255,255,0.25);margin-bottom:1rem;">OUR COMMITMENT</span>
@@ -737,9 +500,69 @@
     </div>
   </div>
 
-  <!-- Interactive Switcher Script -->
+    <!-- Interactive Switcher Script with Animation -->
+  <style>
+    @keyframes stageCardFade {
+      0% { opacity: 0; transform: translateY(14px) scale(0.99); }
+      100% { opacity: 1; transform: translateY(0) scale(1); }
+    }
+    .stage-animating {
+      animation: stageCardFade 0.32s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    }
+  </style>
+
   <script>
-    const elintaStagesData = [{"id": "concept", "num": "01", "name": "Concept Stage", "subtitle": "Feasibility Studies, Requirement Analysis & Performance Modelling", "summary": "We establish the technical foundation of new product and system developments through feasibility studies, requirement analysis, preliminary engineering assessments, and performance modelling to translate concepts into technically viable solutions.", "standards": ["Feasibility Studies", "Requirement Analysis", "Engineering Assessment", "Performance Modelling"], "deliverables": ["Comprehensive stakeholder requirement analysis and operational boundary definition.", "Multi-domain preliminary engineering assessments and constraint mapping.", "Mathematical performance modelling and simulation-driven concept verification.", "Techno-economic feasibility studies and lifecycle trade-off evaluations.", "Translating conceptual frameworks into technically viable, de-risked solutions."], "image": "assets/images/project-turnkey-cad-1.jpg"}, {"id": "design", "num": "02", "name": "Design Stage", "subtitle": "Integrated Engineering Design, System Architecture & Detailed Specifications", "summary": "We deliver integrated engineering design solutions, transforming defined requirements into optimized architectures, detailed technical specifications, engineering drawings, and design configurations, with a focus on functionality, reliability, and performance.", "standards": ["System Architecture", "Technical Specifications", "Engineering Drawings", "Design Configuration"], "deliverables": ["Transforming system requirements into optimized functional and physical architectures.", "Comprehensive multi-discipline 3D CAD modeling and spatial packaging coordination.", "Detailed manufacturing drawings, component configurations, and bill of materials (BOM).", "Advanced structural (FEA) and fluid/thermal (CFD) simulation for maximum performance.", "Rigorous alignment with international design codes, safety standards, and reliability criteria."], "image": "assets/images/project-turnkey-cad-2.jpg"}, {"id": "prototyping", "num": "03", "name": "Prototyping Stage", "subtitle": "Prototype Development, System Integration & Functional Implementation", "summary": "We facilitate the realization of engineering designs through prototype development, system integration, and functional implementation, enabling design refinement and early-stage assessment of technical feasibility.", "standards": ["Prototype Development", "System Integration", "Functional Implementation", "Technical Feasibility"], "deliverables": ["Rapid fabrication of high-precision functional prototypes and pilot assemblies.", "Multi-subsystem physical integration, wiring/plumbing interconnects, and control setup.", "Functional bench implementation and empirical proof-of-concept testing.", "Early-stage technical feasibility assessment and empirical parameter benchmarking.", "Design refinement feedback loops ensuring seamless progression toward validation."], "image": "assets/images/project-reactor-crayvalley.jpg"}, {"id": "validation", "num": "04", "name": "Validation Stage", "subtitle": "Structured Verification, Functional Testing & Performance Assessments", "summary": "We execute structured verification and validation activities through engineering analysis, functional testing, and performance assessments to establish compliance with design specifications, operational requirements, and quality benchmarks.", "standards": ["Verification & Validation", "Functional Testing", "Performance Assessment", "Quality Benchmarks"], "deliverables": ["Structured Design Verification Testing (DVT) across expanded environmental envelopes.", "Full-scale functional testing, load simulation, and dynamic operational trials.", "Rigorous non-destructive testing (NDT), structural proof, and leak integrity screening.", "Performance data analysis verifying complete alignment with target design metrics.", "Quality benchmark validation to ensure zero-defect operational durability."], "image": "assets/images/project-metering-skid-hydrotest.jpg"}, {"id": "homologation", "num": "05", "name": "Homologation Stage", "subtitle": "Product Certification, Statutory Compliance & Regulatory Approvals", "summary": "We provide engineering and technical support for product certification and regulatory approval, ensuring conformity with applicable statutory requirements, industry standards, testing protocols, and homologation procedures.", "standards": ["Product Certification", "Statutory Conformity", "Industry Standards", "Homologation Protocols"], "deliverables": ["Dedicated technical dossiers and engineering documentation for regulatory agencies.", "Statutory conformity verification covering national and international codes.", "Coordination of accredited third-party inspection, witness testing, and compliance audits.", "Formal execution of type approval, CE/ASME/ISO compliance, and code stamping protocols.", "Delivery of verified Certificates of Conformity (CoC) and Manufacturer Data Books (MDB)."], "image": "assets/images/project-metering-skid-main.jpg"}, {"id": "production", "num": "06", "name": "Series Production", "subtitle": "Industrialization, Manufacturing Process Development & Production Ramp-Up", "summary": "We support the industrialization and production ramp-up of validated designs through manufacturing process development, production optimization, quality assurance, and engineering integration to ensure consistency, scalability, and operational efficiency.", "standards": ["Production Ramp-Up", "Process Development", "Quality Assurance", "Scalable Assembly"], "deliverables": ["Manufacturing process flow engineering, specialized tooling, and assembly jig design.", "Pilot production runs, line balancing, and production ramp-up optimization.", "Multi-stage inline Quality Assurance (QA/QC) and Statistical Process Control (SPC).", "100% automated End-of-Line (EOL) functional acceptance testing.", "Full component traceability linking serialized units directly to certified material records."], "image": "assets/images/project-turnkey-emery-main.jpg"}, {"id": "aftersales", "num": "07", "name": "Aftersales", "subtitle": "Lifecycle Engineering, Technical Diagnostics & Continuous Improvement", "summary": "We deliver lifecycle engineering support through technical diagnostics, field performance analysis, failure investigation, maintenance optimization, and continuous product improvement to enhance reliability, serviceability, and long-term product performance.", "standards": ["Lifecycle Support", "Technical Diagnostics", "Failure Investigation", "Continuous Improvement"], "deliverables": ["Comprehensive technical diagnostics, telemetry integration, and remote troubleshooting.", "Real-world field performance telemetry analysis and operational optimization.", "Root-cause failure analysis (RCFA) and corrective engineering intervention.", "Predictive maintenance schedule development and guaranteed long-term spare availability.", "Continuous engineering improvement feedback loops enhancing asset longevity and serviceability."], "image": "assets/images/project-petronas-fgru-site.jpg"}];
+    const elintaStagesData = [
+      {
+        num: "01",
+        name: "Concept Stage",
+        tag: "FEASIBILITY & MODELLING",
+        summary: "We establish the technical foundation of new product and system developments through feasibility studies, requirement analysis, preliminary engineering assessments, and performance modelling to translate concepts into technically viable solutions.",
+        highlights: ["Feasibility Studies", "Requirement Analysis", "Preliminary Engineering", "Performance Modelling"]
+      },
+      {
+        num: "02",
+        name: "Design Stage",
+        tag: "ARCHITECTURE & SPECIFICATIONS",
+        summary: "We deliver integrated engineering design solutions, transforming defined requirements into optimized architectures, detailed technical specifications, engineering drawings, and design configurations, with a focus on functionality, reliability, and performance.",
+        highlights: ["Optimized Architectures", "Technical Specifications", "Engineering Drawings", "Design Configurations"]
+      },
+      {
+        num: "03",
+        name: "Prototyping Stage",
+        tag: "SYSTEM INTEGRATION & REALIZATION",
+        summary: "We facilitate the realization of engineering designs through prototype development, system integration, and functional implementation, enabling design refinement and early-stage assessment of technical feasibility.",
+        highlights: ["Prototype Development", "System Integration", "Functional Implementation", "Technical Feasibility"]
+      },
+      {
+        num: "04",
+        name: "Validation Stage",
+        tag: "TESTING & QUALITY BENCHMARKS",
+        summary: "We execute structured verification and validation activities through engineering analysis, functional testing, and performance assessments to establish compliance with design specifications, operational requirements, and quality benchmarks.",
+        highlights: ["Structured V&V", "Functional Testing", "Engineering Analysis", "Quality Benchmarks"]
+      },
+      {
+        num: "05",
+        name: "Homologation Stage",
+        tag: "CERTIFICATION & REGULATORY APPROVAL",
+        summary: "We provide engineering and technical support for product certification and regulatory approval, ensuring conformity with applicable statutory requirements, industry standards, testing protocols, and homologation procedures.",
+        highlights: ["Product Certification", "Regulatory Approval", "Statutory Conformity", "Testing Protocols"]
+      },
+      {
+        num: "06",
+        name: "Series Production",
+        tag: "INDUSTRIALIZATION & RAMP-UP",
+        summary: "We support the industrialization and production ramp-up of validated designs through manufacturing process development, production optimization, quality assurance, and engineering integration to ensure consistency, scalability, and operational efficiency.",
+        highlights: ["Process Development", "Production Optimization", "Quality Assurance", "Engineering Integration"]
+      },
+      {
+        num: "07",
+        name: "Aftersales",
+        tag: "LIFECYCLE SUPPORT & IMPROVEMENT",
+        summary: "We deliver lifecycle engineering support through technical diagnostics, field performance analysis, failure investigation, maintenance optimization, and continuous product improvement to enhance reliability, serviceability, and long-term product performance.",
+        highlights: ["Technical Diagnostics", "Field Performance", "Failure Investigation", "Continuous Improvement"]
+      }
+    ];
 
     function switchElintaStage(idx) {
       const data = elintaStagesData[idx];
@@ -754,41 +577,33 @@
         }
       }
 
-      // Build right content
+      // Build right content with animation class
       const box = document.getElementById('elintaContentBox');
       if (!box) return;
 
-      const delivsHtml = data.deliverables.map(d => `<li class="elinta-deliv-item"><span class="dot">&bull;</span><span>${d}</span></li>`).join('');
-      const chipsHtml = data.standards.map(s => `<span class="elinta-chip">${s}</span>`).join(' ');
+      const chipsHtml = data.highlights.map(h => `<span class="elinta-chip" style="background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.15);padding:0.35rem 0.85rem;border-radius:999px;font-size:0.8rem;color:#bae6fd;">${h}</span>`).join(' ');
+
+      // Trigger re-animation
+      box.classList.remove('stage-animating');
+      void box.offsetWidth; // force reflow
+      box.classList.add('stage-animating');
 
       box.innerHTML = `
-        <div class="elinta-content-eyebrow">
-          <span>ENGINEERING LIFECYCLE</span>
+        <div class="elinta-content-eyebrow" style="display:inline-flex;align-items:center;gap:0.5rem;font-family:'JetBrains Mono',monospace;font-size:0.75rem;font-weight:700;color:#38bdf8;text-transform:uppercase;letter-spacing:0.08em;margin-bottom:0.75rem;">
+          <span>STAGE ${data.num}</span>
           <span style="opacity:0.4;">&bull;</span>
-          <span>${data.name.toUpperCase()}</span>
+          <span>${data.tag}</span>
         </div>
-        <h3 class="elinta-content-title">${data.name}</h3>
-        <div class="elinta-content-sub">${data.subtitle}</div>
-        <p class="elinta-content-desc">${data.summary}</p>
+        <h3 class="elinta-content-title" style="font-size:clamp(1.75rem,2.8vw,2.4rem);font-weight:800;color:#ffffff;margin-bottom:1.25rem;line-height:1.2;">${data.name}</h3>
+        <p class="elinta-content-desc" style="font-size:1.08rem;color:#e2ecf8;line-height:1.75;margin-bottom:1.75rem;max-width:760px;">${data.summary}</p>
         
-        <div style="margin-bottom:1.5rem;display:flex;gap:0.5rem;flex-wrap:wrap;">
+        <div style="display:flex;gap:0.6rem;flex-wrap:wrap;align-items:center;">
           ${chipsHtml}
         </div>
-
-        <ul class="elinta-content-delivs">
-          ${delivsHtml}
-        </ul>
-
-        <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-          <a class="btn btn-primary btn-sm" href="#stage-${data.id}" style="background:#38bdf8;color:#0b1320;font-weight:700;">
-            <span>Read Stage Specifications</span>
-            <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
-          </a>
-          </div>
       `;
     }
 
-    // Auto initialize to Stage 0
+    // Auto initialize to Stage 0 on DOM load
     document.addEventListener('DOMContentLoaded', () => {
       switchElintaStage(0);
     });
@@ -821,7 +636,7 @@
           <li><a href="epc-turnkey.html">EPC &amp; Turnkey Industrial Plants</a></li>
           <li><a href="sustainable-mobility.html">Sustainable Mobility (EV &amp; Marine)</a></li>
           <li><a href="hvac-thermal.html">HVAC &amp; Thermal Engineering</a></li>
-          <li><a href="trading-commodities.html">Trading</a></li>
+          <li><a href="trading.html">Trading</a></li>
         </ul>
       </div>
 

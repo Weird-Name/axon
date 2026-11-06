@@ -2917,3 +2917,9 @@ body.hide-header .site-header {
 .footer-bottom-inner .sep {
   color: var(--surface-400);
 }
+
+@media (min-width: 992px) {
+  .nowrap-heading, .section-header h2.single-line {
+    white-space: nowrap;
+  }
+}
