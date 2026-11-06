@@ -21,7 +21,7 @@ const DEFAULT_AXON_DATA = {
     whatsapp: "919845530637",
     email: "projects@axonpetro.in",
     rfqEmail: "rfq@axonpetro.in",
-    headquarters: "Industrial Estate, Peenya / Electronic City Phase II, Bengaluru, Karnataka, India",
+    headquarters: "Innov8, Prestige Tech Platina, 11th Floor, No. 32/2 & 34/1, Outer Ring Road, Kadubisanahalli, Bengaluru, Karnataka 560087, India",
     regionalHubs: "Pasir Gudang (Johor, Malaysia) • Kuala Langsat (Selangor, Malaysia) • Jurong Island (Singapore)",
     stats: [
       { value: "30+", label: "Engineered Equipment Lines", detail: "Reactors, Skids, Heat Exchangers, Silos, Columns & Custom Fabrication" },
@@ -1229,7 +1229,7 @@ const DEFAULT_AXON_DATA = {
     {
       id: "trading",
       code: "04",
-      title: "Trading & Strategic Commodities",
+      title: "Trading",
       subtitle: "Global Supply Chain & Material Procurement",
       badge: "GLOBAL PROCUREMENT & SOURCING",
       tagline: "Exotic Alloys • Process Hardware • Raw Materials • International Supply Chains",

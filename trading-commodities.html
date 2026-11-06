@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Trading &amp; Strategic Commodities | Axon Petro Engineering</title>
-  <meta name="description" content="Global supply chain sourcing: exotic nickel alloys, Hastelloy C276, Super Duplex, Monel, ASME piping, and automated industrial valves.">
+  <title>Trading | Oil & Gas Skids, Fertilizers &amp; Commodities | Axon Petro Engineering</title>
+  <meta name="description" content="Axon Petro Trading Division operates across three core sub-verticals: Oil & Gas Equipment and Skids, Organic & Chemical Fertilizers, and Global Bulk Commodities (UCO, Edible Oils, Sugar & Rice).">
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -28,6 +28,24 @@
     .utility-link { display: inline-flex; align-items: center; gap: 0.4rem; color: #475569; font-weight: 500; background: none; border: none; cursor: pointer; font-size: 0.76rem; font-family: inherit; padding: 0; text-decoration: none; transition: color 0.2s; }
     .utility-link:hover { color: #1b5299; }
     .utility-link.accent { color: #1b5299; font-weight: 600; }
+    
+    /* Sub-Vertical Jump Navigation */
+    .subv-nav { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+    .subv-pill { display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.65rem 1.25rem; border-radius: 12px; background: #ffffff; border: 1px solid var(--surface-300); color: var(--text-800); text-decoration: none; font-weight: 600; font-size: 0.88rem; transition: all 0.2s ease; box-shadow: var(--shadow-xs); }
+    .subv-pill:hover, .subv-pill.active { background: #1b5299; color: #ffffff; border-color: #1b5299; transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+    .subv-pill span.num { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; opacity: 0.85; }
+
+    /* Specification Tables */
+    .spec-table-wrap { overflow-x: auto; margin: 1.5rem 0; border-radius: 12px; border: 1px solid var(--surface-200); }
+    .spec-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; text-align: left; }
+    .spec-table th { background: #0f172a; color: #ffffff; padding: 0.75rem 1rem; font-weight: 600; font-size: 0.82rem; letter-spacing: 0.02em; }
+    .spec-table td { padding: 0.75rem 1rem; border-bottom: 1px solid var(--surface-200); color: var(--text-700); }
+    .spec-table tr:last-child td { border-bottom: none; }
+    .spec-table tr:nth-child(even) td { background: #f8fafc; }
+
+    /* Sub-vertical Section Card */
+    .subv-card { background: #ffffff; border: 1px solid var(--surface-200); border-radius: 20px; padding: clamp(1.75rem, 3vw, 2.75rem); box-shadow: var(--shadow-xs); margin-bottom: 3.5rem; }
+    .subv-card-header { display: flex; align-items: flex-start; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap; border-bottom: 1px solid var(--surface-200); padding-bottom: 1.5rem; margin-bottom: 2rem; }
   </style>
 </head>
 <body class="hide-header">
@@ -46,7 +64,8 @@
       </div>
     </div>
   </div>
-    <!-- Top Utility Bar (Contact Direct) -->
+
+  <!-- Top Utility Bar (Contact Direct) -->
   <div class="top-utility-bar">
     <div class="container top-utility-inner" style="justify-content:flex-end;">
       <div class="utility-right">
@@ -70,7 +89,7 @@
   <!-- Header Navigation -->
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand-logo" href="index.html" title="Axon Petro Engineering Pvt. Ltd. — Engineered to perform.">
+      <a class="brand-logo" href="index.html" title="Axon Petro Engineering Pvt. Ltd. &bull; Engineered to perform.">
         <img src="assets/images/axon-logo.jpg" alt="Axon Petro Engineering Pvt. Ltd. Logo" style="height:56px;width:auto;object-fit:contain;">
       </a>
 
@@ -134,8 +153,8 @@
             </a>
             <a class="adani-dropdown-link" href="trading-commodities.html">
               <div>
-                <span class="adani-dropdown-title">Trading &amp; Strategic Commodities</span>
-                <span class="adani-dropdown-sub">Exotic Alloys, Valves &amp; Global EPC Supply Chain</span>
+                <span class="adani-dropdown-title">Trading</span>
+                <span class="adani-dropdown-sub">Oil &amp; Gas Equipment, Fertilizers &amp; Commodities</span>
               </div>
             </a>
           </div>
@@ -165,18 +184,21 @@
   <div class="adani-about-hero">
     <div class="container">
       <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap;">
-        <span class="utility-badge" style="background:rgba(255,255,255,0.18);color:#ffffff;border-color:rgba(255,255,255,0.25);">AXON GROUP ECOSYSTEM // STRATEGIC COMMODITIES</span>
-        <span class="mono" style="font-size:0.8rem;color:#c5d9f2;">EXOTIC ALLOYS &bull; GLOBAL SUPPLY CHAIN</span>
+        <span class="utility-badge" style="background:rgba(255,255,255,0.18);color:#ffffff;border-color:rgba(255,255,255,0.25);">GLOBAL TRADING &bull; MERCANTILE OPERATIONS</span>
+        <span class="mono" style="font-size:0.8rem;color:#c5d9f2;">OIL &amp; GAS SKIDS &bull; ORGANIC FERTILIZERS &bull; BULK COMMODITIES</span>
       </div>
       <h1 class="page-hero-title">
-        Trading &amp; Strategic Commodities
+        Trading
       </h1>
-      <p style="font-size:clamp(1rem,1.8vw,1.2rem);color:#e2ecf8;max-width:850px;line-height:1.65;margin-bottom:1.75rem;">
-        Connecting tier-1 industrial clients with certified prime-mill raw materials, exotic nickel alloys, high-pressure valves, and piping packages through bonded corridors across India, Malaysia, and Singapore.
+      <p style="font-size:clamp(1rem,1.8vw,1.2rem);color:#e2ecf8;max-width:860px;line-height:1.65;margin-bottom:1.75rem;">
+        Engineering the flow of modern commerce. Axon Petro operates across three core trading sub-verticals: Oil &amp; Gas Equipments and Skids, Advanced Organic &amp; Chemical Fertilizers, and Global Mercantile Commodities including Used Cooking Oil (UCO), Edible Oils, Sugar, and Rice.
       </p>
       <div style="display:flex;gap:1rem;flex-wrap:wrap;align-items:center;">
-        <a class="btn btn-outline" href="contact.html" style="color:#ffffff;border-color:rgba(255,255,255,0.4);">
-          <span>Global Procurement Desk</span>
+        <a class="btn btn-outline" href="#oil-gas" style="color:#ffffff;border-color:rgba(255,255,255,0.4);">
+          <span>Explore 3 Verticals</span>
+        </a>
+        <a class="btn btn-whatsapp" href="https://wa.me/919845530637?text=Hello%20Axon%2C%20I%20have%20a%20Trading%20inquiry." target="_blank" rel="noopener">
+          <span>WhatsApp Trade Desk</span>
         </a>
       </div>
     </div>
@@ -184,74 +206,519 @@
 
   <div class="section" style="padding-top:3.5rem;">
     <div class="container">
-<div class="adani-verticals-nav" style="margin-bottom:2.5rem;">
-  <a class="adani-vertical-tab " href="epc-turnkey.html" style="text-decoration:none;display:block;">
-    <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">EPC &amp; PROCESS PLANTS //</div>
-    <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">EPC & Turnkey Industrial Plants</div>
-    <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Process Equipment, Static Vessels & 3,000 MT Steel</div>
-  </a>
-  <a class="adani-vertical-tab " href="sustainable-mobility.html" style="text-decoration:none;display:block;">
-    <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">CLEAN TRANSPORT &amp; EV //</div>
-    <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">Sustainable Mobility</div>
-    <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Electric Road & Marine Mobility Electrification</div>
-  </a>
-  <a class="adani-vertical-tab " href="hvac-thermal.html" style="text-decoration:none;display:block;">
-    <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">THERMAL &amp; CLIMATE SYSTEMS //</div>
-    <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">HVAC & Thermal Engineering</div>
-    <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Industrial Air Handling, WHRU & Exchangers</div>
-  </a>
-  <a class="adani-vertical-tab active" href="trading-commodities.html" style="text-decoration:none;display:block;">
-    <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">STRATEGIC SOURCING //</div>
-    <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">Trading & Strategic Commodities</div>
-    <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Exotic Alloys, Valves & Global EPC Supply Chain</div>
-  </a>
-</div>
+      
+      <!-- Four Verticals Top Tabs -->
+      <div class="adani-verticals-nav" style="margin-bottom:2.5rem;">
+        <a class="adani-vertical-tab " href="epc-turnkey.html" style="text-decoration:none;display:block;">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">EPC &amp; PROCESS PLANTS //</div>
+          <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">EPC & Turnkey Industrial Plants</div>
+          <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Process Equipment, Static Vessels & 3,000 MT Steel</div>
+        </a>
+        <a class="adani-vertical-tab " href="sustainable-mobility.html" style="text-decoration:none;display:block;">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">CLEAN TRANSPORT &amp; EV //</div>
+          <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">Sustainable Mobility</div>
+          <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Electric Road & Marine Mobility Electrification</div>
+        </a>
+        <a class="adani-vertical-tab " href="hvac-thermal.html" style="text-decoration:none;display:block;">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">THERMAL &amp; CLIMATE SYSTEMS //</div>
+          <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">HVAC & Thermal Engineering</div>
+          <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Daikin Channel Partner &bull; Turnkey Cooling &amp; Ventilation</div>
+        </a>
+        <a class="adani-vertical-tab active" href="trading-commodities.html" style="text-decoration:none;display:block;">
+          <div class="mono" style="font-size:0.75rem;font-weight:700;color:var(--primary);margin-bottom:0.4rem;">GLOBAL TRADE //</div>
+          <div style="font-size:1.05rem;font-weight:700;color:var(--text-900);line-height:1.3;margin-bottom:0.35rem;">Trading</div>
+          <div style="font-size:0.8rem;color:var(--text-500);line-height:1.4;">Oil &amp; Gas Skids, Fertilizers &amp; Commodities</div>
+        </a>
+      </div>
+
+      <!-- Jump Navigation to 3 Sub-Verticals -->
+      <div class="subv-nav">
+        <a class="subv-pill" href="#oil-gas">
+          <span class="num">01.</span>
+          <span>Oil &amp; Gas Equipments and Skids</span>
+        </a>
+        <a class="subv-pill" href="#fertilizers">
+          <span class="num">02.</span>
+          <span>Organic &amp; Chemical Fertilizers</span>
+        </a>
+        <a class="subv-pill" href="#commodities">
+          <span class="num">03.</span>
+          <span>All Types of Commodities (UCO, Edible Oils, Sugar, Rice)</span>
+        </a>
+      </div>
 
       <!-- Key Metrics Row -->
       <div class="grid-4-col" style="margin-bottom:3.5rem;">
         <div class="stat-card" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:1.5rem;text-align:center;">
-          <div class="stat-val" style="font-size:2rem;font-weight:800;color:var(--primary);margin-bottom:0.35rem;">EN 10204 3.1</div>
-          <div class="stat-lbl" style="font-size:0.82rem;font-weight:600;color:var(--text-600);text-transform:uppercase;letter-spacing:0.04em;">100% Certified MTC Traceability</div>
+          <div class="stat-val" style="font-size:1.9rem;font-weight:800;color:var(--primary);margin-bottom:0.35rem;">FLOW METERING</div>
+          <div class="stat-lbl" style="font-size:0.82rem;font-weight:600;color:var(--text-600);text-transform:uppercase;letter-spacing:0.04em;">Multiphase &amp; Custody Transfer Skids</div>
         </div>
         <div class="stat-card" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:1.5rem;text-align:center;">
-          <div class="stat-val" style="font-size:2rem;font-weight:800;color:var(--primary);margin-bottom:0.35rem;">HASTELLOY &bull; MONEL</div>
-          <div class="stat-lbl" style="font-size:0.82rem;font-weight:600;color:var(--text-600);text-transform:uppercase;letter-spacing:0.04em;">Super Duplex &amp; Exotic Alloys</div>
+          <div class="stat-val" style="font-size:1.9rem;font-weight:800;color:var(--primary);margin-bottom:0.35rem;">USA ADVISORY</div>
+          <div class="stat-lbl" style="font-size:0.82rem;font-weight:600;color:var(--text-600);text-transform:uppercase;letter-spacing:0.04em;">100% Verified Organic Liquid Bio-Nutrients</div>
         </div>
         <div class="stat-card" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:1.5rem;text-align:center;">
-          <div class="stat-val" style="font-size:2rem;font-weight:800;color:var(--primary);margin-bottom:0.35rem;">ASME B31.3</div>
-          <div class="stat-lbl" style="font-size:0.82rem;font-weight:600;color:var(--text-600);text-transform:uppercase;letter-spacing:0.04em;">Piping, Flanges &amp; MOV Actuators</div>
+          <div class="stat-val" style="font-size:1.9rem;font-weight:800;color:var(--primary);margin-bottom:0.35rem;">24,000L FLEXITANKS</div>
+          <div class="stat-lbl" style="font-size:0.82rem;font-weight:600;color:var(--text-600);text-transform:uppercase;letter-spacing:0.04em;">HVO / UCO Bio-Feedstock Logistics</div>
         </div>
         <div class="stat-card" style="background:#f8fafc;border:1px solid #e2e8f0;border-radius:16px;padding:1.5rem;text-align:center;">
-          <div class="stat-val" style="font-size:2rem;font-weight:800;color:var(--primary);margin-bottom:0.35rem;">3 REGIONAL HUBS</div>
-          <div class="stat-lbl" style="font-size:0.82rem;font-weight:600;color:var(--text-600);text-transform:uppercase;letter-spacing:0.04em;">International Supply Corridors</div>
+          <div class="stat-val" style="font-size:1.9rem;font-weight:800;color:var(--primary);margin-bottom:0.35rem;">GLOBAL HUBS</div>
+          <div class="stat-lbl" style="font-size:0.82rem;font-weight:600;color:var(--text-600);text-transform:uppercase;letter-spacing:0.04em;">Bengaluru &bull; Malaysia &bull; Africa &bull; Singapore</div>
         </div>
       </div>
 
-      <!-- Core Capabilities & Showcase Grid -->
-      <div class="timeline-card" style="grid-template-columns:1fr;margin-bottom:3.5rem;">
-        <div>
-          <div class="milestone-badge-row">
-            <span class="milestone-year-pill">GLOBAL TRADING &amp; SOURCING</span>
-            <span class="milestone-phase-label">EXOTIC METALLURGY &bull; CERTIFIED HARDWARE</span>
+      <!-- ========================================================================
+           SUB-VERTICAL 1: OIL AND GAS EQUIPMENTS AND SKIDS
+           ======================================================================== -->
+      <section id="oil-gas" class="subv-card">
+        <div class="subv-card-header">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+              <span class="utility-badge" style="background:#dbeafe;color:#1e40af;border-color:#bfdbfe;font-weight:700;">SUB-VERTICAL 01</span>
+              <span class="mono" style="font-size:0.8rem;color:#64748b;font-weight:600;">SAM WELLS PROFILE &bull; OILFIELD TECHNOLOGIES</span>
+            </div>
+            <h2 style="font-size:clamp(1.5rem,2.5vw,2rem);color:var(--text-900);margin:0 0 0.5rem;line-height:1.25;">
+              Oil and Gas Equipments and Skids
+            </h2>
+            <p style="font-size:0.95rem;color:var(--text-600);max-width:820px;line-height:1.65;margin:0;">
+              Precision engineered mechanical skids, comprehensive custody transfer flow metering, SCADA telemetry networks, automated actuation valves, and specialty upstream production chemicals for global energy operators.
+            </p>
           </div>
-          <h2 style="font-size:1.75rem;margin-bottom:1rem;color:var(--text-900);">Strategic Commodity Corridors &amp; Procurement</h2>
-          <p class="milestone-desc">
-            Leveraging direct mill relationships and bonded logistics centers in Bengaluru, Pasir Gudang, and Jurong Island, Axon supplies verified metallurgy with positive material identification (XRF PMI) and certified test documentation.
+          <a class="btn btn-primary btn-sm" href="contact.html">Request Technical Dossier</a>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:2rem;margin-bottom:2.5rem;">
+          
+          <!-- 1. Comprehensive Metering Solutions -->
+          <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+              <div style="width:42px;height:42px;border-radius:10px;background:#e0f2fe;display:flex;align-items:center;justify-content:center;color:#0284c7;">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/><rect width="18" height="18" x="3" y="3" rx="2"/></svg>
+              </div>
+              <h3 style="font-size:1.2rem;color:var(--text-900);margin:0;">Comprehensive Metering Solutions</h3>
+            </div>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;margin-bottom:1rem;">
+              Diverse flow meter offerings catering to severe upstream and midstream operational environments:
+            </p>
+            <ul style="font-size:0.85rem;color:var(--text-700);line-height:1.7;padding-left:1.2rem;margin-bottom:1.25rem;">
+              <li><strong>Multiphase Flow Meters:</strong> Accurately measuring simultaneous oil, water, and gas flows under harsh, turbulent wellhead conditions without preliminary phase separation.</li>
+              <li><strong>Custody Transfer Metering:</strong> High-precision fiscal custody transfer systems meeting strict API MPMS, OIML, and AGA accuracy standards.</li>
+              <li><strong>Validation &amp; Verification:</strong> Field proving and audit services guaranteeing system measurement integrity.</li>
+              <li><strong>Calibration &amp; Roving Proving:</strong> Periodic recalibration, master meter verification, and mobile roving proving services.</li>
+              <li><strong>Software Optimization:</strong> Diagnostic metering analytics and flow computer integration maximizing measurement uptime.</li>
+            </ul>
+            <span class="utility-badge" style="background:#ffffff;border-color:#cbd5e1;">MULTIPHASE &bull; CUSTODY TRANSFER</span>
+          </div>
+
+          <!-- 2. Telemetry & SCADA Water / Gas Monitoring -->
+          <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+              <div style="width:42px;height:42px;border-radius:10px;background:#ecfdf5;display:flex;align-items:center;justify-content:center;color:#059669;">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+              </div>
+              <h3 style="font-size:1.2rem;color:var(--text-900);margin:0;">Telemetry &amp; SCADA Network Systems</h3>
+            </div>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;margin-bottom:1rem;">
+              Advanced monitoring and control systems revolutionizing real-time network operations across pipeline grids:
+            </p>
+            <ul style="font-size:0.85rem;color:var(--text-700);line-height:1.7;padding-left:1.2rem;margin-bottom:1.25rem;">
+              <li><strong>Modern SCADA Architectures:</strong> Fully automated supervisory control and data acquisition streamlining operational decision-making.</li>
+              <li><strong>Routine Process Automation:</strong> Replaces manual field monitoring with remote autonomous loops, continuous leak detection, and pressure safety shutdowns.</li>
+              <li><strong>Dispatcher Intervention Flexibility:</strong> High-speed telemetry enabling control-room engineers to intervene remotely in real-time during pipeline deviations.</li>
+              <li><strong>Water &amp; Gas Network Monitoring:</strong> Multi-drop telemetry across regional pipeline corridors with secure RTU and PLC station interfaces.</li>
+            </ul>
+            <span class="utility-badge" style="background:#ffffff;border-color:#cbd5e1;">SCADA &bull; RTU TELEMETRY</span>
+          </div>
+
+          <!-- 3. Sensors, Transmitters & Valve Actuation -->
+          <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+              <div style="width:42px;height:42px;border-radius:10px;background:#eff6ff;display:flex;align-items:center;justify-content:center;color:#2563eb;">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h3 style="font-size:1.2rem;color:var(--text-900);margin:0;">Sensors, Transmitters &amp; Actuators</h3>
+            </div>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;margin-bottom:1rem;">
+              Supply, commissioning, operation, and field servicing of certified instrumentation and actuation packages:
+            </p>
+            <ul style="font-size:0.85rem;color:var(--text-700);line-height:1.7;padding-left:1.2rem;margin-bottom:1.25rem;">
+              <li><strong>Process Transmitters:</strong> Authorized procurement from Endress+Hauser, ABB SACE S.p.A, VEGA (Pressure PT, Temperature TT, Level LT, Flow transmitters).</li>
+              <li><strong>Pneumatic Control Valves:</strong> Flowserve, Emerson, Fisher with smart digital positioners (Siemens, ABB, Flowserve).</li>
+              <li><strong>Motor Operating Valves (MOVs):</strong> Heavy-duty electric actuation packages from Grove Dresser, Rotork, Limitorque, and Biffi.</li>
+              <li><strong>Explosion-Proof Enclosures:</strong> ATEX / IECEx certified junction boxes and SIL-rated safety interlocks.</li>
+            </ul>
+            <span class="utility-badge" style="background:#ffffff;border-color:#cbd5e1;">ROTORK &bull; EMERSON &bull; ABB</span>
+          </div>
+
+          <!-- 4. Engineered Mechanical Products & Pumps -->
+          <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+              <div style="width:42px;height:42px;border-radius:10px;background:#fef3c7;display:flex;align-items:center;justify-content:center;color:#d97706;">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 14h-2v-2h2zm0-4h-2V7h2z"/></svg>
+              </div>
+              <h3 style="font-size:1.2rem;color:var(--text-900);margin:0;">Pumps, Piping &amp; Mechanical Systems</h3>
+            </div>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;margin-bottom:1rem;">
+              Supply, commissioning, and maintenance spare parts for major industrial infrastructure projects:
+            </p>
+            <ul style="font-size:0.85rem;color:var(--text-700);line-height:1.7;padding-left:1.2rem;margin-bottom:1.25rem;">
+              <li><strong>Pump Projects:</strong> Lifting stations, sewage, seawater intake, dewatering &amp; well point, irrigation, booster skids, transfer pumps, and reflex pressure tanks.</li>
+              <li><strong>Industrial Valves &amp; Fabrication:</strong> Ball, gate, globe, check, and cryogenic valves for air, water, oil &amp; gas projects.</li>
+              <li><strong>Piping Packages:</strong> Carbon Steel (CS), Stainless Steel (SS), and PVC/UPVC pipes, fittings, flanges, and spools.</li>
+              <li><strong>Thermal &amp; Boilers:</strong> Industrial boilers, chillers, and high-capacity water heating packages.</li>
+            </ul>
+            <span class="utility-badge" style="background:#ffffff;border-color:#cbd5e1;">PUMPS &bull; PIPING &bull; VALVES</span>
+          </div>
+
+          <!-- 5. Oilfield Production Chemicals -->
+          <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+              <div style="width:42px;height:42px;border-radius:10px;background:#fce7f3;display:flex;align-items:center;justify-content:center;color:#be185d;">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10 2v7.31M14 9.3V2M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/></svg>
+              </div>
+              <h3 style="font-size:1.2rem;color:var(--text-900);margin:0;">Oilfield Production Chemicals</h3>
+            </div>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;margin-bottom:1rem;">
+              Specialty formulations enhancing operational flow assurance and hydrocarbon separation efficiency:
+            </p>
+            <ul style="font-size:0.85rem;color:var(--text-700);line-height:1.7;padding-left:1.2rem;margin-bottom:1.25rem;">
+              <li><strong>Scale Inhibitors:</strong> Formulated to control and prevent salt mineral scale deposition in production tubing and completion strings, maintaining unrestricted flow.</li>
+              <li><strong>Demulsifiers:</strong> Rapidly destabilizes and breaks complex water-in-oil emulsions, accelerating phase separation in dehydration skids.</li>
+              <li><strong>Pour Point Depressants (PPD):</strong> Prevents formation of wax paraffin crystals in crude oil, lowering pour points for flowability in cold ambient pipelines.</li>
+            </ul>
+            <span class="utility-badge" style="background:#ffffff;border-color:#cbd5e1;">FLOW ASSURANCE &bull; PPD &bull; DEMULSIFIERS</span>
+          </div>
+
+          <!-- 6. Drilling Fluid Mud & Additives -->
+          <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;">
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;">
+              <div style="width:42px;height:42px;border-radius:10px;background:#f3e8ff;display:flex;align-items:center;justify-content:center;color:#7e22ce;">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </div>
+              <h3 style="font-size:1.2rem;color:var(--text-900);margin:0;">Drilling Fluid Mud &amp; Additives</h3>
+            </div>
+            <p style="font-size:0.88rem;color:var(--text-600);line-height:1.6;margin-bottom:1rem;">
+              Comprehensive range of essential drilling and grouting fluid reagents optimizing drilling dynamics:
+            </p>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem;font-size:0.82rem;color:var(--text-700);line-height:1.5;">
+              <div>&bull; Weighting Materials</div>
+              <div>&bull; Fluid Loss Agents</div>
+              <div>&bull; H2S Scavengers</div>
+              <div>&bull; Corrosion Inhibitors</div>
+              <div>&bull; HP Lubricants</div>
+              <div>&bull; Biocides</div>
+              <div>&bull; Shale Inhibitors</div>
+              <div>&bull; Wetting Agents</div>
+              <div>&bull; Spotting Fluids</div>
+              <div>&bull; ROP Penetration Enhancers</div>
+            </div>
+            <div style="margin-top:1rem;">
+              <span class="utility-badge" style="background:#ffffff;border-color:#cbd5e1;">MUD CHEMICALS &bull; ROP ENHANCERS</span>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           SUB-VERTICAL 2: ORGANIC AND CHEMICAL FERTILIZERS
+           ======================================================================== -->
+      <section id="fertilizers" class="subv-card">
+        <div class="subv-card-header">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+              <span class="utility-badge" style="background:#dcfce7;color:#15803d;border-color:#bbf7d0;font-weight:700;">SUB-VERTICAL 02</span>
+              <span class="mono" style="font-size:0.8rem;color:#64748b;font-weight:600;">USA ADVISORY APPROVED &bull; LIQUID BIO-NUTRIENTS</span>
+            </div>
+            <h2 style="font-size:clamp(1.5rem,2.5vw,2rem);color:var(--text-900);margin:0 0 0.5rem;line-height:1.25;">
+              Organic and Chemical Fertilizers
+            </h2>
+            <p style="font-size:0.95rem;color:var(--text-600);max-width:820px;line-height:1.65;margin:0;">
+              Native Indian manufacturer of 100% verified organic fertilizers fully reviewed and approved by USA advisory groups. Deploying advanced biological processing chains to formulate dense, bio-available liquid nutrients instead of raw composted waste.
+            </p>
+          </div>
+          <a class="btn btn-primary btn-sm" href="contact.html">Agronomic Specification Sheet</a>
+        </div>
+
+        <!-- Composition & Scientific Manufacturing Architecture -->
+        <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:2rem;margin-bottom:2.5rem;">
+          
+          <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;">
+            <div class="mono" style="font-size:0.75rem;color:var(--primary);font-weight:700;margin-bottom:0.4rem;">GUARANTEED SPECIFICATION</div>
+            <h3 style="font-size:1.2rem;color:var(--text-900);margin:0 0 0.75rem;">Guaranteed Composition Profiles</h3>
+            <ul style="font-size:0.86rem;color:var(--text-700);line-height:1.7;padding-left:1.2rem;margin:0;">
+              <li><strong>Humic Active Complex (45%–60%):</strong> Super-concentrated humic and fulvic matrix engineered to maximize cation exchange capacity (CEC) in depleted soils.</li>
+              <li><strong>Balanced C:N Ratio (&lt; 15:1):</strong> Optimized carbon-to-nitrogen ratio ensuring instant microbial bio-stimulation and rapid nitrogen assimilation.</li>
+              <li><strong>Natural Heavy Metals Mitigation:</strong> Heavy metal levels tested far below strict international regulatory safety limits, ensuring clean non-toxic runoff.</li>
+              <li><strong>USA Advisory Group Approval:</strong> Full formulation compliance with international organic agricultural standards.</li>
+            </ul>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;">
+            <div class="mono" style="font-size:0.75rem;color:#15803d;font-weight:700;margin-bottom:0.4rem;">ENGINEERED PROCESSING</div>
+            <h3 style="font-size:1.2rem;color:var(--text-900);margin:0 0 0.75rem;">Advanced Manufacturing Loop</h3>
+            <p style="font-size:0.86rem;color:var(--text-600);line-height:1.65;margin-bottom:0.75rem;">
+              The core manufacturing loop moves entirely away from solid bulk compost, deploying multi-stage high-shear blending reactors, chelation vessels, and sanitary stainless steel fermentation tanks.
+            </p>
+            <p style="font-size:0.86rem;color:var(--text-600);line-height:1.65;margin:0;">
+              Closed-loop digital temperature and mixing controls break down premium organic feedstocks into concentrated, stable liquid bio-nutrients with complete batch consistency.
+            </p>
+          </div>
+
+          <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:16px;padding:1.75rem;">
+            <div class="mono" style="font-size:0.75rem;color:#0284c7;font-weight:700;margin-bottom:0.4rem;">APPLICATION MODALITIES</div>
+            <h3 style="font-size:1.2rem;color:var(--text-900);margin:0 0 0.75rem;">Precision Foliar Spray &amp; Fertigation</h3>
+            <p style="font-size:0.86rem;color:var(--text-600);line-height:1.65;margin-bottom:0.75rem;">
+              The concentrated liquid formulation allows for instant stomatal uptake and ultra-flexible commercial agricultural deployment:
+            </p>
+            <ul style="font-size:0.84rem;color:var(--text-700);line-height:1.65;padding-left:1.2rem;margin:0;">
+              <li><strong>Micro-Drip Fertigation:</strong> Non-clogging formula delivering nutrients straight to the root zone.</li>
+              <li><strong>Tractor Boom Field Sprayers:</strong> High-acreage uniform coverage.</li>
+              <li><strong>Agricultural Spraying UAV Drones:</strong> Precision aerial foliage misting.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <!-- Agronomic Performance Breakdown Table -->
+        <h3 style="font-size:1.2rem;color:var(--text-900);margin-bottom:0.75rem;">Agronomic Functional Performance Breakdown</h3>
+        <div class="spec-table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th style="width:28%;">Target Crop Sector</th>
+                <th>Agronomic Functional Performance Breakdown</th>
+                <th style="width:25%;">Field Result Impact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Palm Plantations</strong></td>
+                <td>Boosts Fresh Fruit Bunch (FFB) weight and maximizes lipid extraction rates across commercial oil palm blocks.</td>
+                <td><span style="color:#15803d;font-weight:700;">Higher FFB Yield &amp; Oil Extraction Ratio (OER)</span></td>
+              </tr>
+              <tr>
+                <td><strong>Commercial Fruit Orchards</strong></td>
+                <td>Optimizes Brix sugar values, improves carbohydrate distribution, and significantly minimizes premature blossom and fruit drops.</td>
+                <td><span style="color:#15803d;font-weight:700;">Enhanced Fruit Grade, Weight &amp; Shelf Life</span></td>
+              </tr>
+              <tr>
+                <td><strong>High-Value Cash Crops</strong></td>
+                <td>Restores depleted soil microbiome structures, stimulates microbial activity, and improves soil aeration for Sugarcane, Cotton, and Tobacco.</td>
+                <td><span style="color:#15803d;font-weight:700;">Drought Resistance &amp; Root Mass Expansion</span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- ========================================================================
+           SUB-VERTICAL 3: ALL TYPES OF COMMODITIES
+           ======================================================================== -->
+      <section id="commodities" class="subv-card">
+        <div class="subv-card-header">
+          <div>
+            <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;flex-wrap:wrap;">
+              <span class="utility-badge" style="background:#fef3c7;color:#b45309;border-color:#fde68a;font-weight:700;">SUB-VERTICAL 03</span>
+              <span class="mono" style="font-size:0.8rem;color:#64748b;font-weight:600;">GLOBAL MERCANTILE DIVISION &bull; BULK SUPPLY CHAINS</span>
+            </div>
+            <h2 style="font-size:clamp(1.5rem,2.5vw,2rem);color:var(--text-900);margin:0 0 0.5rem;line-height:1.25;">
+              All Types of Commodities: Used Cooking Oil, Edible Oils, Sugar &amp; Rice
+            </h2>
+            <p style="font-size:0.95rem;color:var(--text-600);max-width:820px;line-height:1.65;margin:0;">
+              Pure-play commodity asset trading, processing facilitation, and bulk supply chains. Handling specialized energy-transition bio-feedstocks (Used Cooking Oil for HVO/SAF biofuels) alongside certified culinary edible oils and premium agricultural staples.
+            </p>
+          </div>
+          <a class="btn btn-whatsapp" href="https://wa.me/919845530637?text=Hello%20Axon%2C%20I%20have%20a%20Bulk%20Commodity%20inquiry." target="_blank" rel="noopener">WhatsApp Trade Desk</a>
+        </div>
+
+        <!-- 3.1 Used Cooking Oil (UCO) & Eco-Feedstock Operations -->
+        <div style="background:#f0fdf4;border:1px solid #bbf7d0;border-radius:16px;padding:2rem;margin-bottom:2.5rem;">
+          <div style="display:flex;align-items:center;gap:0.75rem;margin-bottom:1rem;flex-wrap:wrap;">
+            <span class="utility-badge" style="background:#15803d;color:#ffffff;border:none;">ENERGY TRANSITION FEEDSTOCK</span>
+            <h3 style="font-size:1.35rem;color:#14532d;margin:0;">Used Cooking Oil (UCO) &amp; Eco-Feedstock Operations</h3>
+          </div>
+          <p style="font-size:0.92rem;color:#166534;line-height:1.65;margin-bottom:1.5rem;">
+            Responding to the global decarbonization imperative, Axon Petro Engineering handles end-to-end merchandise pipelines for Used Cooking Oil (UCO) destined for Hydrotreated Vegetable Oil (HVO) and Sustainable Aviation Fuel (SAF) biorefineries.
           </p>
 
-          <ul class="milestone-deliverables" style="margin-top:1.5rem;">
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Certified Exotic Alloy Plates &amp; Bars:</strong> Prime-mill Hastelloy C276, Super Duplex UNS S32760, Monel 400, and Inconel 625.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>High-Pressure Flanges &amp; Fittings:</strong> ASME B16.5, B16.47, and DIN weld-neck flanges, forged elbows, tees, and reducers.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Industrial Valves &amp; MOV Actuators:</strong> High-pressure ball, gate, globe, check, and cryogenic control valves with automated pneumatic/electric actuators.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Bonded Logistics &amp; JIT Staging:</strong> Secure staging yards across India and ASEAN ensuring on-time project deliveries.</li>
-            <li class="milestone-deliverable-item"><span class="chk">&#10003;</span> <strong>Third-Party Verification:</strong> Lloyd's Register, DNV, and TÜV third-party inspection releases and ultrasonic thickness testing.</li>
-          </ul>
+          <h4 style="font-size:1rem;color:#14532d;margin-bottom:0.75rem;">UCO Standard Benchmark Specifications</h4>
+          <div class="spec-table-wrap" style="background:#ffffff;margin-bottom:1.5rem;">
+            <table class="spec-table">
+              <thead>
+                <tr>
+                  <th>Property Metric</th>
+                  <th>Standard Limit Benchmark</th>
+                  <th>Logistical Modality</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Free Fatty Acid (FFA)</strong></td>
+                  <td>Typically &lt; 5.0% (Max 7.5%)</td>
+                  <td>Flexitanks / 20ft Containers (up to 24,000L)</td>
+                </tr>
+                <tr>
+                  <td><strong>Moisture &amp; Impurities (M&amp;I)</strong></td>
+                  <td>Max 1.0% to 1.5%</td>
+                  <td>ISO-Tank Bulk Contracts</td>
+                </tr>
+                <tr>
+                  <td><strong>Sulfur Content</strong></td>
+                  <td>Max 30 – 50 ppm</td>
+                  <td>Direct Port-to-Port Maritime Delivery</td>
+                </tr>
+                <tr>
+                  <td><strong>Iodine Value</strong></td>
+                  <td>75 – 95 min</td>
+                  <td>Certified Sustainability Documentation (ISCC/SGS)</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
 
-          <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-            <a class="btn btn-whatsapp" href="https://wa.me/919845530637?text=Hello%20Axon%2C%20I%20have%20a%20Commodities%20inquiry." target="_blank" rel="noopener">WhatsApp Direct</a>
+          <h4 style="font-size:1rem;color:#14532d;margin-bottom:0.75rem;">UCO Collection Ecosystem &amp; Quality Control</h4>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));gap:1.25rem;">
+            <div style="background:#ffffff;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;">
+              <strong style="color:#14532d;display:block;margin-bottom:0.35rem;">Hospitality &amp; Commercial Sourcing</strong>
+              <p style="font-size:0.84rem;color:#166534;line-height:1.6;margin:0;">Systematic long-term contracts with urban commercial kitchens, food processing plants, and retail quick-service restaurant networks to extract high-yield waste grease.</p>
+            </div>
+            <div style="background:#ffffff;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;">
+              <strong style="color:#14532d;display:block;margin-bottom:0.35rem;">Cash-and-Carry Sourcing Frameworks</strong>
+              <p style="font-size:0.84rem;color:#166534;line-height:1.6;margin:0;">Transparent spot-payment localized architectures encouraging reliable, high-volume community-level collection loops.</p>
+            </div>
+            <div style="background:#ffffff;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;">
+              <strong style="color:#14532d;display:block;margin-bottom:0.35rem;">Regional Aggregation Yards</strong>
+              <p style="font-size:0.84rem;color:#166534;line-height:1.6;margin:0;">Central collection yards strategically established near primary port nodes across East Africa, South Africa, and Nigeria.</p>
+            </div>
+            <div style="background:#ffffff;border:1px solid #bbf7d0;border-radius:12px;padding:1.25rem;">
+              <strong style="color:#14532d;display:block;margin-bottom:0.35rem;">In-House Filtration &amp; SGS Audits</strong>
+              <p style="font-size:0.84rem;color:#166534;line-height:1.6;margin:0;">Proprietary multi-stage filtration units removing all suspended solids and moisture before vessel loading, verified via third-party SGS origin testing.</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3.2 Edible Oils & Mercantile Trading -->
+        <div style="margin-bottom:2.5rem;">
+          <h3 style="font-size:1.3rem;color:var(--text-900);margin-bottom:1rem;">Edible Oils &amp; Culinary Ingredients</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));gap:1.5rem;">
+            
+            <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:14px;padding:1.5rem;">
+              <h4 style="font-size:1.1rem;color:var(--text-900);margin:0 0 0.5rem;">Crude &amp; Refined Sunflower Oil</h4>
+              <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;margin-bottom:0.75rem;">Sourced primarily for international bottling facilities and industrial culinary packing operations.</p>
+              <div style="font-size:0.82rem;color:var(--text-700);line-height:1.6;background:#ffffff;border:1px solid var(--surface-200);padding:0.75rem;border-radius:8px;">
+                <div>&bull; <strong>FFA (Crude):</strong> Max 1.5% – 2.0%</div>
+                <div>&bull; <strong>FFA (Refined):</strong> Max 0.10%</div>
+                <div>&bull; <strong>Iodine Value:</strong> 110 – 143</div>
+              </div>
+            </div>
+
+            <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:14px;padding:1.5rem;">
+              <h4 style="font-size:1.1rem;color:var(--text-900);margin:0 0 0.5rem;">Crude &amp; Refined Palm Oils</h4>
+              <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;margin-bottom:0.75rem;">High-volume supply lines direct from certified Southeast Asian plantations:</p>
+              <div style="font-size:0.82rem;color:var(--text-700);line-height:1.6;background:#ffffff;border:1px solid var(--surface-200);padding:0.75rem;border-radius:8px;">
+                <div>&bull; <strong>Crude Palm Oil (CPO):</strong> FFA Max 5.0% for industrial fractionation and refining</div>
+                <div>&bull; <strong>RBD Palm Olein:</strong> FFA Max 0.1%, Iodine Value Min 56</div>
+              </div>
+            </div>
+
+            <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:14px;padding:1.5rem;">
+              <h4 style="font-size:1.1rem;color:var(--text-900);margin:0 0 0.5rem;">Crude &amp; Refined Soybean (Soya) Oil</h4>
+              <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;margin-bottom:0.75rem;">High-grade crude and refined variants for food manufacturing and culinary packaging:</p>
+              <div style="font-size:0.82rem;color:var(--text-700);line-height:1.6;background:#ffffff;border:1px solid var(--surface-200);padding:0.75rem;border-radius:8px;">
+                <div>&bull; <strong>Refined Grade:</strong> Fully deodorized, bleached &amp; winterized</div>
+                <div>&bull; <strong>Crude Degummed:</strong> Optimal for chemical processing</div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3.3 Agro-Commodity Exports: Rice & Sugar -->
+        <div style="margin-bottom:2.5rem;">
+          <h3 style="font-size:1.3rem;color:var(--text-900);margin-bottom:1rem;">Agro-Commodity Exports: Rice &amp; Sugar</h3>
+          <div style="display:grid;grid-template-columns:repeat(auto-fit, minmax(320px, 1fr));gap:1.5rem;">
+            
+            <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:14px;padding:1.5rem;">
+              <h4 style="font-size:1.1rem;color:var(--text-900);margin:0 0 0.5rem;">Premium Indian Rice Varieties</h4>
+              <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;margin-bottom:0.75rem;">
+                Export matrices supplying tier-1 global distributors and food security reserves:
+              </p>
+              <ul style="font-size:0.84rem;color:var(--text-700);line-height:1.65;padding-left:1.2rem;margin:0;">
+                <li><strong>Premium Long-Grain Basmati Rice:</strong> Fully aromatic, aged, extra-long grain with exceptional elongation upon cooking.</li>
+                <li><strong>Non-Basmati Long Grain / Parboiled Rice:</strong> Strictly sorted for moisture control, minimum broken counts (&lt; 5%), and high nutritional value.</li>
+              </ul>
+            </div>
+
+            <div style="background:#f8fafc;border:1px solid var(--surface-200);border-radius:14px;padding:1.5rem;">
+              <h4 style="font-size:1.1rem;color:var(--text-900);margin:0 0 0.5rem;">Refined Cane Sugar (ICUMSA 45)</h4>
+              <p style="font-size:0.86rem;color:var(--text-600);line-height:1.6;margin-bottom:0.75rem;">
+                International food-grade white crystalline pure cane sugar conforming strictly to international standards:
+              </p>
+              <ul style="font-size:0.84rem;color:var(--text-700);line-height:1.65;padding-left:1.2rem;margin:0;">
+                <li><strong>Polarization Index:</strong> &gt; 99.80% minimum pure sucrose content.</li>
+                <li><strong>Color:</strong> Sparkling white sparkling crystals conforming to ICUMSA 45 attenuation index units.</li>
+                <li><strong>Packaging:</strong> Multi-ply poly-lined 50 kg PP bags in seaworthy containerized consignments.</li>
+              </ul>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- 3.4 Packing Logistics & Intermodal Modalities -->
+        <h3 style="font-size:1.2rem;color:var(--text-900);margin-bottom:0.75rem;">Packing Logistics &amp; Intermodal Modalities</h3>
+        <div class="spec-table-wrap">
+          <table class="spec-table">
+            <thead>
+              <tr>
+                <th style="width:25%;">Logistical Format</th>
+                <th style="width:25%;">Volumetric Specifications</th>
+                <th>Operational Standard &amp; Mitigation Features</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Flexitanks (20ft Sea Containers)</strong></td>
+                <td>Up to 24,000 Liters / Metric Tons per container</td>
+                <td>Heavy-duty food-grade/industrial flexible multi-layer polymer bladders. Fully optimized for cross-border maritime shipping with high payload-to-weight efficiency.</td>
+              </tr>
+              <tr>
+                <td><strong>ISO-Tank Containers (Bulk Intermodal)</strong></td>
+                <td>Fixed rigid multi-ton cylindrical pressure configurations</td>
+                <td>Stainless steel structural framing, optimal for long-term lease models, continuous volume commitments, and seamless port-to-rail intermodal transfers.</td>
+              </tr>
+              <tr>
+                <td><strong>IBC Totes &amp; Steel Drums (Localized Freight)</strong></td>
+                <td>1,000L Intermediate Bulk Containers or 200L standard heavy drums</td>
+                <td>Primarily deployed for initial field collection, local truck transport, routing to central filtration yards, and flexible multi-consignment inventory sorting.</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+      </section>
+
+      <!-- Commitment Callout Banner -->
+      <div style="background:linear-gradient(135deg, #162436 0%, #1b5299 100%);color:#ffffff;border-radius:24px;padding:clamp(2rem, 4vw, 3.5rem);box-shadow:var(--shadow-md);position:relative;overflow:hidden;margin-bottom:4rem;">
+        <div style="max-width:820px;position:relative;z-index:2;">
+          <span class="utility-badge" style="background:rgba(255,255,255,0.15);color:#ffffff;border-color:rgba(255,255,255,0.25);margin-bottom:1rem;">COMMERCIAL SOURCING DESK</span>
+          <h2 style="font-size:clamp(1.75rem,3.2vw,2.5rem);color:#ffffff !important;margin-bottom:1rem;line-height:1.2;">
+            Connect with Axon Trading Division
+          </h2>
+          <p style="font-size:1.05rem;color:#e2ecf8;margin-bottom:1.5rem;line-height:1.7;">
+            Whether you require custom oil and gas skids, certified organic liquid bio-nutrients, or contract shipments of UCO, edible oils, and sugar, our international commercial desks in Bengaluru, Malaysia, Africa, and Singapore are ready to assist.
+          </p>
+          <div style="display:flex;align-items:center;gap:1.25rem;flex-wrap:wrap;">
+            <a class="btn btn-outline" href="contact.html" style="color:#ffffff;border-color:rgba(255,255,255,0.5);">
+              <span>Submit RFQ Lead</span>
+            </a>
+            <a class="btn btn-whatsapp" href="https://wa.me/919845530637?text=Hello%20Axon%2C%20I%20have%20a%20Trading%20inquiry." target="_blank" rel="noopener">
+              <span>WhatsApp Trade Specialist</span>
+            </a>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 
@@ -282,14 +749,14 @@
           <li><a href="epc-turnkey.html">EPC &amp; Turnkey Industrial Plants</a></li>
           <li><a href="sustainable-mobility.html">Sustainable Mobility (EV &amp; Marine)</a></li>
           <li><a href="hvac-thermal.html">HVAC &amp; Thermal Engineering</a></li>
-          <li><a href="trading-commodities.html">Trading &amp; Strategic Commodities</a></li>
+          <li><a href="trading-commodities.html">Trading</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h4 class="footer-title">Contact &amp; Hubs</h4>
+        <h4 class="footer-title">Corporate Headquarters</h4>
         <div style="font-size:0.86rem;color:#94a3b8;line-height:1.7;">
-          <p><strong>Bengaluru:</strong> Peenya / Electronic City Phase II, Bengaluru, Karnataka, India</p>
+          <p><strong style="color:#ffffff;">Bengaluru (HQ):</strong><br>Innov8, Prestige Tech Platina, 11th Floor<br>No. 32/2 &amp; 34/1, Outer Ring Road, Kadubisanahalli<br>Bengaluru &ndash; 560087, Karnataka, India</p>
           <p><strong>Malaysia:</strong> Pasir Gudang (Johor) &bull; Kuala Langsat (Selangor)</p>
           <p><strong>Singapore:</strong> Jurong Island Regional Office</p>
           <p style="margin-top:0.5rem;"><a href="mailto:projects@axonpetro.in" style="color:#60a5fa;">projects@axonpetro.in</a> &bull; <a href="tel:+919845530637" style="color:#60a5fa;">+91 98455 30637</a></p>
@@ -297,7 +764,7 @@
       </div>
     </div>
 
-        <div class="footer-bottom">
+    <div class="footer-bottom">
       <div class="container footer-bottom-inner">
         <span>&copy; 2026 Axon Petro Engineering Pvt. Ltd. All rights reserved. &bull; U29299KA2005PTC036789</span>
         <span class="sep">&bull;</span>
