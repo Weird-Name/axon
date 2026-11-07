@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Under Scheduled Maintenance | Axon Petro Engineering Pvt. Ltd.</title>
+  <meta name="description" content="Axon Petro Engineering official portal is temporarily undergoing scheduled maintenance and system commissioning.">
+  <link rel="icon" type="image/png" href="assets/images/axon-symbol-user.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <style>
+    :root {
+      --navy-900: #0a192f;
+      --navy-800: #0f2744;
+      --primary: #1b5299;
+      --accent: #38bdf8;
+      --text-light: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-subtle: rgba(255, 255, 255, 0.12);
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: linear-gradient(135deg, var(--navy-900) 0%, var(--navy-800) 100%);
+      color: var(--text-light);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem 1.5rem;
+      text-align: center;
+    }
+    .maintenance-card {
+      background: rgba(15, 39, 68, 0.75);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: 3rem 2.5rem;
+      max-width: 640px;
+      width: 100%;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.45);
+      backdrop-filter: blur(12px);
+    }
+    .logo-img {
+      max-width: 280px;
+      height: auto;
+      margin-bottom: 2rem;
+      filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.3));
+    }
+    .status-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(56, 189, 248, 0.12);
+      border: 1px solid rgba(56, 189, 248, 0.3);
+      color: var(--accent);
+      padding: 0.4rem 1rem;
+      border-radius: 9999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+    }
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 8px var(--accent);
+      animation: pulse 1.8s infinite ease-in-out;
+    }
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.85); }
+    }
+    h1 {
+      font-size: 1.9rem;
+      font-weight: 800;
+      line-height: 1.3;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+    p {
+      color: var(--text-muted);
+      font-size: 1.05rem;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+    .contact-box {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+      font-size: 0.92rem;
+    }
+    .contact-box a {
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.1rem;
+    }
+    .contact-box a:hover {
+      text-decoration: underline;
+    }
+    .corporate-footer {
+      margin-top: 2rem;
+      font-size: 0.78rem;
+      color: #64748b;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="maintenance-card">
+    <img src="assets/images/axon-logo-transparent.png" alt="Axon Petro Engineering Pvt. Ltd." class="logo-img">
+    
+    <div>
+      <span class="status-badge">
+        <span class="pulse-dot"></span>
+        System Scheduled Maintenance &amp; Commissioning
+      </span>
+    </div>
+
+    <h1>Official Web Portal Updating</h1>
+    
+    <p>
+      The digital infrastructure for <strong>Axon Petro Engineering Pvt. Ltd.</strong> is currently undergoing scheduled platform updates and system commissioning. All services will resume shortly.
+    </p>
+
+    <div class="contact-box">
+      <div>For immediate project inquiries or commercial procurement:</div>
+      <a href="tel:+919845530637">+91 98455 30637</a>
+    </div>
+
+    <div class="corporate-footer">
+      Innov8, Prestige Tech Platina, 11th Floor, Kadubisanahalli, Bengaluru Rural, Karnataka - 560087<br>
+      &copy; 2026 Axon Petro Engineering Pvt. Ltd. All rights reserved.
+    </div>
+  </div>
+
+</body>
+</html>
