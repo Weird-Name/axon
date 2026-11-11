@@ -15,7 +15,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="favicon.png?v=2026.24">
   <link rel="shortcut icon" href="favicon.ico?v=2026.24">
   <link rel="apple-touch-icon" href="assets/images/axon-logo-favicon.png?v=2026.24">
-  <link rel="stylesheet" href="assets/css/styles.css?v=2026.35">
+  <link rel="stylesheet" href="assets/css/styles.css?v=2026.36">
 
   <script>
     // Seamless URL redirect for legacy query parameters
@@ -226,11 +226,20 @@
   </a>
 </div>
 
+      <!-- Interactive Filter Pills: Select one to focus & hide the others -->
+      <div class="vertical-filter-pills" style="display:flex;gap:0.65rem;flex-wrap:wrap;margin-bottom:2rem;">
+        <button type="button" class="subv-pill active" onclick="filterVerticalCards('all', this)" style="cursor:pointer;background:#1b5299;color:#ffffff;border-color:#1b5299;"><span>All 4 Verticals</span></button>
+        <button type="button" class="subv-pill" onclick="filterVerticalCards('epc', this)" style="cursor:pointer;background:#ffffff;color:var(--text-800);"><span>1. EPC &amp; Turnkey Plants</span></button>
+        <button type="button" class="subv-pill" onclick="filterVerticalCards('mobility', this)" style="cursor:pointer;background:#ffffff;color:var(--text-800);"><span>2. Sustainable Mobility</span></button>
+        <button type="button" class="subv-pill" onclick="filterVerticalCards('hvac', this)" style="cursor:pointer;background:#ffffff;color:var(--text-800);"><span>3. HVAC &amp; Thermal</span></button>
+        <button type="button" class="subv-pill" onclick="filterVerticalCards('trading', this)" style="cursor:pointer;background:#ffffff;color:var(--text-800);"><span>4. Trading</span></button>
+      </div>
+
       <!-- 4 Dedicated Verticals Showcase Grid -->
       <div style="display:flex;flex-direction:column;gap:2.5rem;margin-bottom:4rem;">
         
         <!-- Card 1: EPC -->
-        <article class="timeline-card">
+        <article class="timeline-card" id="card-epc">
           <div>
             <div class="milestone-badge-row">
               <span class="milestone-year-pill">CORE EPC &amp; PROCESS PLANTS</span>
@@ -271,7 +280,7 @@
         </article>
 
         <!-- Card 2: Sustainable Mobility -->
-        <article class="timeline-card" style="grid-template-columns:1fr;">
+        <article class="timeline-card" id="card-mobility" style="grid-template-columns:1fr;">
           <div>
             <div class="milestone-badge-row">
               <span class="milestone-year-pill">CLEAN-TECH &amp; MOBILITY</span>
@@ -305,7 +314,7 @@
         </article>
 
         <!-- Card 3: HVAC & Thermal -->
-        <article class="timeline-card">
+        <article class="timeline-card" id="card-hvac">
           <div>
             <div class="milestone-badge-row">
               <span class="milestone-year-pill">THERMAL &amp; CLIMATE SYSTEMS</span>
@@ -339,7 +348,7 @@
         </article>
 
         <!-- Card 4: Trading -->
-        <article class="timeline-card" style="grid-template-columns:1fr;">
+        <article class="timeline-card" id="card-trading" style="grid-template-columns:1fr;">
           <div>
             <div class="milestone-badge-row">
               <span class="milestone-year-pill">GLOBAL TRADING</span>
@@ -474,6 +483,34 @@
   <script src="assets/js/data.js?v=2026.33"></script>
   <script src="assets/js/app.js?v=2026.33"></script>
   <script>
+    
+    function filterVerticalCards(category, btn) {
+      var pills = document.querySelectorAll('.vertical-filter-pills .subv-pill');
+      pills.forEach(function(p) {
+        p.classList.remove('active');
+        p.style.background = '#ffffff';
+        p.style.color = 'var(--text-800)';
+        p.style.borderColor = 'var(--surface-300)';
+      });
+      if (btn) {
+        btn.classList.add('active');
+        btn.style.background = '#1b5299';
+        btn.style.color = '#ffffff';
+        btn.style.borderColor = '#1b5299';
+      }
+      var cards = {
+        epc: document.getElementById('card-epc'),
+        mobility: document.getElementById('card-mobility'),
+        hvac: document.getElementById('card-hvac'),
+        trading: document.getElementById('card-trading')
+      };
+      for (var k in cards) {
+        if (cards[k]) {
+          cards[k].style.display = (category === 'all' || category === k) ? 'grid' : 'none';
+        }
+      }
+    }
+
     function toggleMobileNav() {
       var nav = document.getElementById('mainNav');
       var btn = document.getElementById('mobileMenuBtn') || document.querySelector('.mobile-menu-toggle');
