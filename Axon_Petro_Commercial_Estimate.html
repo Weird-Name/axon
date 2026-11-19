@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Commercial Estimate - Axon Petro Engineering</title>
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: #1e293b;
+    margin: 0;
+    padding: 0;
+    font-size: 8.5pt;
+    line-height: 1.35;
+    background: #ffffff;
+  }
+  .header-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+    border-bottom: 2.5px solid #1b5299;
+    padding-bottom: 8px;
+  }
+  .brand-title {
+    font-size: 17pt;
+    font-weight: 800;
+    color: #0a192f;
+    letter-spacing: -0.5px;
+    margin: 0;
+  }
+  .brand-sub {
+    font-size: 8pt;
+    color: #1b5299;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    margin-top: 2px;
+  }
+  .doc-type {
+    text-align: right;
+  }
+  .doc-badge {
+    display: inline-block;
+    background: #e0f2fe;
+    color: #0369a1;
+    font-size: 7.5pt;
+    font-weight: 800;
+    padding: 3px 8px;
+    border-radius: 4px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+  }
+  .doc-ref {
+    font-size: 9pt;
+    font-weight: 700;
+    color: #0f172a;
+    margin-top: 3px;
+  }
+  .doc-date {
+    font-size: 8pt;
+    color: #64748b;
+    margin-top: 1px;
+  }
+
+  .meta-grid {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 10px;
+  }
+  .meta-card {
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 5px;
+    padding: 7px 10px;
+    vertical-align: top;
+    width: 48%;
+  }
+  .meta-card-title {
+    font-size: 7pt;
+    font-weight: 800;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+  .meta-card-body {
+    font-size: 8pt;
+    color: #334155;
+    line-height: 1.35;
+  }
+  .meta-card-body strong {
+    color: #0f172a;
+    font-size: 8.8pt;
+  }
+
+  .items-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+  }
+  .items-table th {
+    background: #0a192f;
+    color: #ffffff;
+    font-size: 7.5pt;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 5px 8px;
+    text-align: left;
+  }
+  .items-table th.amount-col {
+    text-align: right;
+  }
+  .items-table td {
+    padding: 5px 8px;
+    border-bottom: 1px solid #e2e8f0;
+    font-size: 7.8pt;
+    vertical-align: top;
+  }
+  .items-table tr:nth-child(even) td {
+    background: #fbfcfe;
+  }
+  .item-title {
+    font-weight: 700;
+    color: #0f172a;
+    font-size: 8.2pt;
+    margin-bottom: 1px;
+  }
+  .item-desc {
+    color: #475569;
+    font-size: 7.3pt;
+    line-height: 1.3;
+  }
+
+  .totals-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 8px;
+  }
+  .totals-table td {
+    padding: 4px 8px;
+    font-size: 8.2pt;
+  }
+  .totals-table .label {
+    text-align: right;
+    color: #475569;
+    width: 74%;
+  }
+  .totals-table .val {
+    text-align: right;
+    font-weight: 700;
+    color: #0f172a;
+    width: 26%;
+  }
+  .totals-table .discount-row td {
+    color: #047857;
+    background: #ecfdf5;
+    font-weight: 700;
+    font-size: 8.2pt;
+  }
+  .totals-table .final-row td {
+    background: #0a192f;
+    color: #ffffff;
+    font-size: 9.5pt;
+    font-weight: 800;
+    padding: 6px 8px;
+  }
+  .totals-table .final-row .val {
+    color: #38bdf8;
+    font-size: 11pt;
+  }
+
+  .notes-box {
+    background: #eff6ff;
+    border-left: 3px solid #1b5299;
+    padding: 6px 8px;
+    border-radius: 0 4px 4px 0;
+    margin-bottom: 8px;
+    font-size: 7.5pt;
+    color: #1e3a8a;
+    line-height: 1.3;
+  }
+
+  .terms-section {
+    border-top: 1px solid #e2e8f0;
+    padding-top: 6px;
+    margin-top: 6px;
+  }
+  .terms-title {
+    font-size: 7.5pt;
+    font-weight: 800;
+    color: #0f172a;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 3px;
+  }
+  .terms-list {
+    margin: 0;
+    padding-left: 14px;
+    font-size: 7.2pt;
+    color: #475569;
+    line-height: 1.35;
+  }
+  .footer-sig {
+    margin-top: 10px;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  .footer-sig td {
+    width: 50%;
+    vertical-align: bottom;
+    font-size: 7.5pt;
+  }
+</style>
+</head>
+<body>
+
+<table class="header-table">
+  <tr>
+    <td>
+      <div class="brand-title">AXON PETRO ENGINEERING</div>
+      <div class="brand-sub">Commercial Estimate & Project Work Completion Verdict</div>
+    </td>
+    <td class="doc-type">
+      <span class="doc-badge">Official Estimate</span>
+      <div class="doc-ref">REF: EST-AXON-2026-FINAL</div>
+      <div class="doc-date">Date: 07 November 2026</div>
+    </td>
+  </tr>
+</table>
+
+<table class="meta-grid">
+  <tr>
+    <td class="meta-card">
+      <div class="meta-card-title">Client Details</div>
+      <div class="meta-card-body">
+        <strong>Axon Petro Engineering Pvt. Ltd.</strong><br>
+        Innov8, Prestige Tech Platina, 11th Floor,<br>
+        Kadubisanahalli, Bengaluru Rural, Karnataka - 560087<br>
+        Contact: +91 98455 30637 &bull; Target Domain: <code>axonpetro.in</code>
+      </div>
+    </td>
+    <td style="width:4%;"></td>
+    <td class="meta-card">
+      <div class="meta-card-title">Project Scope & Staging Link</div>
+      <div class="meta-card-body">
+        <strong>Enterprise Web Platform Architecture</strong><br>
+        16 Standalone Production Pages across 4 Business Verticals<br>
+        Live Verified Staging: <span style="color:#0284c7;font-weight:600;">https://weird-name.github.io/axon/</span><br>
+        Status: <strong>100% Development Complete & Ready for Cutover</strong>
+      </div>
+    </td>
+  </tr>
+</table>
+
+<table class="items-table">
+  <thead>
+    <tr>
+      <th style="width:5%;">#</th>
+      <th style="width:75%;">Scope & Technical Deliverables</th>
+      <th style="width:20%;" class="amount-col">Amount (INR)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>01</strong></td>
+      <td>
+        <div class="item-title">Multi-Page Corporate Architecture (16 Standalone Pages)</div>
+        <div class="item-desc">
+          Full development of 16 bespoke responsive pages: Homepage (<code>index.html</code>), Corporate Profile (<code>about.html</code>), Verticals Hub (<code>business-verticals.html</code>), EPC Plants (<code>epc-turnkey.html</code>), Sustainable Mobility (<code>sustainable-mobility.html</code>), HVAC Systems (<code>hvac-thermal.html</code>), Dedicated Trading Hub (<code>trading.html</code>) + 3 dedicated sub-pages (<code>trading-oil-gas.html</code>, <code>trading-fertilizers.html</code>, <code>trading-commodities.html</code>), Technology (<code>technology.html</code>), Services (<code>services.html</code>), Contact Desk (<code>contact.html</code>), Staff Gateway (<code>admin.html</code>), Privacy Policy, and Terms & Conditions.
+        </div>
+      </td>
+      <td class="amount-col"><strong>₹18,000</strong></td>
+    </tr>
+    <tr>
+      <td><strong>02</strong></td>
+      <td>
+        <div class="item-title">Interactive Engineering Systems & Custom Technical Data Modules</div>
+        <div class="item-desc">
+          • Coded <strong>7-Stage Engineering Development Lifecycle</strong> with active state tabs, CSS animations, and universal R&D process flow.<br>
+          • Certified <strong>26-Procedure WPS/PQR Welding Specification Registry</strong> with real-time client-side CSV export and industrial print stylesheets.<br>
+          • In-browser CMS staff management gateway and responsive mobile drawer navigation.
+        </div>
+      </td>
+      <td class="amount-col"><strong>₹8,500</strong></td>
+    </tr>
+    <tr>
+      <td><strong>03</strong></td>
+      <td>
+        <div class="item-title">Executive UI/UX Industrial Design & Brand Asset Integration</div>
+        <div class="item-desc">
+          Adani-inspired executive hierarchy, responsive Google Sans typography, single-line desktop title formatting, high-contrast buttons, lightweight clean code (zero third-party bloat), and official Daikin vector SVG brand integration.
+        </div>
+      </td>
+      <td class="amount-col"><strong>₹5,500</strong></td>
+    </tr>
+    <tr>
+      <td><strong>04</strong></td>
+      <td>
+        <div class="item-title">Domain Cutover, SSL Security & Google Workspace Protection Guarantee</div>
+        <div class="item-desc">
+          Pre-flight DNS routing for <code>axonpetro.in</code>, apex A cluster routing, www CNAME mapping, automatic HTTPS SSL certificate installation, and zero-downtime protection guaranteeing existing Google Workspace business emails (MX/SPF/DKIM) remain 100% untouched.
+        </div>
+      </td>
+      <td class="amount-col"><strong>₹4,000</strong></td>
+    </tr>
+    <tr>
+      <td><strong>05</strong></td>
+      <td>
+        <div class="item-title">Content Structure, Technical Dossier Synthesis & PDF Data Conversion</div>
+        <div class="item-desc">
+          Technical document formatting, data table extraction, and sector copy structuring from industrial profiles (Petronas, Lanxess, IOI, Daikin, bio-fuels).
+        </div>
+      </td>
+      <td class="amount-col"><strong>₹4,000</strong></td>
+    </tr>
+  </tbody>
+</table>
+
+<table class="totals-table">
+  <tr>
+    <td class="label">Standard Project Scope Gross Total:</td>
+    <td class="val">₹40,000</td>
+  </tr>
+  <tr class="discount-row">
+    <td class="label">Less: Client Content Supply Credit (Dossiers & Reference PDFs Provided by Client):</td>
+    <td class="val">- ₹5,000</td>
+  </tr>
+  <tr class="final-row">
+    <td class="label">FINAL NET PAYABLE SETTLEMENT BALANCE:</td>
+    <td class="val">₹35,000 INR</td>
+  </tr>
+</table>
+
+<div class="notes-box">
+  <strong>Special Courtesy Note on Content:</strong> In recognition of the technical brochures, PDFs, and corporate documentation supplied directly by Axon Petro Engineering, a direct <strong>₹5,000 Credit</strong> has been deducted from the final valuation. The net payable balance of <strong>₹35,000 INR</strong> strictly accounts for the technical software engineering, 16 custom standalone pages, interactive data widgets, and domain cutover.
+</div>
+
+<div class="terms-section">
+  <div class="terms-title">Commercial Terms & Handover Conditions</div>
+  <ol class="terms-list">
+    <li><strong>Payment Terms:</strong> 100% of the net balance (<strong>₹35,000 INR</strong>) is payable upon final review of the live staging portal.</li>
+    <li><strong>Domain Activation:</strong> Custom domain linking for <code>axonpetro.in</code> and SSL certification will be executed immediately upon payment confirmation.</li>
+    <li><strong>Google Workspace Email Safety:</strong> Full technical guarantee that corporate emails will experience zero downtime or disruption.</li>
+    <li><strong>30-Day Post-Launch Warranty:</strong> Includes 30 calendar days of complimentary support for bug fixes, text adjustments, and layout fine-tuning.</li>
+    <li><strong>Code Ownership:</strong> Complete intellectual property and publishing rights for all HTML/CSS/JS files and graphics transfer entirely to Axon Petro Engineering Pvt. Ltd.</li>
+  </ol>
+</div>
+
+<table class="footer-sig">
+  <tr>
+    <td>
+      <div style="color:#64748b;font-size:7pt;text-transform:uppercase;">Prepared & Submitted by</div>
+      <div style="font-weight:700;color:#0f172a;margin-top:2px;">Technical Web Architecture Team</div>
+      <div style="color:#64748b;font-size:7.5pt;">Status: Approved for Final Settlement</div>
+    </td>
+    <td style="text-align:right;">
+      <div style="color:#64748b;font-size:7.5pt;text-transform:uppercase;">Accepted & Confirmed for Client</div>
+      <div style="font-weight:700;color:#0f172a;margin-top:2px;">Axon Petro Engineering Pvt. Ltd.</div>
+      <div style="color:#64748b;font-size:7.5pt;">Authorized Signatory / Directorate</div>
+    </td>
+  </tr>
+</table>
+
+</body>
+</html>
